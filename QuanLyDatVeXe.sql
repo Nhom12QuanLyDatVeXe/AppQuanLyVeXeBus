@@ -32,34 +32,62 @@ CREATE TABLE NhanVien (
 	FOREIGN KEY (MaChucVu) REFERENCES ChucVu(MaChucVu)
 );
 
+CREATE TABLE TinhThanh
+(
+	MaTinh CHAR(5) PRIMARY KEY,
+	TenTinh NVARCHAR(30)
+)
+
+CREATE TABLE Huyen
+(
+	MaHuyen CHAR(5) PRIMARY KEY,
+	TenHuyen NVARCHAR(30),
+	MaTinh CHAR(5),
+	FOREIGN KEY (MaTinh) REFERENCES TinhThanh(MaTinh)
+)
+
+CREATE TABLE DiaDiem
+(
+	MaDiaDiem CHAR(5) PRIMARY KEY,
+	TenDiaDiem NVARCHAR(30),
+	MaHuyen CHAR(5),
+	FOREIGN KEY (MaHuyen) REFERENCES Huyen(MaHuyen)
+)
+
 -- Bảng Tuyến xe
 CREATE TABLE TuyenXe (
     MaTuyenXe INT PRIMARY KEY,
     TenTuyen NVARCHAR(100),
     NgayDi DATE,
     GioDi TIME,
-    DiemDi NVARCHAR(100),
-    DiemDen NVARCHAR(100),
+    DiemDi CHAR(5),
+    DiemDen CHAR(5),
     GioXuatBen TIME,
     GioDenNoi TIME,
-	KhoangCach INT
+	KhoangCach INT,
+	FOREIGN KEY (DiemDi) REFERENCES DiaDiem(MaDiaDiem),
+	FOREIGN KEY (DiemDen) REFERENCES DiaDiem(MaDiaDiem)
 );
+
 
 -- Bảng Phương tiện
 CREATE TABLE PhuongTien (
-    MaPhuongTien INT PRIMARY KEY,
-    BienSoXe NVARCHAR(15),
+    BienSoXe CHAR(10) PRIMARY KEY,
     TaiXeChinh NVARCHAR(100),
     TaiXePhu NVARCHAR(100),
-    SoGhe INT
+    SoGhe INT,
+	MaTuyenXe INT,
+	FOREIGN KEY (MaTuyenXe) REFERENCES TuyenXe(MaTuyenXe)
 );
+
+
 
 -- Bảng Ghế
 CREATE TABLE Ghe (
     MaGhe INT PRIMARY KEY,
     DonGia DECIMAL(18, 2),
-    MaPhuongTien INT,
-    FOREIGN KEY (MaPhuongTien) REFERENCES PhuongTien(MaPhuongTien)
+    BienSoXe CHAR(10),
+    FOREIGN KEY (BienSoXe) REFERENCES PhuongTien(BienSoXe)
 );
 
 -- Bảng Phiếu đặt vé
@@ -72,10 +100,6 @@ CREATE TABLE PhieuDatVe (
     FOREIGN KEY (MaKH) REFERENCES KhachHang(MaKH),
 	FOREIGN KEY (MaNV) REFERENCES NhanVien(MaNV)
 )
-ALTER TABLE PhieuDatVe
-ADD MaTuyenXe INT
-ALTER TABLE PhieuDatVe
-ADD FOREIGN KEY (MaTuyenXe) REFERENCES TuyenXe(MaTuyenXe)
 
 
 -- Bảng Chi tiết đặt vé (Liên kết giữa Ghế và Phiếu đặt vé)
