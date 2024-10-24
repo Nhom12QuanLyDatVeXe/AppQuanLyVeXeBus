@@ -38,21 +38,6 @@ CREATE TABLE TinhThanh
 	TenTinh NVARCHAR(30)
 )
 
-CREATE TABLE Huyen
-(
-	MaHuyen CHAR(5) PRIMARY KEY,
-	TenHuyen NVARCHAR(30),
-	MaTinh CHAR(5),
-	FOREIGN KEY (MaTinh) REFERENCES TinhThanh(MaTinh)
-)
-
-CREATE TABLE DiaDiem
-(
-	MaDiaDiem CHAR(5) PRIMARY KEY,
-	TenDiaDiem NVARCHAR(30),
-	MaHuyen CHAR(5),
-	FOREIGN KEY (MaHuyen) REFERENCES Huyen(MaHuyen)
-)
 
 -- Bảng Tuyến xe
 CREATE TABLE TuyenXe (
@@ -65,8 +50,8 @@ CREATE TABLE TuyenXe (
     GioXuatBen TIME,
     GioDenNoi TIME,
 	KhoangCach INT,
-	FOREIGN KEY (DiemDi) REFERENCES DiaDiem(MaDiaDiem),
-	FOREIGN KEY (DiemDen) REFERENCES DiaDiem(MaDiaDiem)
+	FOREIGN KEY (DiemDi) REFERENCES TinhThanh(MaTinh),
+	FOREIGN KEY (DiemDen) REFERENCES TinhThanh(MaTinh)
 );
 
 
@@ -146,32 +131,31 @@ VALUES
 
 INSERT INTO TuyenXe (MaTuyenXe, TenTuyen, NgayDi, GioDi, DiemDi, DiemDen, GioXuatBen, GioDenNoi, KhoangCach)
 VALUES 
-(1, N'TP.HCM - Đà Lạt', '2024-10-10', '08:00', N'TP.HCM', N'Đà Lạt', '08:30', '16:00', 300),
-(2, N'TP.HCM - Nha Trang', '2024-10-11', '06:00', N'TP.HCM', N'Nha Trang', '06:30', '14:30', 430),
-(3, N'Hà Nội - Hải Phòng', '2024-10-12', '07:00', N'Hà Nội', N'Hải Phòng', '07:30', '10:00', 120);
+(1, N'TP.HCM - Đà Lạt', '2024-10-10', '08:00', 79, 77, '08:30', '16:00', 300),
+(2, N'TP.HCM - Nha Trang', '2024-10-11', '06:00', 79, 37, '06:30', '14:30', 430)
 
 
-INSERT INTO PhuongTien (MaPhuongTien, BienSoXe, TaiXeChinh, TaiXePhu, SoGhe)
+INSERT INTO PhuongTien (BienSoXe, TaiXeChinh, TaiXePhu, SoGhe)
 VALUES 
-(1, '51B-12345', N'Phạm Minh D', N'Trần Văn F', 45),
-(2, '51B-67890', N'Nguyễn Văn G', N'Lê Văn H', 30),
-(3, '29A-54321', N'Hoàng Văn I', N'Bùi Thị J', 35);
+('51B-12345', N'Phạm Minh D', N'Trần Văn F', 45),
+('51B-67890', N'Nguyễn Văn G', N'Lê Văn H', 30),
+('29A-54321', N'Hoàng Văn I', N'Bùi Thị J', 35);
 
 
-INSERT INTO Ghe (MaGhe, DonGia, MaPhuongTien)
+INSERT INTO Ghe (MaGhe, DonGia, BienSoXe)
 VALUES 
-(1, 300000, 1),
-(2, 250000, 1),
-(3, 400000, 2),
-(4, 350000, 2),
-(5, 200000, 3)
+(1, 300000, '51B-12345'),
+(2, 250000, '51B-12345'),
+(3, 400000, '51B-67890'),
+(4, 350000, '51B-67890'),
+(5, 200000, '29A-54321')
 
 
-INSERT INTO PhieuDatVe (MaPhieu, MaKH, MaNV, SoLuongGhe, TongTien, MaTuyenXe)
+INSERT INTO PhieuDatVe (MaPhieu, MaKH, MaNV, SoLuongGhe, TongTien)
 VALUES 
-(1, 'KH0001', 'NV001', 2, 600000, 1),
-(2, 'KH0002', 'NV002', 1, 250000, 2),
-(3, 'KH0003', 'NV001', 1, 400000, 3);
+(1, 'KH0001', 'NV001', 2, 600000),
+(2, 'KH0002', 'NV002', 1, 250000),
+(3, 'KH0003', 'NV001', 1, 400000);
 
 INSERT INTO ChiTietDatVe (MaPhieu, MaGhe)
 VALUES 
