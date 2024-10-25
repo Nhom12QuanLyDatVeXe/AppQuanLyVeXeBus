@@ -30,10 +30,10 @@
         {
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
-            this.CenterPanel = new Guna.UI2.WinForms.Guna2Panel();
-            this.btnClose = new Guna.UI2.WinForms.Guna2ControlBox();
-            this.btnMax = new Guna.UI2.WinForms.Guna2ControlBox();
             this.btnMin = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.btnMax = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.btnClose = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.CenterPanel = new Guna.UI2.WinForms.Guna2Panel();
             this.btnPhuongTien = new Guna.UI2.WinForms.Guna2Button();
             this.btnHoaDon = new Guna.UI2.WinForms.Guna2Button();
             this.btnKhachHang = new Guna.UI2.WinForms.Guna2Button();
@@ -72,25 +72,16 @@
             this.guna2Panel2.Size = new System.Drawing.Size(1174, 76);
             this.guna2Panel2.TabIndex = 1;
             // 
-            // CenterPanel
+            // btnMin
             // 
-            this.CenterPanel.CustomizableEdges.TopRight = false;
-            this.CenterPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.CenterPanel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.CenterPanel.Location = new System.Drawing.Point(326, 76);
-            this.CenterPanel.Name = "CenterPanel";
-            this.CenterPanel.Size = new System.Drawing.Size(1174, 666);
-            this.CenterPanel.TabIndex = 1;
-            // 
-            // btnClose
-            // 
-            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnClose.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(152)))), ((int)(((byte)(166)))));
-            this.btnClose.IconColor = System.Drawing.Color.White;
-            this.btnClose.Location = new System.Drawing.Point(1095, 12);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(66, 44);
-            this.btnClose.TabIndex = 0;
+            this.btnMin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMin.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
+            this.btnMin.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(152)))), ((int)(((byte)(166)))));
+            this.btnMin.IconColor = System.Drawing.Color.White;
+            this.btnMin.Location = new System.Drawing.Point(951, 12);
+            this.btnMin.Name = "btnMin";
+            this.btnMin.Size = new System.Drawing.Size(66, 44);
+            this.btnMin.TabIndex = 2;
             // 
             // btnMax
             // 
@@ -103,16 +94,25 @@
             this.btnMax.Size = new System.Drawing.Size(66, 44);
             this.btnMax.TabIndex = 1;
             // 
-            // btnMin
+            // btnClose
             // 
-            this.btnMin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMin.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
-            this.btnMin.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(152)))), ((int)(((byte)(166)))));
-            this.btnMin.IconColor = System.Drawing.Color.White;
-            this.btnMin.Location = new System.Drawing.Point(951, 12);
-            this.btnMin.Name = "btnMin";
-            this.btnMin.Size = new System.Drawing.Size(66, 44);
-            this.btnMin.TabIndex = 2;
+            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnClose.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(152)))), ((int)(((byte)(166)))));
+            this.btnClose.IconColor = System.Drawing.Color.White;
+            this.btnClose.Location = new System.Drawing.Point(1095, 12);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(66, 44);
+            this.btnClose.TabIndex = 0;
+            // 
+            // CenterPanel
+            // 
+            this.CenterPanel.CustomizableEdges.TopRight = false;
+            this.CenterPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.CenterPanel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.CenterPanel.Location = new System.Drawing.Point(326, 76);
+            this.CenterPanel.Name = "CenterPanel";
+            this.CenterPanel.Size = new System.Drawing.Size(1174, 666);
+            this.CenterPanel.TabIndex = 1;
             // 
             // btnPhuongTien
             // 
@@ -224,12 +224,14 @@
             // 
             // guna2PictureBox1
             // 
-            this.guna2PictureBox1.BackColor = System.Drawing.Color.White;
+            this.guna2PictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.guna2PictureBox1.FillColor = System.Drawing.Color.DimGray;
+            this.guna2PictureBox1.Image = global::AppQuanLyDatVeXe.Properties.Resources.logo;
             this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(65, 49);
+            this.guna2PictureBox1.Location = new System.Drawing.Point(66, 52);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
             this.guna2PictureBox1.Size = new System.Drawing.Size(157, 133);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.guna2PictureBox1.TabIndex = 1;
             this.guna2PictureBox1.TabStop = false;
             // 

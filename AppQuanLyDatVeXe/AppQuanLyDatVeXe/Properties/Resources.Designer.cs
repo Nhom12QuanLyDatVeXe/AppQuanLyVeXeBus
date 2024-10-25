@@ -63,6 +63,26 @@ namespace AppQuanLyDatVeXe.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap futa {
+            get {
+                object obj = ResourceManager.GetObject("futa", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap futa_bus_dat_ve_xe_phuong_trang_online_ngay_tren_dien_224298_10_08_2020_0 {
+            get {
+                object obj = ResourceManager.GetObject("futa-bus-dat-ve-xe-phuong-trang-online-ngay-tren-dien-224298-10-08-2020-0", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_bill_26 {
             get {
                 object obj = ResourceManager.GetObject("icons8-bill-26", resourceCulture);
@@ -76,6 +96,56 @@ namespace AppQuanLyDatVeXe.Properties {
         internal static System.Drawing.Bitmap icons8_bus_26 {
             get {
                 object obj = ResourceManager.GetObject("icons8-bus-26", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_eye_50 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-eye-50", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_invisible_50 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-invisible-50", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_password_26 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-password-26", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_phone_26 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-phone-26", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_phone_26__1_ {
+            get {
+                object obj = ResourceManager.GetObject("icons8-phone-26 (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -106,6 +176,46 @@ namespace AppQuanLyDatVeXe.Properties {
         internal static System.Drawing.Bitmap icons8_user_account_26 {
             get {
                 object obj = ResourceManager.GetObject("icons8-user-account-26", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap images {
+            get {
+                object obj = ResourceManager.GetObject("images", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap logo {
+            get {
+                object obj = ResourceManager.GetObject("logo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Screenshot_2024_10_25_104320 {
+            get {
+                object obj = ResourceManager.GetObject("Screenshot 2024-10-25 104320", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Screenshot_2024_10_25_105843 {
+            get {
+                object obj = ResourceManager.GetObject("Screenshot 2024-10-25 105843", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
