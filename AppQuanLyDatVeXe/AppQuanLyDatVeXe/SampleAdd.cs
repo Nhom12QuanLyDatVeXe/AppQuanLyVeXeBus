@@ -16,5 +16,15 @@ namespace AppQuanLyDatVeXe
         {
             InitializeComponent();
         }
+
+        public virtual void btnLuu_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        public virtual void  btnDong_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

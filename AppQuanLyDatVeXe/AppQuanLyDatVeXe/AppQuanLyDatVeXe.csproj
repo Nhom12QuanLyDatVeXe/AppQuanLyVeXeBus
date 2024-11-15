@@ -68,6 +68,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormDangKy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDangKy.designer.cs">
+      <DependentUpon>FormDangKy.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormDangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,6 +97,12 @@
     </Compile>
     <Compile Include="FormChuyenXe.Designer.cs">
       <DependentUpon>FormChuyenXe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormNhanVien.designer.cs">
+      <DependentUpon>FormNhanVien.cs</DependentUpon>
     </Compile>
     <Compile Include="FormPhuongTien.cs">
       <SubType>Form</SubType>
@@ -136,6 +148,9 @@
     <Compile Include="View\frmUserView.Designer.cs">
       <DependentUpon>frmUserView.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FormDangKy.resx">
+      <DependentUpon>FormDangKy.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormDangNhap.resx">
       <DependentUpon>FormDangNhap.cs</DependentUpon>
     </EmbeddedResource>
@@ -147,6 +162,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormChuyenXe.resx">
       <DependentUpon>FormChuyenXe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormNhanVien.resx">
+      <DependentUpon>FormNhanVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormPhuongTien.resx">
       <DependentUpon>FormPhuongTien.cs</DependentUpon>
@@ -250,6 +268,17 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-eye-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\icons8-add-26.png" />
+    <Content Include="Resources\icons8-edit-26.png" />
+    <Content Include="Resources\icons8-employee-50.png" />
+    <Content Include="Resources\icons8-exit-26 %281%29.png" />
+    <Content Include="Resources\icons8-exit-26 %281%291.png" />
+    <Content Include="Resources\icons8-exit-26.png" />
+    <Content Include="Resources\icons8-find-26.png" />
+    <Content Include="Resources\icons8-minus-26.png" />
+    <Content Include="Resources\icons8-user-26.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
