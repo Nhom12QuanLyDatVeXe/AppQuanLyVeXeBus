@@ -1,59 +1,16 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "E:\\HUFI\\Hk1_2024_2025\\PTPMUDTM\\DoAnMonHoc\\AppQuanLyVeXeBus\\AppQuanLyDatVeXe\\",
-<<<<<<< HEAD
   "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\HUFI\\Hk1_2024_2025\\PTPMUDTM\\DoAnMonHoc\\AppQuanLyVeXeBus\\AppQuanLyDatVeXe\\DAL\\Ketnoi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DAL\\Ketnoi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-=======
-<<<<<<< Updated upstream
-  "Documents": [],
-=======
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{5BF18DE5-82BA-40D8-86A1-9BCE46FF8177}|AppQuanLyDatVeXe\\AppQuanLyDatVeXe.csproj|e:\\hufi\\hk1_2024_2025\\ptpmudtm\\doanmonhoc\\appquanlyvexebus\\appquanlydatvexe\\appquanlydatvexe\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5BF18DE5-82BA-40D8-86A1-9BCE46FF8177}|AppQuanLyDatVeXe\\AppQuanLyDatVeXe.csproj|solutionrelative:appquanlydatvexe\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5BF18DE5-82BA-40D8-86A1-9BCE46FF8177}|AppQuanLyDatVeXe\\AppQuanLyDatVeXe.csproj|e:\\hufi\\hk1_2024_2025\\ptpmudtm\\doanmonhoc\\appquanlyvexebus\\appquanlydatvexe\\appquanlydatvexe\\formmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{5BF18DE5-82BA-40D8-86A1-9BCE46FF8177}|AppQuanLyDatVeXe\\AppQuanLyDatVeXe.csproj|solutionrelative:appquanlydatvexe\\formmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5BF18DE5-82BA-40D8-86A1-9BCE46FF8177}|AppQuanLyDatVeXe\\AppQuanLyDatVeXe.csproj|e:\\hufi\\hk1_2024_2025\\ptpmudtm\\doanmonhoc\\appquanlyvexebus\\appquanlydatvexe\\appquanlydatvexe\\formhoadon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{5BF18DE5-82BA-40D8-86A1-9BCE46FF8177}|AppQuanLyDatVeXe\\AppQuanLyDatVeXe.csproj|solutionrelative:appquanlydatvexe\\formhoadon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
     {
       "AbsoluteMoniker": "D:0:0:{5BF18DE5-82BA-40D8-86A1-9BCE46FF8177}|AppQuanLyDatVeXe\\AppQuanLyDatVeXe.csproj|e:\\hufi\\hk1_2024_2025\\ptpmudtm\\doanmonhoc\\appquanlyvexebus\\appquanlydatvexe\\appquanlydatvexe\\formdangnhap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{5BF18DE5-82BA-40D8-86A1-9BCE46FF8177}|AppQuanLyDatVeXe\\AppQuanLyDatVeXe.csproj|solutionrelative:appquanlydatvexe\\formdangnhap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5BF18DE5-82BA-40D8-86A1-9BCE46FF8177}|AppQuanLyDatVeXe\\AppQuanLyDatVeXe.csproj|e:\\hufi\\hk1_2024_2025\\ptpmudtm\\doanmonhoc\\appquanlyvexebus\\appquanlydatvexe\\appquanlydatvexe\\formchuyenxe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{5BF18DE5-82BA-40D8-86A1-9BCE46FF8177}|AppQuanLyDatVeXe\\AppQuanLyDatVeXe.csproj|solutionrelative:appquanlydatvexe\\formchuyenxe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5BF18DE5-82BA-40D8-86A1-9BCE46FF8177}|AppQuanLyDatVeXe\\AppQuanLyDatVeXe.csproj|e:\\hufi\\hk1_2024_2025\\ptpmudtm\\doanmonhoc\\appquanlyvexebus\\appquanlydatvexe\\appquanlydatvexe\\formdangnhap.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5BF18DE5-82BA-40D8-86A1-9BCE46FF8177}|AppQuanLyDatVeXe\\AppQuanLyDatVeXe.csproj|solutionrelative:appquanlydatvexe\\formdangnhap.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5BF18DE5-82BA-40D8-86A1-9BCE46FF8177}|AppQuanLyDatVeXe\\AppQuanLyDatVeXe.csproj|e:\\hufi\\hk1_2024_2025\\ptpmudtm\\doanmonhoc\\appquanlyvexebus\\appquanlydatvexe\\appquanlydatvexe\\formmain.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5BF18DE5-82BA-40D8-86A1-9BCE46FF8177}|AppQuanLyDatVeXe\\AppQuanLyDatVeXe.csproj|solutionrelative:appquanlydatvexe\\formmain.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5BF18DE5-82BA-40D8-86A1-9BCE46FF8177}|AppQuanLyDatVeXe\\AppQuanLyDatVeXe.csproj|e:\\hufi\\hk1_2024_2025\\ptpmudtm\\doanmonhoc\\appquanlyvexebus\\appquanlydatvexe\\appquanlydatvexe\\sampleadd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{5BF18DE5-82BA-40D8-86A1-9BCE46FF8177}|AppQuanLyDatVeXe\\AppQuanLyDatVeXe.csproj|solutionrelative:appquanlydatvexe\\sampleadd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5BF18DE5-82BA-40D8-86A1-9BCE46FF8177}|AppQuanLyDatVeXe\\AppQuanLyDatVeXe.csproj|e:\\hufi\\hk1_2024_2025\\ptpmudtm\\doanmonhoc\\appquanlyvexebus\\appquanlydatvexe\\appquanlydatvexe\\sample.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{5BF18DE5-82BA-40D8-86A1-9BCE46FF8177}|AppQuanLyDatVeXe\\AppQuanLyDatVeXe.csproj|solutionrelative:appquanlydatvexe\\sample.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5BF18DE5-82BA-40D8-86A1-9BCE46FF8177}|AppQuanLyDatVeXe\\AppQuanLyDatVeXe.csproj|e:\\hufi\\hk1_2024_2025\\ptpmudtm\\doanmonhoc\\appquanlyvexebus\\appquanlydatvexe\\appquanlydatvexe\\sampleview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{5BF18DE5-82BA-40D8-86A1-9BCE46FF8177}|AppQuanLyDatVeXe\\AppQuanLyDatVeXe.csproj|solutionrelative:appquanlydatvexe\\sampleview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
->>>>>>> main
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\HUFI\\Hk1_2024_2025\\PTPMUDTM\\DoAnMonHoc\\AppQuanLyVeXeBus\\AppQuanLyDatVeXe\\DAL\\Ketnoi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DAL\\Ketnoi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
->>>>>>> Stashed changes
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -61,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -70,144 +27,31 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-<<<<<<< Updated upstream
-=======
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-<<<<<<< HEAD
-              "Title": "Ketnoi.cs",
-              "DocumentMoniker": "E:\\HUFI\\Hk1_2024_2025\\PTPMUDTM\\DoAnMonHoc\\AppQuanLyVeXeBus\\AppQuanLyDatVeXe\\DAL\\Ketnoi.cs",
-              "RelativeDocumentMoniker": "DAL\\Ketnoi.cs",
-              "ToolTip": "E:\\HUFI\\Hk1_2024_2025\\PTPMUDTM\\DoAnMonHoc\\AppQuanLyVeXeBus\\AppQuanLyDatVeXe\\DAL\\Ketnoi.cs",
-              "RelativeToolTip": "DAL\\Ketnoi.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-24T04:17:19.042Z",
-              "EditorCaption": ""
-=======
-              "Title": "Program.cs",
-              "DocumentMoniker": "E:\\HUFI\\Hk1_2024_2025\\PTPMUDTM\\DoAnMonHoc\\AppQuanLyVeXeBus\\AppQuanLyDatVeXe\\AppQuanLyDatVeXe\\Program.cs",
-              "RelativeDocumentMoniker": "AppQuanLyDatVeXe\\Program.cs",
-              "ToolTip": "E:\\HUFI\\Hk1_2024_2025\\PTPMUDTM\\DoAnMonHoc\\AppQuanLyVeXeBus\\AppQuanLyDatVeXe\\AppQuanLyDatVeXe\\Program.cs",
-              "RelativeToolTip": "AppQuanLyDatVeXe\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-14T14:38:52.326Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
               "Title": "FormDangNhap.cs [Design]",
               "DocumentMoniker": "E:\\HUFI\\Hk1_2024_2025\\PTPMUDTM\\DoAnMonHoc\\AppQuanLyVeXeBus\\AppQuanLyDatVeXe\\AppQuanLyDatVeXe\\FormDangNhap.cs",
               "RelativeDocumentMoniker": "AppQuanLyDatVeXe\\FormDangNhap.cs",
               "ToolTip": "E:\\HUFI\\Hk1_2024_2025\\PTPMUDTM\\DoAnMonHoc\\AppQuanLyVeXeBus\\AppQuanLyDatVeXe\\AppQuanLyDatVeXe\\FormDangNhap.cs [Design]",
               "RelativeToolTip": "AppQuanLyDatVeXe\\FormDangNhap.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-14T14:28:34.948Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "FormHoaDon.cs [Design]",
-              "DocumentMoniker": "E:\\HUFI\\Hk1_2024_2025\\PTPMUDTM\\DoAnMonHoc\\AppQuanLyVeXeBus\\AppQuanLyDatVeXe\\AppQuanLyDatVeXe\\FormHoaDon.cs",
-              "RelativeDocumentMoniker": "AppQuanLyDatVeXe\\FormHoaDon.cs",
-              "ToolTip": "E:\\HUFI\\Hk1_2024_2025\\PTPMUDTM\\DoAnMonHoc\\AppQuanLyVeXeBus\\AppQuanLyDatVeXe\\AppQuanLyDatVeXe\\FormHoaDon.cs [Design]",
-              "RelativeToolTip": "AppQuanLyDatVeXe\\FormHoaDon.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-14T14:28:44.118Z",
+              "WhenOpened": "2024-11-14T15:10:59.076Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "FormMain.cs [Design]",
-              "DocumentMoniker": "E:\\HUFI\\Hk1_2024_2025\\PTPMUDTM\\DoAnMonHoc\\AppQuanLyVeXeBus\\AppQuanLyDatVeXe\\AppQuanLyDatVeXe\\FormMain.cs",
-              "RelativeDocumentMoniker": "AppQuanLyDatVeXe\\FormMain.cs",
-              "ToolTip": "E:\\HUFI\\Hk1_2024_2025\\PTPMUDTM\\DoAnMonHoc\\AppQuanLyVeXeBus\\AppQuanLyDatVeXe\\AppQuanLyDatVeXe\\FormMain.cs [Design]",
-              "RelativeToolTip": "AppQuanLyDatVeXe\\FormMain.cs [Design]",
+              "Title": "Ketnoi.cs",
+              "DocumentMoniker": "E:\\HUFI\\Hk1_2024_2025\\PTPMUDTM\\DoAnMonHoc\\AppQuanLyVeXeBus\\AppQuanLyDatVeXe\\DAL\\Ketnoi.cs",
+              "RelativeDocumentMoniker": "DAL\\Ketnoi.cs",
+              "ToolTip": "E:\\HUFI\\Hk1_2024_2025\\PTPMUDTM\\DoAnMonHoc\\AppQuanLyVeXeBus\\AppQuanLyDatVeXe\\DAL\\Ketnoi.cs",
+              "RelativeToolTip": "DAL\\Ketnoi.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-14T14:28:46.369Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "FormChuyenXe.cs [Design]",
-              "DocumentMoniker": "E:\\HUFI\\Hk1_2024_2025\\PTPMUDTM\\DoAnMonHoc\\AppQuanLyVeXeBus\\AppQuanLyDatVeXe\\AppQuanLyDatVeXe\\FormChuyenXe.cs",
-              "RelativeDocumentMoniker": "AppQuanLyDatVeXe\\FormChuyenXe.cs",
-              "ToolTip": "E:\\HUFI\\Hk1_2024_2025\\PTPMUDTM\\DoAnMonHoc\\AppQuanLyVeXeBus\\AppQuanLyDatVeXe\\AppQuanLyDatVeXe\\FormChuyenXe.cs [Design]",
-              "RelativeToolTip": "AppQuanLyDatVeXe\\FormChuyenXe.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-14T14:28:32.025Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "FormDangNhap.Designer.cs",
-              "DocumentMoniker": "E:\\HUFI\\Hk1_2024_2025\\PTPMUDTM\\DoAnMonHoc\\AppQuanLyVeXeBus\\AppQuanLyDatVeXe\\AppQuanLyDatVeXe\\FormDangNhap.Designer.cs",
-              "RelativeDocumentMoniker": "AppQuanLyDatVeXe\\FormDangNhap.Designer.cs",
-              "ToolTip": "E:\\HUFI\\Hk1_2024_2025\\PTPMUDTM\\DoAnMonHoc\\AppQuanLyVeXeBus\\AppQuanLyDatVeXe\\AppQuanLyDatVeXe\\FormDangNhap.Designer.cs",
-              "RelativeToolTip": "AppQuanLyDatVeXe\\FormDangNhap.Designer.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAnwB8AAAALAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-14T14:35:27.204Z",
+              "WhenOpened": "2024-10-24T04:17:19.042Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "FormMain.Designer.cs",
-              "DocumentMoniker": "E:\\HUFI\\Hk1_2024_2025\\PTPMUDTM\\DoAnMonHoc\\AppQuanLyVeXeBus\\AppQuanLyDatVeXe\\AppQuanLyDatVeXe\\FormMain.Designer.cs",
-              "RelativeDocumentMoniker": "AppQuanLyDatVeXe\\FormMain.Designer.cs",
-              "ToolTip": "E:\\HUFI\\Hk1_2024_2025\\PTPMUDTM\\DoAnMonHoc\\AppQuanLyVeXeBus\\AppQuanLyDatVeXe\\AppQuanLyDatVeXe\\FormMain.Designer.cs",
-              "RelativeToolTip": "AppQuanLyDatVeXe\\FormMain.Designer.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-14T14:29:01.084Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "SampleAdd.cs [Design]",
-              "DocumentMoniker": "E:\\HUFI\\Hk1_2024_2025\\PTPMUDTM\\DoAnMonHoc\\AppQuanLyVeXeBus\\AppQuanLyDatVeXe\\AppQuanLyDatVeXe\\SampleAdd.cs",
-              "RelativeDocumentMoniker": "AppQuanLyDatVeXe\\SampleAdd.cs",
-              "ToolTip": "E:\\HUFI\\Hk1_2024_2025\\PTPMUDTM\\DoAnMonHoc\\AppQuanLyVeXeBus\\AppQuanLyDatVeXe\\AppQuanLyDatVeXe\\SampleAdd.cs [Design]",
-              "RelativeToolTip": "AppQuanLyDatVeXe\\SampleAdd.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-14T14:30:40.549Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Sample.cs [Design]",
-              "DocumentMoniker": "E:\\HUFI\\Hk1_2024_2025\\PTPMUDTM\\DoAnMonHoc\\AppQuanLyVeXeBus\\AppQuanLyDatVeXe\\AppQuanLyDatVeXe\\Sample.cs",
-              "RelativeDocumentMoniker": "AppQuanLyDatVeXe\\Sample.cs",
-              "ToolTip": "E:\\HUFI\\Hk1_2024_2025\\PTPMUDTM\\DoAnMonHoc\\AppQuanLyVeXeBus\\AppQuanLyDatVeXe\\AppQuanLyDatVeXe\\Sample.cs [Design]",
-              "RelativeToolTip": "AppQuanLyDatVeXe\\Sample.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-14T14:30:41.424Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "SampleView.cs [Design]",
-              "DocumentMoniker": "E:\\HUFI\\Hk1_2024_2025\\PTPMUDTM\\DoAnMonHoc\\AppQuanLyVeXeBus\\AppQuanLyDatVeXe\\AppQuanLyDatVeXe\\SampleView.cs",
-              "RelativeDocumentMoniker": "AppQuanLyDatVeXe\\SampleView.cs",
-              "ToolTip": "E:\\HUFI\\Hk1_2024_2025\\PTPMUDTM\\DoAnMonHoc\\AppQuanLyVeXeBus\\AppQuanLyDatVeXe\\AppQuanLyDatVeXe\\SampleView.cs [Design]",
-              "RelativeToolTip": "AppQuanLyDatVeXe\\SampleView.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-14T14:30:39.062Z",
-              "EditorCaption": " [Design]"
->>>>>>> Stashed changes
->>>>>>> main
             }
           ]
         }
