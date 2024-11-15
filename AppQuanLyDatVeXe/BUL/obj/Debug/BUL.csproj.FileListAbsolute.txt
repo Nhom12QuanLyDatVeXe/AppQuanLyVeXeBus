@@ -13,3 +13,9 @@ E:\HUFI\Hk1_2024_2025\PTPMUDTM\DoAnMonHoc\AppQuanLyVeXeBus\AppQuanLyDatVeXe\BUL\
 E:\HUFI\Hk1_2024_2025\PTPMUDTM\DoAnMonHoc\AppQuanLyVeXeBus\AppQuanLyDatVeXe\BUL\obj\Debug\BUL.csproj.Up2Date
 E:\HUFI\Hk1_2024_2025\PTPMUDTM\DoAnMonHoc\AppQuanLyVeXeBus\AppQuanLyDatVeXe\BUL\obj\Debug\BUL.dll
 E:\HUFI\Hk1_2024_2025\PTPMUDTM\DoAnMonHoc\AppQuanLyVeXeBus\AppQuanLyDatVeXe\BUL\obj\Debug\BUL.pdb
+E:\HUFI\Hk1_2024_2025\PTPMUDTM\DoAnMonHoc\AppQuanLyVeXeBus\AppQuanLyDatVeXe\BUL\bin\Debug\DTO.dll
+E:\HUFI\Hk1_2024_2025\PTPMUDTM\DoAnMonHoc\AppQuanLyVeXeBus\AppQuanLyDatVeXe\BUL\bin\Debug\DTO.pdb
+E:\HUFI\Hk1_2024_2025\PTPMUDTM\DoAnMonHoc\AppQuanLyVeXeBus\AppQuanLyDatVeXe\BUL\bin\Debug\DTO.dll.config
+E:\HUFI\Hk1_2024_2025\PTPMUDTM\DoAnMonHoc\AppQuanLyVeXeBus\AppQuanLyDatVeXe\BUL\bin\Debug\DAL.dll
+E:\HUFI\Hk1_2024_2025\PTPMUDTM\DoAnMonHoc\AppQuanLyVeXeBus\AppQuanLyDatVeXe\BUL\bin\Debug\DAL.pdb
+E:\HUFI\Hk1_2024_2025\PTPMUDTM\DoAnMonHoc\AppQuanLyVeXeBus\AppQuanLyDatVeXe\BUL\bin\Debug\DAL.dll.config
