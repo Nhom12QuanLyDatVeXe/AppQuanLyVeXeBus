@@ -7,8 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using DTO;
-using BUL;
 
 namespace AppQuanLyDatVeXe
 {
@@ -19,9 +17,11 @@ namespace AppQuanLyDatVeXe
             InitializeComponent();
         }
 
-        private TaiKhoan_BUL TK_BUL = new TaiKhoan_BUL();
-
-        
+        private void txtSDT_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
+                e.Handled = true;
+        }
 
         private void ckcHienPass_CheckedChanged(object sender, EventArgs e)
         {
@@ -31,31 +31,32 @@ namespace AppQuanLyDatVeXe
                 txtPass.PasswordChar = '*';
         }
 
-
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
-            if (txtUserName.Text.Length == 0)
+            if (txtTenUser.Text.Length == 0)
             {
                 lblThongBaoSDT.Visible = true;
-                lblThongBaoSDT.Text = "Vui lòng nhập số điện thoại";
-                return;
+                lblThongBaoSDT.Text = "Vui lòng nhập tên đăng nhập";
             }
+            else
+                return;
             if (txtPass.Text.Length == 0)
             {
                 lblThongBaoPass.Visible = true;
                 lblThongBaoPass.Text = "Vui lòng nhập mật khẩu";
+            }
+            else
                 return;
-            }
-            TaiKhoan_DTO account = new TaiKhoan_DTO();
-            account.UserName = txtUserName.Text;
-            account.PassWord = txtPass.Text;
-            if(TK_BUL.CheckLogin(account) == 1)
-            {
-                FormMain form = new FormMain();
-                form.ShowDialog();
-                this.Visible = false;
-                this.Hide();
-            }
         }
+
+        private void linkDK_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            
+            FormDangKy dk= new FormDangKy();
+            
+            dk.Show();
+            this.Hide();
+        }
+
     }
 }

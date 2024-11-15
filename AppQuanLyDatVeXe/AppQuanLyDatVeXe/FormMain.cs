@@ -16,7 +16,7 @@ namespace AppQuanLyDatVeXe
         {
             InitializeComponent();
         }
-        private void AddControls(Form f)
+        public void AddControls(Form f)
         {
             CenterPanel.Controls.Clear();
             f.TopLevel = false;
@@ -62,6 +62,16 @@ namespace AppQuanLyDatVeXe
         private void btnPhuongTien_Click(object sender, EventArgs e)
         {
             AddControls(new FormPhuongTien());
+        }
+
+        private void btnNhanVien_Click(object sender, EventArgs e)
+        {
+            AddControls(new FormNhanVien());
+        }
+
+        private void btnMax_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
