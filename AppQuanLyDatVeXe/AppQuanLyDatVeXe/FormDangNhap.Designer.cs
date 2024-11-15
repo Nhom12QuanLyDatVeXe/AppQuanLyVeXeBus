@@ -34,11 +34,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txtPass = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtSDT = new Guna.UI2.WinForms.Guna2TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.txtUserName = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnDangNhap = new Guna.UI2.WinForms.Guna2Button();
             this.ckcHienPass = new Guna.UI2.WinForms.Guna2ImageCheckBox();
             this.lblThongBaoSDT = new System.Windows.Forms.Label();
@@ -80,7 +80,7 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(755, 46);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(295, 32);
+            this.label1.Size = new System.Drawing.Size(202, 24);
             this.label1.TabIndex = 4;
             this.label1.Text = "Đăng nhập tài khoản";
             // 
@@ -101,6 +101,17 @@
             this.panel1.Size = new System.Drawing.Size(648, 495);
             this.panel1.TabIndex = 5;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = global::AppQuanLyDatVeXe.Properties.Resources.Screenshot_2024_10_25_105843;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(648, 495);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -108,9 +119,9 @@
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(82)))), ((int)(((byte)(34)))));
             this.label2.Location = new System.Drawing.Point(687, 110);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(154, 29);
+            this.label2.Size = new System.Drawing.Size(116, 20);
             this.label2.TabIndex = 6;
-            this.label2.Text = "Số điện thoại";
+            this.label2.Text = "Tên đăng nhập";
             // 
             // label3
             // 
@@ -119,7 +130,7 @@
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(82)))), ((int)(((byte)(34)))));
             this.label3.Location = new System.Drawing.Point(687, 237);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(109, 29);
+            this.label3.Size = new System.Drawing.Size(75, 20);
             this.label3.TabIndex = 8;
             this.label3.Text = "Mật khẩu";
             // 
@@ -149,43 +160,31 @@
             this.txtPass.Size = new System.Drawing.Size(390, 57);
             this.txtPass.TabIndex = 9;
             // 
-            // txtSDT
+            // txtUserName
             // 
-            this.txtSDT.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.txtSDT.BorderRadius = 10;
-            this.txtSDT.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtSDT.DefaultText = "";
-            this.txtSDT.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtSDT.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtSDT.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtSDT.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtSDT.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSDT.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.txtSDT.HoverState.BorderColor = System.Drawing.Color.Transparent;
-            this.txtSDT.HoverState.FillColor = System.Drawing.Color.Transparent;
-            this.txtSDT.IconLeft = global::AppQuanLyDatVeXe.Properties.Resources.icons8_phone_26__1_;
-            this.txtSDT.IconLeftOffset = new System.Drawing.Point(10, 0);
-            this.txtSDT.Location = new System.Drawing.Point(682, 143);
-            this.txtSDT.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.txtSDT.Name = "txtSDT";
-            this.txtSDT.Padding = new System.Windows.Forms.Padding(13);
-            this.txtSDT.PasswordChar = '\0';
-            this.txtSDT.PlaceholderText = "Nhập số điện thoại";
-            this.txtSDT.SelectedText = "";
-            this.txtSDT.Size = new System.Drawing.Size(390, 57);
-            this.txtSDT.TabIndex = 7;
-            this.txtSDT.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSDT_KeyPress);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = global::AppQuanLyDatVeXe.Properties.Resources.Screenshot_2024_10_25_105843;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(648, 495);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.txtUserName.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.txtUserName.BorderRadius = 10;
+            this.txtUserName.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtUserName.DefaultText = "";
+            this.txtUserName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtUserName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtUserName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtUserName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtUserName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtUserName.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.txtUserName.HoverState.BorderColor = System.Drawing.Color.Transparent;
+            this.txtUserName.HoverState.FillColor = System.Drawing.Color.Transparent;
+            this.txtUserName.IconLeft = global::AppQuanLyDatVeXe.Properties.Resources.icons8_phone_26__1_;
+            this.txtUserName.IconLeftOffset = new System.Drawing.Point(10, 0);
+            this.txtUserName.Location = new System.Drawing.Point(682, 143);
+            this.txtUserName.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.txtUserName.Name = "txtUserName";
+            this.txtUserName.Padding = new System.Windows.Forms.Padding(13);
+            this.txtUserName.PasswordChar = '\0';
+            this.txtUserName.PlaceholderText = "Nhập tên đăng nhập";
+            this.txtUserName.SelectedText = "";
+            this.txtUserName.Size = new System.Drawing.Size(390, 57);
+            this.txtUserName.TabIndex = 7;
             // 
             // btnDangNhap
             // 
@@ -223,7 +222,7 @@
             this.lblThongBaoSDT.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(77)))), ((int)(((byte)(79)))));
             this.lblThongBaoSDT.Location = new System.Drawing.Point(688, 208);
             this.lblThongBaoSDT.Name = "lblThongBaoSDT";
-            this.lblThongBaoSDT.Size = new System.Drawing.Size(57, 25);
+            this.lblThongBaoSDT.Size = new System.Drawing.Size(40, 17);
             this.lblThongBaoSDT.TabIndex = 15;
             this.lblThongBaoSDT.Text = "lblTB";
             this.lblThongBaoSDT.Visible = false;
@@ -235,7 +234,7 @@
             this.lblThongBaoPass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(77)))), ((int)(((byte)(79)))));
             this.lblThongBaoPass.Location = new System.Drawing.Point(686, 335);
             this.lblThongBaoPass.Name = "lblThongBaoPass";
-            this.lblThongBaoPass.Size = new System.Drawing.Size(57, 25);
+            this.lblThongBaoPass.Size = new System.Drawing.Size(40, 17);
             this.lblThongBaoPass.TabIndex = 16;
             this.lblThongBaoPass.Text = "lblTB";
             this.lblThongBaoPass.Visible = false;
@@ -251,7 +250,7 @@
             this.Controls.Add(this.btnDangNhap);
             this.Controls.Add(this.txtPass);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.txtSDT);
+            this.Controls.Add(this.txtUserName);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
@@ -276,7 +275,7 @@
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
         private System.Windows.Forms.Panel panel1;
-        private Guna.UI2.WinForms.Guna2TextBox txtSDT;
+        private Guna.UI2.WinForms.Guna2TextBox txtUserName;
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2TextBox txtPass;
         private System.Windows.Forms.Label label3;

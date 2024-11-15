@@ -32,3 +32,6 @@ E:\HUFI\Hk1_2024_2025\PTPMUDTM\DoAnMonHoc\AppQuanLyVeXeBus\AppQuanLyDatVeXe\AppQ
 E:\HUFI\Hk1_2024_2025\PTPMUDTM\DoAnMonHoc\AppQuanLyVeXeBus\AppQuanLyDatVeXe\AppQuanLyDatVeXe\obj\Debug\AppQuanL.EFABF64F.Up2Date
 E:\HUFI\Hk1_2024_2025\PTPMUDTM\DoAnMonHoc\AppQuanLyVeXeBus\AppQuanLyDatVeXe\AppQuanLyDatVeXe\obj\Debug\AppQuanLyDatVeXe.exe
 E:\HUFI\Hk1_2024_2025\PTPMUDTM\DoAnMonHoc\AppQuanLyVeXeBus\AppQuanLyDatVeXe\AppQuanLyDatVeXe\obj\Debug\AppQuanLyDatVeXe.pdb
+E:\HUFI\Hk1_2024_2025\PTPMUDTM\DoAnMonHoc\AppQuanLyVeXeBus\AppQuanLyDatVeXe\AppQuanLyDatVeXe\bin\Debug\DAL.dll
+E:\HUFI\Hk1_2024_2025\PTPMUDTM\DoAnMonHoc\AppQuanLyVeXeBus\AppQuanLyDatVeXe\AppQuanLyDatVeXe\bin\Debug\DAL.pdb
+E:\HUFI\Hk1_2024_2025\PTPMUDTM\DoAnMonHoc\AppQuanLyVeXeBus\AppQuanLyDatVeXe\AppQuanLyDatVeXe\bin\Debug\DAL.dll.config
