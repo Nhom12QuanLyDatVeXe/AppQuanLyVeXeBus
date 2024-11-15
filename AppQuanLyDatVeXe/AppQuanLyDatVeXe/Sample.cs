@@ -12,9 +12,14 @@ namespace AppQuanLyDatVeXe
 {
     public partial class Sample : Form
     {
-        public Sample()
+        public Sample() 
         {
             InitializeComponent();
+        }
+
+        private void Sample_Load(object sender, EventArgs e)
+        {
+            
         }
     }
 }

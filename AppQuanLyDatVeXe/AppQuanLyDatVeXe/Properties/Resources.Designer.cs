@@ -83,6 +83,16 @@ namespace AppQuanLyDatVeXe.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_add_26 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-add-26", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_bill_26 {
             get {
                 object obj = ResourceManager.GetObject("icons8-bill-26", resourceCulture);
@@ -103,9 +113,49 @@ namespace AppQuanLyDatVeXe.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_employee_50 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-employee-50", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_exit_26 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-exit-26", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_exit_26__1_ {
+            get {
+                object obj = ResourceManager.GetObject("icons8-exit-26 (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_eye_50 {
             get {
                 object obj = ResourceManager.GetObject("icons8-eye-50", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_find_26 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-find-26", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -166,6 +216,16 @@ namespace AppQuanLyDatVeXe.Properties {
         internal static System.Drawing.Bitmap icons8_ticket_26 {
             get {
                 object obj = ResourceManager.GetObject("icons8-ticket-26", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_user_26 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-user-26", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

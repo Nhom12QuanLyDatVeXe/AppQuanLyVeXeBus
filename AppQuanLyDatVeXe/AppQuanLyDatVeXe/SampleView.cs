@@ -16,15 +16,5 @@ namespace AppQuanLyDatVeXe
         {
             InitializeComponent();
         }
-
-        public virtual void btnAdd_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        public virtual void txtSearch_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }
