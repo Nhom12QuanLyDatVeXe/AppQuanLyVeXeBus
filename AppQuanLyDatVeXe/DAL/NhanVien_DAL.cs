@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DAL
 {
-    internal class NhanVien_DAL
+    public class NhanVien_DAL
     {
     }
 }

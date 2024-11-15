@@ -12,6 +12,5 @@ namespace DTO
         public string TaiXeChinh { get; set; }
         public string TaiXephu { get; set; }
         public string SoGhe { get; set; }
-        public string MaTuyenXe { get; set; }
     }
 }
