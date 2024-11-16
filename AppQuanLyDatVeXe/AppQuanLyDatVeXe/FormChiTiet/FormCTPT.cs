@@ -8,19 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace AppQuanLyDatVeXe
+namespace AppQuanLyDatVeXe.FormChiTiet
 {
-    public partial class FormThongTinKhachHang : Form
+    public partial class FormCTPT : Sample
     {
-        public FormThongTinKhachHang()
+        public FormCTPT()
         {
             InitializeComponent();
         }
 
-        private void btnThem_Click(object sender, EventArgs e)
+        private void btnDong_Click(object sender, EventArgs e)
         {
-            FormCTKH ctkh= new FormCTKH();
-            ctkh.ShowDialog();
+            this.Close();
         }
     }
 }

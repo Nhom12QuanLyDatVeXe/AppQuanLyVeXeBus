@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AppQuanLyDatVeXe.FormChiTiet;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,12 @@ namespace AppQuanLyDatVeXe
         public FormChuyenXe()
         {
             InitializeComponent();
+        }
+
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            FormCTCX ctcx=new FormCTCX();
+            ctcx.ShowDialog();
         }
     }
 }

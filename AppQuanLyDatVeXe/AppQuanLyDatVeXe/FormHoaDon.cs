@@ -16,5 +16,11 @@ namespace AppQuanLyDatVeXe
         {
             InitializeComponent();
         }
+
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            FormCTHD cthd=new FormCTHD();
+            cthd.ShowDialog();
+        }
     }
 }

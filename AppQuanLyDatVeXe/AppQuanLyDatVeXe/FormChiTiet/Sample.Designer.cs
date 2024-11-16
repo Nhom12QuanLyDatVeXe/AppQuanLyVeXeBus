@@ -41,7 +41,6 @@
             this.KeyPreview = true;
             this.Name = "Sample";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Sample";
             this.Load += new System.EventHandler(this.Sample_Load);
             this.ResumeLayout(false);
 

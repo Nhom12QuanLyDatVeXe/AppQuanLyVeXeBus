@@ -1,4 +1,5 @@
 ﻿
+using AppQuanLyDatVeXe.FormChiTiet;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,18 +19,16 @@ namespace AppQuanLyDatVeXe
             InitializeComponent();
         }
 
-        private void guna2Button3_Click(object sender, EventArgs e)
-        {
-       
-        }
-
-        private void guna2DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-        }
 
         private void FormNhanVien_Load(object sender, EventArgs e)
         {
             
+        }
+
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            FormCTNV ctnv=new FormCTNV();
+            ctnv.ShowDialog();
         }
     }
 }
