@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace AppQuanLyDatVeXe
 {
-    public partial class SampleAdd : Sample
+    public partial class FormCTKH : Sample
     {
-        public SampleAdd()
+        public FormCTKH()
         {
             InitializeComponent();
         }
@@ -25,6 +25,11 @@ namespace AppQuanLyDatVeXe
         public virtual void  btnDong_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void guna2ComboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

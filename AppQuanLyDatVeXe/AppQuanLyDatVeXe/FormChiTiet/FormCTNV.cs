@@ -8,16 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-
-namespace AppQuanLyDatVeXe.View
+namespace AppQuanLyDatVeXe.FormChiTiet
 {
-    public partial class frmUserView : Form
+    public partial class FormCTNV : Sample
     {
-        public frmUserView()
+        public FormCTNV()
         {
             InitializeComponent();
         }
 
-
+        private void btnDong_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
