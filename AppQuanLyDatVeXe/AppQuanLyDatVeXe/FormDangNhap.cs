@@ -46,9 +46,13 @@ namespace AppQuanLyDatVeXe
                 lblThongBaoPass.Text = "Vui lòng nhập mật khẩu"; return;
             }
             TaiKhoan_DTO acc = new TaiKhoan_DTO();
+            acc.UserName = txtTenUser.Text;
+            acc.PassWord = txtPass.Text;
             if(tK_BUL.CheckLogin(acc) == 1)
             {
-                FormMain main = new FormMain();
+                TaiKhoan_DTO acc_login = new TaiKhoan_DTO();
+                acc_login = tK_BUL.getAccount(acc.UserName);
+                FormMain main = new FormMain(acc_login);
                 main.ShowDialog();
                 this.Hide();
                 this.Visible = false;
