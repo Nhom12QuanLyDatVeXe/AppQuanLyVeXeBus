@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DTO;
+using BUL;
 
 namespace AppQuanLyDatVeXe
 {
@@ -16,7 +18,7 @@ namespace AppQuanLyDatVeXe
         {
             InitializeComponent();
         }
-
+        TaiKhoan_BUL tK_BUL = new TaiKhoan_BUL();
         private void txtSDT_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
@@ -36,17 +38,21 @@ namespace AppQuanLyDatVeXe
             if (txtTenUser.Text.Length == 0)
             {
                 lblThongBaoSDT.Visible = true;
-                lblThongBaoSDT.Text = "Vui lòng nhập tên đăng nhập";
-            }
-            else
-                return;
+                lblThongBaoSDT.Text = "Vui lòng nhập tên đăng nhập"; return;
+            }          
             if (txtPass.Text.Length == 0)
             {
                 lblThongBaoPass.Visible = true;
-                lblThongBaoPass.Text = "Vui lòng nhập mật khẩu";
+                lblThongBaoPass.Text = "Vui lòng nhập mật khẩu"; return;
             }
-            else
-                return;
+            TaiKhoan_DTO acc = new TaiKhoan_DTO();
+            if(tK_BUL.CheckLogin(acc) == 1)
+            {
+                FormMain main = new FormMain();
+                main.ShowDialog();
+                this.Hide();
+                this.Visible = false;
+            }
         }
 
         private void linkDK_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

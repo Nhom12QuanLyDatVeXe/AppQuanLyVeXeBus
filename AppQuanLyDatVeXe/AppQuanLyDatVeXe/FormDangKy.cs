@@ -38,6 +38,7 @@ namespace AppQuanLyDatVeXe
                 lblThongBaoNhapLai.Visible = true;
                 lblThongBaoNhapLai.Text = "Vui lòng nhập lại mật khẩu";
             }
+
         }
 
         private void ckcHienPass_CheckedChanged(object sender, EventArgs e)
