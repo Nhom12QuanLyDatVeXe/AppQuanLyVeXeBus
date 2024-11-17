@@ -10,7 +10,7 @@ CREATE TABLE TaiKhoan
 	UserName varchar(20) unique not null,
 	Pass varchar(30) not null,
 	Quyen varchar(10) not null,
-	TrangThai varchar(20) not null
+	TrangThai nvarchar(20) not null
 );
 
 -- Bảng Khách hàng

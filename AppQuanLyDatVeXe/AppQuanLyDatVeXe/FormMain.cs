@@ -7,14 +7,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DTO;
+using BUL;
 
 namespace AppQuanLyDatVeXe
 {
     public partial class FormMain : Form
     {
-        public FormMain()
+        TaiKhoan_DTO acc = new TaiKhoan_DTO();
+        public FormMain(TaiKhoan_DTO login_acc)
         {
             InitializeComponent();
+            acc = login_acc;
+            lblTenUser.Text = acc.UserName;
         }
         public void AddControls(Form f)
         {
