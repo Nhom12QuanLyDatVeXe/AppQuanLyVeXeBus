@@ -11,6 +11,6 @@ namespace DTO
         public string BienSoXe { get; set; }
         public string TaiXeChinh { get; set; }
         public string TaiXephu { get; set; }
-        public string SoGhe { get; set; }
+        public int? SoGhe { get; set; }
     }
 }

@@ -63,6 +63,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="HoaDon_BUL.cs" />
+    <Compile Include="KhachHang_BUL.cs" />
+    <Compile Include="NhanVien_BUL.cs" />
+    <Compile Include="PhieuDatVe_BUL.cs" />
+    <Compile Include="PhuongTien_BUL.cs" />
+    <Compile Include="TuyenXe_BUL.cs" />
     <Compile Include="TaiKhoan_BUL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

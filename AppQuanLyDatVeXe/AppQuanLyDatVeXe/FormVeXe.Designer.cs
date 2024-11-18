@@ -49,7 +49,7 @@
             // btnThem
             // 
             this.btnThem.AutoRoundedCorners = true;
-            this.btnThem.BorderRadius = 31;
+            this.btnThem.BorderRadius = 26;
             this.btnThem.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.ToogleButton;
             this.btnThem.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnThem.CustomizableEdges.TopLeft = false;
@@ -58,15 +58,16 @@
             this.btnThem.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnThem.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnThem.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(147)))), ((int)(((byte)(81)))));
-            this.btnThem.Font = new System.Drawing.Font("Poppins", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThem.ForeColor = System.Drawing.Color.White;
             this.btnThem.Image = global::AppQuanLyDatVeXe.Properties.Resources.icons8_add_26;
             this.btnThem.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnThem.ImageOffset = new System.Drawing.Point(10, 0);
-            this.btnThem.Location = new System.Drawing.Point(53, 76);
+            this.btnThem.Location = new System.Drawing.Point(44, 63);
+            this.btnThem.Margin = new System.Windows.Forms.Padding(2);
             this.btnThem.Name = "btnThem";
-            this.btnThem.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnThem.Size = new System.Drawing.Size(206, 65);
+            this.btnThem.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.btnThem.Size = new System.Drawing.Size(172, 54);
             this.btnThem.TabIndex = 9;
             this.btnThem.Text = "Thêm";
             this.btnThem.TextOffset = new System.Drawing.Point(10, 0);
@@ -75,10 +76,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(36, 21);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(30, 18);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(240, 34);
+            this.label1.Size = new System.Drawing.Size(224, 29);
             this.label1.TabIndex = 0;
             this.label1.Text = "> Danh sách vé xe";
             // 
@@ -89,8 +91,9 @@
             this.guna2Panel1.Controls.Add(this.label1);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(1451, 154);
+            this.guna2Panel1.Size = new System.Drawing.Size(1209, 128);
             this.guna2Panel1.TabIndex = 14;
             // 
             // txtTimKiem
@@ -106,21 +109,21 @@
             this.txtTimKiem.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtTimKiem.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtTimKiem.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTimKiem.Font = new System.Drawing.Font("Poppins", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTimKiem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtTimKiem.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(118)))), ((int)(((byte)(49)))));
             this.txtTimKiem.IconRight = global::AppQuanLyDatVeXe.Properties.Resources.icons8_find_26;
             this.txtTimKiem.IconRightCursor = System.Windows.Forms.Cursors.Hand;
             this.txtTimKiem.IconRightOffset = new System.Drawing.Point(20, 0);
             this.txtTimKiem.IconRightSize = new System.Drawing.Size(30, 30);
-            this.txtTimKiem.Location = new System.Drawing.Point(931, 83);
-            this.txtTimKiem.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.txtTimKiem.Location = new System.Drawing.Point(776, 69);
+            this.txtTimKiem.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.txtTimKiem.Name = "txtTimKiem";
             this.txtTimKiem.PasswordChar = '\0';
             this.txtTimKiem.PlaceholderForeColor = System.Drawing.Color.Black;
             this.txtTimKiem.PlaceholderText = "";
             this.txtTimKiem.SelectedText = "";
-            this.txtTimKiem.Size = new System.Drawing.Size(520, 65);
+            this.txtTimKiem.Size = new System.Drawing.Size(433, 54);
             this.txtTimKiem.TabIndex = 8;
             this.txtTimKiem.TextOffset = new System.Drawing.Point(20, 0);
             // 
@@ -156,12 +159,13 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvDSNV.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvDSNV.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvDSNV.Location = new System.Drawing.Point(40, 168);
+            this.dgvDSNV.Location = new System.Drawing.Point(33, 140);
+            this.dgvDSNV.Margin = new System.Windows.Forms.Padding(2);
             this.dgvDSNV.Name = "dgvDSNV";
             this.dgvDSNV.RowHeadersVisible = false;
             this.dgvDSNV.RowHeadersWidth = 62;
             this.dgvDSNV.RowTemplate.Height = 28;
-            this.dgvDSNV.Size = new System.Drawing.Size(1411, 829);
+            this.dgvDSNV.Size = new System.Drawing.Size(1176, 691);
             this.dgvDSNV.TabIndex = 15;
             this.dgvDSNV.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvDSNV.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -187,24 +191,28 @@
             // 
             // maPhieu
             // 
+            this.maPhieu.DataPropertyName = "MaPhieu";
             this.maPhieu.HeaderText = "Mã phiếu";
             this.maPhieu.MinimumWidth = 8;
             this.maPhieu.Name = "maPhieu";
             // 
             // slGhe
             // 
+            this.slGhe.DataPropertyName = "SoLuongGhe";
             this.slGhe.HeaderText = "Số lượng ghế";
             this.slGhe.MinimumWidth = 8;
             this.slGhe.Name = "slGhe";
             // 
             // tongTien
             // 
+            this.tongTien.DataPropertyName = "TongTien";
             this.tongTien.HeaderText = "Tổng tiền";
             this.tongTien.MinimumWidth = 8;
             this.tongTien.Name = "tongTien";
             // 
             // maKH
             // 
+            this.maKH.DataPropertyName = "MaKH";
             this.maKH.HeaderText = "Mã khách hàng";
             this.maKH.MinimumWidth = 8;
             this.maKH.Name = "maKH";
@@ -233,15 +241,17 @@
             // 
             // FormVeXe
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(144F, 144F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1451, 1030);
+            this.ClientSize = new System.Drawing.Size(1209, 858);
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.dgvDSNV);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormVeXe";
             this.Text = "FormVeXe";
+            this.Load += new System.EventHandler(this.FormVeXe_Load);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSNV)).EndInit();
