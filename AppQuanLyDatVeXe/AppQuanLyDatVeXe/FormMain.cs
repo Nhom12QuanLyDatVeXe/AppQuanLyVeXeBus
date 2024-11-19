@@ -78,5 +78,12 @@ namespace AppQuanLyDatVeXe
         {
 
         }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            FormDangNhap dn = new FormDangNhap();
+            dn.Show();
+            this.Close();
+        }
     }
 }

@@ -31,8 +31,8 @@ namespace AppQuanLyDatVeXe
         KhachHang_BUL KH_BUL = new KhachHang_BUL();
         public void LoadKH()
         {
-            dgvDSNV.DataSource = null;
-            dgvDSNV.DataSource = KH_BUL.GetKhachHang();
+            dgvDSKH.DataSource = null;
+            dgvDSKH.DataSource = KH_BUL.GetKhachHang();
         }
     }
 }

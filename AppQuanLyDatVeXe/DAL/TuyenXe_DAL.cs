@@ -23,18 +23,18 @@ namespace DAL
 
                           MaTuyenXe = tx.MaTuyenXe,
                           TenTuyen = tx.TenTuyen,
-                          ThoiGianDi = tx.ThoiGianDi.Value,
+                          ThoiGianDi = tx.ThoiGianDi.Value, // Default if null
                           DiemDi = tx.DiemDi,
                           DiemDen = tx.DiemDen,
-                          //GioXuatBen = tx.GioXuatBen.Value.Hours,
-                          GioDenNoi = tx.GioXuatBen.HasValue? DateTime.Today.Add(new TimeSpan(tx.GioXuatBen.Value.Hours, 0, 0)) : (DateTime?)null,
+                          GioXuatBen = tx.GioXuatBen.Value,
+                          GioDenNoi = tx.GioDenNoi.Value,
                           KhoangCach = tx.KhoangCach,
                           DonGia = tx.DonGia,
                           BienSoXe = tx.BienSoXe,
 
                       };
 
-            
+
             return tbl.ToList();
         }
     }

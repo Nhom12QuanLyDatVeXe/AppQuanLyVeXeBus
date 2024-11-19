@@ -64,7 +64,7 @@
             this.btnThem.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnThem.ImageOffset = new System.Drawing.Point(10, 0);
             this.btnThem.Location = new System.Drawing.Point(44, 63);
-            this.btnThem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnThem.Margin = new System.Windows.Forms.Padding(2);
             this.btnThem.Name = "btnThem";
             this.btnThem.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
             this.btnThem.Size = new System.Drawing.Size(172, 54);
@@ -91,9 +91,9 @@
             this.guna2Panel1.Controls.Add(this.label1);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
-            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(1209, 128);
+            this.guna2Panel1.Size = new System.Drawing.Size(1352, 128);
             this.guna2Panel1.TabIndex = 10;
             // 
             // txtTimKiem
@@ -160,12 +160,12 @@
             this.dgvDSPT.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvDSPT.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvDSPT.Location = new System.Drawing.Point(33, 140);
-            this.dgvDSPT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvDSPT.Margin = new System.Windows.Forms.Padding(2);
             this.dgvDSPT.Name = "dgvDSPT";
             this.dgvDSPT.RowHeadersVisible = false;
             this.dgvDSPT.RowHeadersWidth = 62;
             this.dgvDSPT.RowTemplate.Height = 28;
-            this.dgvDSPT.Size = new System.Drawing.Size(1176, 691);
+            this.dgvDSPT.Size = new System.Drawing.Size(1341, 1000);
             this.dgvDSPT.TabIndex = 11;
             this.dgvDSPT.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvDSPT.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -244,11 +244,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1209, 858);
+            this.ClientSize = new System.Drawing.Size(1352, 1000);
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.dgvDSPT);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormPhuongTien";
             this.Text = "FormPhuongTien";
             this.Load += new System.EventHandler(this.FormPhuongTien_Load);

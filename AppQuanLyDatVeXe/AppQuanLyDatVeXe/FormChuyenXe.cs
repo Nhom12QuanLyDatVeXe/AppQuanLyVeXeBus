@@ -34,8 +34,17 @@ namespace AppQuanLyDatVeXe
         }
         public void LoadCX()
         {
-            dgvDSNV.DataSource = null;
-            dgvDSNV.DataSource = CX_BUL.GetTuyenXe();
+            dgvDSTX.DataSource = null;
+            dgvDSTX.DataSource = CX_BUL.GetTuyenXe();
+        }
+
+        private void dgvDSTX_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (dgvDSTX.Columns[e.ColumnIndex].Name == "ThoiGianDi" && e.Value is DateTime dateTime)
+            {
+                e.Value = dateTime.ToString("dd/MM/yyyy");
+                e.FormattingApplied = true;
+            }
         }
     }
 }
