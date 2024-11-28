@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace DTO
 {
-    internal class PhieuDatVe_DTO
+    public class PhieuDatVe_DTO
     {
         public int MaPhieu { get; set; }
         public string MaKH { get; set; }
-        public int SoLuongGhe { get; set; }
-        public float TongTien { get; set; }
+        public int? SoLuongGhe { get; set; }
+        public decimal?TongTien { get; set; }
     }
 }

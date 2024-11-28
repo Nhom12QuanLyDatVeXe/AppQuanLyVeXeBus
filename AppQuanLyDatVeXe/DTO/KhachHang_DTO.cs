@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DTO
 {
-    internal class KhachHang_DTO
+    public class KhachHang_DTO
     {
         public string MaKH {  get; set; }
         public string HoTen { get; set; }

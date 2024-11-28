@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BUL;
 
 namespace AppQuanLyDatVeXe
 {
@@ -22,6 +23,19 @@ namespace AppQuanLyDatVeXe
         {
             FormCTVX ctvx=  new FormCTVX();
             ctvx.ShowDialog();
+        }
+
+        private void FormVeXe_Load(object sender, EventArgs e)
+        {
+            LoadPDV();
+        }
+
+        PhieuDatVe_BUL PDV_BUL = new PhieuDatVe_BUL();
+       
+        public void LoadPDV()
+        {
+            dgvDSNV.DataSource = null;
+            dgvDSNV.DataSource = PDV_BUL.GetPhieuDatVe();
         }
     }
 }

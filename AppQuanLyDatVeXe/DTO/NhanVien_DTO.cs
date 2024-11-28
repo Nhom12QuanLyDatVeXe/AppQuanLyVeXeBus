@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DTO
 {
-    internal class NhanVien_DTO
+    public class NhanVien_DTO
     {
         public string MaNV { get; set; }
         public string HoTen { get; set; }
@@ -15,8 +15,8 @@ namespace DTO
         public string GioiTinh { get; set; }
         public string CCCD { get; set; }
         public string SDT { get; set; }
-        public float Luong { get; set; }
+        public decimal? Luong { get; set; }
         public string TrangThai { get; set; }
-        public int MaChucVu { get; set; }
+        public int ?MaChucVu { get; set; }
     }
 }
