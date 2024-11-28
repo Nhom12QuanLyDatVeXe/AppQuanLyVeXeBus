@@ -29,5 +29,21 @@ namespace DAL
 
             return tbl.ToList();
         }
+
+        public int insert(PhuongTien_DTO pt)
+        {
+            try
+            {
+                PhuongTien phuongtien = new PhuongTien { 
+                BienSoXe = pt.BienSoXe,
+                TaiXeChinh = pt.TaiXeChinh,
+                TaiXePhu = pt.TaiXephu,
+                SoGhe = pt.SoGhe};
+                qldvx.PhuongTiens.InsertOnSubmit(phuongtien);
+                qldvx.SubmitChanges();
+                return 1;
+            }
+            catch { return -1; }
+        }
     }
 }

@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DTO;
+using BUL;
 
 namespace AppQuanLyDatVeXe.FormChiTiet
 {
@@ -28,6 +30,14 @@ namespace AppQuanLyDatVeXe.FormChiTiet
             dtpGioDi.ShowUpDown = true;
             DateTime myDate = dtpNgayDi.Value.Date +
                     dtpGioDi.Value.TimeOfDay;
+        }
+
+        private void btnLuu_Click(object sender, EventArgs e)
+        {
+            TuyenXe_DTO tx = new TuyenXe_DTO();
+            tx.MaTuyenXe = int.Parse(txtMaChuyen.Text);
+            tx.TenTuyen = txtTenChuyen.Text;
+
         }
     }
 }

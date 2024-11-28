@@ -26,5 +26,10 @@ namespace BUL
                 throw;
             }
         }
+
+        public int insert(PhuongTien_DTO pt)
+        {
+            return dal.insert(pt);
+        }
     }
 }
