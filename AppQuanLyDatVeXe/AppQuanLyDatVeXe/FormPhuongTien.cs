@@ -21,6 +21,7 @@ namespace AppQuanLyDatVeXe
         private void btnThem_Click(object sender, EventArgs e)
         {
             FormCTPT ctpt=new FormCTPT();
+            ctpt.Owner = this;
             ctpt.ShowDialog();
         }
 
@@ -32,8 +33,25 @@ namespace AppQuanLyDatVeXe
 
         public void loadPT()
         {
-            dgvDSPT.DataSource = null;
-            dgvDSPT.DataSource = PT_BUL.GetPhuongTien();
+            BindingSource bindingSource = new BindingSource();
+            bindingSource.DataSource = PT_BUL.GetPhuongTien();
+            dgvDSPT.DataSource = bindingSource;
+
+            //dgvDSPT.DataSource = null;
+            //dgvDSPT.DataSource = PT_BUL.GetPhuongTien();
+
+        }
+
+        private void dgvDSPT_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0) 
+            {
+                if (dgvDSPT.Columns[e.RowIndex].Name == "ColumnSua")
+                {
+                    DataGridViewRow row = dgvDSPT.Rows[e.RowIndex];
+                    
+                }
+            }
         }
     }
 }

@@ -24,5 +24,10 @@ namespace BUL
                 throw;
             }
         }
+
+        public NhanVien_DTO getNhanVien(string ma)
+        {
+            return dal.getNhanVien(ma);
+        }
     }
 }

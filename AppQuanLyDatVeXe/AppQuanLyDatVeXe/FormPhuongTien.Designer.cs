@@ -40,8 +40,8 @@
             this.taiXeChinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.taiXePhu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.soGhe = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.ColumnSua = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.ColumnXoa = new System.Windows.Forms.DataGridViewButtonColumn();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSPT)).BeginInit();
             this.SuspendLayout();
@@ -49,7 +49,7 @@
             // btnThem
             // 
             this.btnThem.AutoRoundedCorners = true;
-            this.btnThem.BorderRadius = 26;
+            this.btnThem.BorderRadius = 20;
             this.btnThem.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.ToogleButton;
             this.btnThem.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnThem.CustomizableEdges.TopLeft = false;
@@ -63,11 +63,11 @@
             this.btnThem.Image = global::AppQuanLyDatVeXe.Properties.Resources.icons8_add_26;
             this.btnThem.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnThem.ImageOffset = new System.Drawing.Point(10, 0);
-            this.btnThem.Location = new System.Drawing.Point(44, 63);
+            this.btnThem.Location = new System.Drawing.Point(35, 50);
             this.btnThem.Margin = new System.Windows.Forms.Padding(2);
             this.btnThem.Name = "btnThem";
-            this.btnThem.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
-            this.btnThem.Size = new System.Drawing.Size(172, 54);
+            this.btnThem.Padding = new System.Windows.Forms.Padding(6, 0, 0, 0);
+            this.btnThem.Size = new System.Drawing.Size(138, 43);
             this.btnThem.TabIndex = 9;
             this.btnThem.Text = "Thêm";
             this.btnThem.TextOffset = new System.Drawing.Point(10, 0);
@@ -77,10 +77,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(30, 18);
+            this.label1.Location = new System.Drawing.Point(24, 14);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(300, 29);
+            this.label1.Size = new System.Drawing.Size(245, 24);
             this.label1.TabIndex = 0;
             this.label1.Text = "> Danh sách phương tiện";
             // 
@@ -93,7 +93,7 @@
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(1352, 128);
+            this.guna2Panel1.Size = new System.Drawing.Size(1082, 102);
             this.guna2Panel1.TabIndex = 10;
             // 
             // txtTimKiem
@@ -116,14 +116,14 @@
             this.txtTimKiem.IconRightCursor = System.Windows.Forms.Cursors.Hand;
             this.txtTimKiem.IconRightOffset = new System.Drawing.Point(20, 0);
             this.txtTimKiem.IconRightSize = new System.Drawing.Size(30, 30);
-            this.txtTimKiem.Location = new System.Drawing.Point(776, 69);
-            this.txtTimKiem.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.txtTimKiem.Location = new System.Drawing.Point(621, 55);
+            this.txtTimKiem.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.txtTimKiem.Name = "txtTimKiem";
             this.txtTimKiem.PasswordChar = '\0';
             this.txtTimKiem.PlaceholderForeColor = System.Drawing.Color.Black;
             this.txtTimKiem.PlaceholderText = "";
             this.txtTimKiem.SelectedText = "";
-            this.txtTimKiem.Size = new System.Drawing.Size(433, 54);
+            this.txtTimKiem.Size = new System.Drawing.Size(346, 43);
             this.txtTimKiem.TabIndex = 8;
             this.txtTimKiem.TextOffset = new System.Drawing.Point(20, 0);
             // 
@@ -148,8 +148,8 @@
             this.taiXeChinh,
             this.taiXePhu,
             this.soGhe,
-            this.Column1,
-            this.Column2});
+            this.ColumnSua,
+            this.ColumnXoa});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -159,13 +159,13 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvDSPT.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvDSPT.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvDSPT.Location = new System.Drawing.Point(33, 140);
+            this.dgvDSPT.Location = new System.Drawing.Point(26, 112);
             this.dgvDSPT.Margin = new System.Windows.Forms.Padding(2);
             this.dgvDSPT.Name = "dgvDSPT";
             this.dgvDSPT.RowHeadersVisible = false;
             this.dgvDSPT.RowHeadersWidth = 62;
             this.dgvDSPT.RowTemplate.Height = 28;
-            this.dgvDSPT.Size = new System.Drawing.Size(1341, 1000);
+            this.dgvDSPT.Size = new System.Drawing.Size(1056, 800);
             this.dgvDSPT.TabIndex = 11;
             this.dgvDSPT.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvDSPT.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -188,6 +188,7 @@
             this.dgvDSPT.ThemeStyle.RowsStyle.Height = 28;
             this.dgvDSPT.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvDSPT.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dgvDSPT.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDSPT_CellContentClick);
             // 
             // bienSo
             // 
@@ -217,34 +218,34 @@
             this.soGhe.MinimumWidth = 8;
             this.soGhe.Name = "soGhe";
             // 
-            // Column1
+            // ColumnSua
             // 
-            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Column1.FillWeight = 50F;
-            this.Column1.HeaderText = "";
-            this.Column1.MinimumWidth = 8;
-            this.Column1.Name = "Column1";
-            this.Column1.Text = "Sửa";
-            this.Column1.UseColumnTextForButtonValue = true;
-            this.Column1.Width = 40;
+            this.ColumnSua.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.ColumnSua.FillWeight = 50F;
+            this.ColumnSua.HeaderText = "";
+            this.ColumnSua.MinimumWidth = 8;
+            this.ColumnSua.Name = "ColumnSua";
+            this.ColumnSua.Text = "Sửa";
+            this.ColumnSua.UseColumnTextForButtonValue = true;
+            this.ColumnSua.Width = 40;
             // 
-            // Column2
+            // ColumnXoa
             // 
-            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Column2.FillWeight = 50F;
-            this.Column2.HeaderText = "";
-            this.Column2.MinimumWidth = 8;
-            this.Column2.Name = "Column2";
-            this.Column2.Text = "Xóa";
-            this.Column2.UseColumnTextForButtonValue = true;
-            this.Column2.Width = 40;
+            this.ColumnXoa.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.ColumnXoa.FillWeight = 50F;
+            this.ColumnXoa.HeaderText = "";
+            this.ColumnXoa.MinimumWidth = 8;
+            this.ColumnXoa.Name = "ColumnXoa";
+            this.ColumnXoa.Text = "Xóa";
+            this.ColumnXoa.UseColumnTextForButtonValue = true;
+            this.ColumnXoa.Width = 40;
             // 
             // FormPhuongTien
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1352, 1000);
+            this.ClientSize = new System.Drawing.Size(1082, 800);
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.dgvDSPT);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -270,7 +271,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn taiXeChinh;
         private System.Windows.Forms.DataGridViewTextBoxColumn taiXePhu;
         private System.Windows.Forms.DataGridViewTextBoxColumn soGhe;
-        private System.Windows.Forms.DataGridViewButtonColumn Column1;
-        private System.Windows.Forms.DataGridViewButtonColumn Column2;
+        private System.Windows.Forms.DataGridViewButtonColumn ColumnSua;
+        private System.Windows.Forms.DataGridViewButtonColumn ColumnXoa;
     }
 }
