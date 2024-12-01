@@ -45,16 +45,16 @@ namespace DAL
                 TuyenXe newTuyenXe = new TuyenXe
                 {
 
-                        MaTuyenXe = tuyenxe.MaTuyenXe,
-                        TenTuyen = tuyenxe.TenTuyen,
-                        ThoiGianDi = tuyenxe.ThoiGianDi,
-                        DiemDi = tuyenxe.DiemDi,
-                        DiemDen = tuyenxe.DiemDen,
-                        GioDenNoi = tuyenxe.GioDenNoi,
-                        GioXuatBen = tuyenxe.GioXuatBen,
-                        KhoangCach = tuyenxe.KhoangCach,
-                        DonGia= tuyenxe.DonGia,
-                        BienSoXe = tuyenxe.BienSoXe,
+                    MaTuyenXe = tuyenxe.MaTuyenXe,
+                    TenTuyen = tuyenxe.TenTuyen,
+                    ThoiGianDi = tuyenxe.ThoiGianDi,
+                    DiemDi = tuyenxe.DiemDi,
+                    DiemDen = tuyenxe.DiemDen,
+                    GioDenNoi = tuyenxe.GioDenNoi,
+                    GioXuatBen = tuyenxe.GioXuatBen,
+                    KhoangCach = tuyenxe.KhoangCach,
+                    DonGia = tuyenxe.DonGia,
+                    BienSoXe = tuyenxe.BienSoXe,
                 };
 
 
@@ -72,4 +72,5 @@ namespace DAL
                 return false;
             }
         }
+    }
 }

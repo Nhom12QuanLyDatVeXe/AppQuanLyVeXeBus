@@ -38,13 +38,15 @@ namespace AppQuanLyDatVeXe.FormChiTiet
             try
             {
 
-                string maTx = txtMaChuyen.Text.Trim();
+                int maTx =int.Parse( txtMaChuyen.Text.Trim());
                 string tenTuyen = txtTenChuyen.Text.Trim();
-                int diemDi =int.Parse( cboDiemDen.SelectedItem?.ToString());
-                int diemDen = int.Parse(cboDiemDen.SelectedItem?.ToString());
+                string diemDi =cboDiemDen.SelectedItem?.ToString();
+                string diemDen = cboDiemDen.SelectedItem?.ToString();
                 DateTime ngayDi = dtpNgayDi.Value;
-                DateTime gioxuatBen= dtpGioDi.Value;
-
+                TimeSpan gioxuatBen = dtpGioDi.Value.TimeOfDay;
+                int khoangcach = int.Parse(txtKhoangcach.Text.Trim());
+                decimal donGia = decimal.Parse(txtDonGia.Text.Trim());
+                string biensoxe = txtBienso.Text.Trim();
                 
 
 
@@ -61,7 +63,15 @@ namespace AppQuanLyDatVeXe.FormChiTiet
 
                 TuyenXe_DTO tx = new TuyenXe_DTO
                 {
-
+                    MaTuyenXe = maTx,
+                    TenTuyen = tenTuyen,
+                    DiemDi = diemDi,
+                    DiemDen = diemDen,
+                    ThoiGianDi = ngayDi,
+                    GioXuatBen = gioxuatBen,
+                    KhoangCach = khoangcach,
+                    DonGia = donGia,
+                    BienSoXe = biensoxe,
                 };
 
 

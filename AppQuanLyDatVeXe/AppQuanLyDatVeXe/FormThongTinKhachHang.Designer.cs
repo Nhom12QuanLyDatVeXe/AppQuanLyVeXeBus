@@ -42,7 +42,7 @@
             this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gioiTinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.xoa = new System.Windows.Forms.DataGridViewButtonColumn();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSKH)).BeginInit();
             this.SuspendLayout();
@@ -151,7 +151,7 @@
             this.email,
             this.gioiTinh,
             this.Column1,
-            this.Column2});
+            this.xoa});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -237,16 +237,16 @@
             this.Column1.UseColumnTextForButtonValue = true;
             this.Column1.Width = 40;
             // 
-            // Column2
+            // xoa
             // 
-            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Column2.FillWeight = 50F;
-            this.Column2.HeaderText = "";
-            this.Column2.MinimumWidth = 8;
-            this.Column2.Name = "Column2";
-            this.Column2.Text = "Xóa";
-            this.Column2.UseColumnTextForButtonValue = true;
-            this.Column2.Width = 40;
+            this.xoa.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.xoa.FillWeight = 50F;
+            this.xoa.HeaderText = "";
+            this.xoa.MinimumWidth = 8;
+            this.xoa.Name = "xoa";
+            this.xoa.Text = "Xóa";
+            this.xoa.UseColumnTextForButtonValue = true;
+            this.xoa.Width = 40;
             // 
             // FormThongTinKhachHang
             // 
@@ -281,6 +281,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn email;
         private System.Windows.Forms.DataGridViewTextBoxColumn gioiTinh;
         private System.Windows.Forms.DataGridViewButtonColumn Column1;
-        private System.Windows.Forms.DataGridViewButtonColumn Column2;
+        private System.Windows.Forms.DataGridViewButtonColumn xoa;
     }
 }
