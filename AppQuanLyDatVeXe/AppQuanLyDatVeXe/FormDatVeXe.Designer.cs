@@ -33,7 +33,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
-            this.guna2BorderlessForm2 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.btnTimKiem = new Guna.UI2.WinForms.Guna2Button();
             this.label7 = new System.Windows.Forms.Label();
@@ -65,12 +64,6 @@
             this.guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
             this.guna2BorderlessForm1.TransparentWhileDrag = true;
             // 
-            // guna2BorderlessForm2
-            // 
-            this.guna2BorderlessForm2.ContainerControl = this;
-            this.guna2BorderlessForm2.DockIndicatorTransparencyValue = 0.6D;
-            this.guna2BorderlessForm2.TransparentWhileDrag = true;
-            // 
             // guna2Panel1
             // 
             this.guna2Panel1.Controls.Add(this.btnTimKiem);
@@ -83,9 +76,8 @@
             this.guna2Panel1.Controls.Add(this.label1);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
-            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(1309, 157);
+            this.guna2Panel1.Size = new System.Drawing.Size(1946, 139);
             this.guna2Panel1.TabIndex = 14;
             // 
             // btnTimKiem
@@ -195,10 +187,9 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(24, 14);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(36, 22);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(300, 24);
+            this.label1.Size = new System.Drawing.Size(426, 32);
             this.label1.TabIndex = 0;
             this.label1.Text = "> Danh sách chuyến xe còn vé";
             // 
@@ -239,13 +230,12 @@
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvDSTX.DefaultCellStyle = dataGridViewCellStyle6;
             this.dgvDSTX.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvDSTX.Location = new System.Drawing.Point(28, 161);
-            this.dgvDSTX.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvDSTX.Location = new System.Drawing.Point(42, 158);
             this.dgvDSTX.Name = "dgvDSTX";
             this.dgvDSTX.RowHeadersVisible = false;
             this.dgvDSTX.RowHeadersWidth = 62;
             this.dgvDSTX.RowTemplate.Height = 28;
-            this.dgvDSTX.Size = new System.Drawing.Size(945, 517);
+            this.dgvDSTX.Size = new System.Drawing.Size(1418, 795);
             this.dgvDSTX.TabIndex = 15;
             this.dgvDSTX.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvDSTX.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -353,12 +343,14 @@
             // 
             // FormDatVeXe
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1309, 689);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(1946, 1060);
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.dgvDSTX);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FormDatVeXe";
             this.Text = "FormDatVeXe";
             this.Load += new System.EventHandler(this.FormDatVeXe_Load);
@@ -372,7 +364,6 @@
         #endregion
 
         private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
-        private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm2;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2DataGridView dgvDSTX;
