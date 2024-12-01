@@ -20,8 +20,9 @@ CREATE TABLE KhachHang (
     SDT NVARCHAR(15),
     Email NVARCHAR(100),
     GioiTinh NVARCHAR(10),
-	constraint FK_KH_TK foreign Key (MaKH) references TaiKhoan(ID)
+	
 );
+
 
 CREATE TABLE ChucVu
 (
@@ -79,7 +80,7 @@ CREATE TABLE TuyenXe (
 
 -- Bảng Phiếu đặt vé
 CREATE TABLE PhieuDatVe (
-    MaPhieu INT PRIMARY KEY,
+    MaPhieu CHAR(10) PRIMARY KEY,
     SoLuongGhe INT,
     TongTien DECIMAL(18, 2),
 	MaKH CHAR(7),
@@ -89,7 +90,7 @@ CREATE TABLE PhieuDatVe (
 
 -- Bảng Chi tiết đặt vé (Liên kết giữa Ghế và Phiếu đặt vé)
 CREATE TABLE ChiTietDatVe (
-    MaPhieu INT,
+    MaPhieu CHAR(10),
     MaTuyenXe INT,
 	MaGhe char(5), --SA01 -> ghế trên, SB01 -> ghế dưới
 	DonGia Money,
@@ -101,7 +102,7 @@ CREATE TABLE ChiTietDatVe (
 -- Bảng Hóa đơn
 CREATE TABLE HoaDon (
     SoHD INT PRIMARY KEY,
-    MaPhieu INT,
+    MaPhieu CHAR(10),
     ThanhTien DECIMAL(18, 2),
     TrangThai NVARCHAR(20),
 	PhuongThucTT NVARCHAR(20),

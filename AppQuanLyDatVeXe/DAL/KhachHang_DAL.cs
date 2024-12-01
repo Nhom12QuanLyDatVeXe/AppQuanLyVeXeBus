@@ -29,5 +29,35 @@ namespace DAL
 
             return tbl.ToList();
         }
+
+        public bool themKH(KhachHang_DTO khachHang)
+        {
+            try
+            {
+                KhachHang newKhachHang = new KhachHang
+                {
+                    MaKH = khachHang.MaKH,
+                    HoTen = khachHang.HoTen,
+                    SDT = khachHang.SDT,
+                    Email = khachHang.Email,
+                    GioiTinh = khachHang.GioiTinh
+                };
+
+
+                qldvx.KhachHangs.InsertOnSubmit(newKhachHang);
+
+
+                qldvx.SubmitChanges();
+
+                return true;
+            }
+            catch (Exception ex)
+            {
+
+                Console.WriteLine("Lỗi khi thêm khách hàng !: " + ex.Message);
+                return false;
+            }
+        }
+
     }
 }

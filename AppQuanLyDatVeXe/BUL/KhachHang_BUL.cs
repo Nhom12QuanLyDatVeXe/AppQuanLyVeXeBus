@@ -20,9 +20,15 @@ namespace BUL
             catch (Exception ex)
             {
 
-                Console.WriteLine($"Error : {ex.Message}");
+                Console.WriteLine($"lỗi : {ex.Message}");
                 throw;
             }
+        }
+
+        public bool ThemKH(KhachHang_DTO khachhang)
+        {
+
+            return dal.themKH(khachhang);
         }
     }
 }
