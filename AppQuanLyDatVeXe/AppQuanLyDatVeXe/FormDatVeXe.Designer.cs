@@ -28,17 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-<<<<<<< HEAD
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
-=======
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
->>>>>>> main
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.btnTimKiem = new Guna.UI2.WinForms.Guna2Button();
             this.label7 = new System.Windows.Forms.Label();
@@ -104,15 +100,7 @@
             this.panelDsGheChon.SuspendLayout();
             this.SuspendLayout();
             // 
-<<<<<<< HEAD
-=======
-            // guna2BorderlessForm1
-            // 
-            this.guna2BorderlessForm1.ContainerControl = this;
-            this.guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
-            this.guna2BorderlessForm1.TransparentWhileDrag = true;
-            // 
->>>>>>> main
+            // guna2BorderlessForm1 
             // guna2Panel1
             // 
             this.guna2Panel1.Controls.Add(this.txtMaNV);
@@ -128,11 +116,8 @@
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel1.Name = "guna2Panel1";
-<<<<<<< HEAD
-            this.guna2Panel1.Size = new System.Drawing.Size(1637, 157);
-=======
+
             this.guna2Panel1.Size = new System.Drawing.Size(1946, 139);
->>>>>>> main
             this.guna2Panel1.TabIndex = 14;
             // 
             // btnTimKiem
@@ -290,11 +275,8 @@
             this.dgvDSTX.RowHeadersVisible = false;
             this.dgvDSTX.RowHeadersWidth = 62;
             this.dgvDSTX.RowTemplate.Height = 28;
-<<<<<<< HEAD
-            this.dgvDSTX.Size = new System.Drawing.Size(820, 830);
-=======
+
             this.dgvDSTX.Size = new System.Drawing.Size(1418, 795);
->>>>>>> main
             this.dgvDSTX.TabIndex = 15;
             this.dgvDSTX.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvDSTX.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -952,16 +934,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-<<<<<<< HEAD
-            this.ClientSize = new System.Drawing.Size(1637, 1020);
-            this.Controls.Add(this.panelDsGheChon);
-            this.Controls.Add(this.btnTangTren);
-            this.Controls.Add(this.btnTangDuoi);
-            this.Controls.Add(this.panelThongTinDatve);
-=======
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1946, 1060);
->>>>>>> main
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.dgvDSTX);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -980,11 +954,8 @@
         }
 
         #endregion
-<<<<<<< HEAD
-=======
 
         private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
->>>>>>> main
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2DataGridView dgvDSTX;
