@@ -30,6 +30,17 @@ namespace DAL
             return tbl.ToList();
         }
 
+        public PhuongTien_DTO GetPhuongTien(string biensoxe)
+        {
+            var phuongtien = qldvx.PhuongTiens.Where(t => t.BienSoXe == biensoxe).FirstOrDefault();
+            PhuongTien_DTO pt = new PhuongTien_DTO();
+            pt.BienSoXe = phuongtien.BienSoXe;
+            pt.TaiXephu = phuongtien.TaiXePhu;
+            pt.TaiXeChinh = phuongtien.TaiXeChinh;
+            pt.SoGhe = phuongtien.SoGhe;
+            return pt;
+        }
+
         public int insert(PhuongTien_DTO pt)
         {
             try
