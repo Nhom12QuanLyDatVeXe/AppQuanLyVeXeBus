@@ -15,6 +15,7 @@ namespace AppQuanLyDatVeXe
     public partial class FormDatVeXe : Form
     {
         TuyenXe_BUL CX_BUL = new TuyenXe_BUL();
+        TinhThanh_BUL bul_tinhthanh = new TinhThanh_BUL();
         public FormDatVeXe()
         {
             InitializeComponent();
@@ -23,6 +24,9 @@ namespace AppQuanLyDatVeXe
         private void FormDatVeXe_Load(object sender, EventArgs e)
         {
             LoadCX();
+            loadDiemDi_den();
+            cboDiemDen.DropDownStyle = ComboBoxStyle.DropDown;
+            cboDiemDi.DropDownStyle = ComboBoxStyle.DropDown;
         }
 
         public void LoadCX()
@@ -30,7 +34,18 @@ namespace AppQuanLyDatVeXe
             dgvDSTX.DataSource = null;
             dgvDSTX.DataSource = CX_BUL.GetTuyenXe();
         }
+        void loadDiemDi_den()
+        {
+            cboDiemDi.DataSource = bul_tinhthanh.getAll();
+            cboDiemDi.DisplayMember = "TenTinh";
+            cboDiemDi.ValueMember = "MaTinh";
 
+
+            cboDiemDen.DataSource = bul_tinhthanh.getAll();
+            cboDiemDen.DisplayMember = "TenTinh";
+            cboDiemDen.ValueMember = "MaTinh";
+
+        }
         private void dgvDSTX_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
             if (dgvDSTX.Columns[e.ColumnIndex].Name == "ThoiGianDi" && e.Value is DateTime dateTime)
