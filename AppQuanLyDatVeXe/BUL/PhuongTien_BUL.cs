@@ -26,5 +26,11 @@ namespace BUL
                 throw;
             }
         }
+
+        public bool ThemPT(PhuongTien_DTO pt)
+        {
+
+            return dal.ThemPhuongTien(pt);
+        }
     }
 }

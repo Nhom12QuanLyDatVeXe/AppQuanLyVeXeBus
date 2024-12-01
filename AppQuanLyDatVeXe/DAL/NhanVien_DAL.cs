@@ -27,13 +27,47 @@ namespace DAL
                           SDT = nv.SDT,
                           Luong = nv.Luong,
                           TrangThai = nv.TrangThai,
-                          MaChucVu= nv.MaChucVu,
-                        
+                          MaChucVu = nv.MaChucVu,
+
 
                       };
 
 
             return tbl.ToList();
+        }
+
+        public bool ThemNhanVien(NhanVien_DTO nhanvien)
+        {
+            try
+            {
+                NhanVien newNhanVien = new NhanVien
+                {
+
+                    MaNV = nhanvien.MaNV,
+                    TenNV = nhanvien.HoTen,
+                    NgaySinh = nhanvien.NgaySinh,
+                    GioiTinh = nhanvien.GioiTinh,
+                    CCCD = nhanvien.CCCD,
+                    SDT = nhanvien.SDT,
+                    Luong = nhanvien.Luong,
+                    TrangThai = nhanvien.TrangThai,
+                    MaChucVu = nhanvien.MaChucVu,
+                };
+
+
+                qldvx.NhanViens.InsertOnSubmit(newNhanVien);
+
+
+                qldvx.SubmitChanges();
+
+                return true;
+            }
+            catch (Exception ex)
+            {
+
+                Console.WriteLine("Lỗi khi thêm khách hàng !: " + ex.Message);
+                return false;
+            }
         }
     }
 }

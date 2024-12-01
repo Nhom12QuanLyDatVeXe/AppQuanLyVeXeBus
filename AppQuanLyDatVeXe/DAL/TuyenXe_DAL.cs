@@ -37,5 +37,39 @@ namespace DAL
 
             return tbl.ToList();
         }
-    }
+
+        public bool ThemTuyenXe(TuyenXe_DTO tuyenxe)
+        {
+            try
+            {
+                TuyenXe newTuyenXe = new TuyenXe
+                {
+
+                        MaTuyenXe = tuyenxe.MaTuyenXe,
+                        TenTuyen = tuyenxe.TenTuyen,
+                        ThoiGianDi = tuyenxe.ThoiGianDi,
+                        DiemDi = tuyenxe.DiemDi,
+                        DiemDen = tuyenxe.DiemDen,
+                        GioDenNoi = tuyenxe.GioDenNoi,
+                        GioXuatBen = tuyenxe.GioXuatBen,
+                        KhoangCach = tuyenxe.KhoangCach,
+                        DonGia= tuyenxe.DonGia,
+                        BienSoXe = tuyenxe.BienSoXe,
+                };
+
+
+                qldvx.TuyenXes.InsertOnSubmit(newTuyenXe);
+
+
+                qldvx.SubmitChanges();
+
+                return true;
+            }
+            catch (Exception ex)
+            {
+
+                Console.WriteLine("Lỗi khi thêm khách hàng !: " + ex.Message);
+                return false;
+            }
+        }
 }

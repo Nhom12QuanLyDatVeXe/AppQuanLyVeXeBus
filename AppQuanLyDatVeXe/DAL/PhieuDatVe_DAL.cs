@@ -35,9 +35,11 @@ namespace DAL
             {
                 PhieuDatVe newPhieuDatVe = new PhieuDatVe
                 {
+                    
                     MaPhieu = phieuDatVe.MaPhieu,
                     SoLuongGhe = phieuDatVe.SoLuongGhe,
                     TongTien = phieuDatVe.TongTien,
+                    MaKH = phieuDatVe.MaKH,
                 };
 
 

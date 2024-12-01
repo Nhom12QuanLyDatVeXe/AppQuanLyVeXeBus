@@ -30,5 +30,12 @@ namespace BUL
         }
 
 
+        public bool ThemTX(TuyenXe_DTO tx)
+        {
+
+            return dal.ThemTuyenXe(tx);
+        }
+
+
     }
 }

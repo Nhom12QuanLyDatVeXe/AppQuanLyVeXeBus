@@ -24,5 +24,12 @@ namespace BUL
                 throw;
             }
         }
+
+
+        public bool ThemNV(NhanVien_DTO nhanvien)
+        {
+
+            return dal.ThemNhanVien(nhanvien);
+        }
     }
 }
