@@ -37,5 +37,25 @@ namespace DAL
 
             return tbl.ToList();
         }
+
+        public object GetTuyenXe(string diemdi, string diemden, DateTime ngaydi)
+        {
+            var tbl = from tx in qldvx.TuyenXes
+                      where tx.DiemDi == diemdi && tx.DiemDen == diemden && tx.ThoiGianDi.HasValue && tx.ThoiGianDi.Value.Date == ngaydi.Date
+                      select new TuyenXe_DTO
+                      {
+                          MaTuyenXe = tx.MaTuyenXe,
+                          TenTuyen = tx.TenTuyen,
+                          ThoiGianDi = tx.ThoiGianDi.Value,
+                          DiemDi = tx.DiemDi,
+                          DiemDen = tx.DiemDen,
+                          GioXuatBen = tx.GioXuatBen.Value,
+                          GioDenNoi = tx.GioDenNoi.Value,
+                          KhoangCach = tx.KhoangCach,
+                          DonGia = tx.DonGia,
+                          BienSoXe = tx.BienSoXe
+                      };
+            return tbl.ToList();
+        }
     }
 }
