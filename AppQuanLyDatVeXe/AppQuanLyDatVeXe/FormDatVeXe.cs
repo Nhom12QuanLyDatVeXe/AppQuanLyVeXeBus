@@ -54,5 +54,21 @@ namespace AppQuanLyDatVeXe
                 e.FormattingApplied = true;
             }
         }
+
+        private void cboDiemDi_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = false;
+        }
+        public void LoadCX(string diemdi, string diemden, DateTime ngaydi)
+        {
+            dgvDSTX.DataSource = null;
+            dgvDSTX.DataSource = CX_BUL.GetTuyenXe(diemdi, diemden, ngaydi);
+        }
+        private void btnTimKiem_Click(object sender, EventArgs e)
+        {
+            if(cboDiemDi.SelectedIndex < 0 || cboDiemDen.SelectedIndex < 0)
+            { return; }    
+            LoadCX(cboDiemDi.SelectedValue.ToString(), cboDiemDen.SelectedValue.ToString(), dtpNgayDi.Value);
+        }
     }
 }
