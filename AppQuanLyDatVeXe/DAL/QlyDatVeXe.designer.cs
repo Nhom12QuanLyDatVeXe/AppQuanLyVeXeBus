@@ -57,9 +57,9 @@ namespace DAL
     partial void InsertTuyenXe(TuyenXe instance);
     partial void UpdateTuyenXe(TuyenXe instance);
     partial void DeleteTuyenXe(TuyenXe instance);
-    partial void InsertTinhThanh(TinhThanh instance);
-    partial void UpdateTinhThanh(TinhThanh instance);
-    partial void DeleteTinhThanh(TinhThanh instance);
+    partial void InsertTinhThanh(TinhThanh_DAL instance);
+    partial void UpdateTinhThanh(TinhThanh_DAL instance);
+    partial void DeleteTinhThanh(TinhThanh_DAL instance);
     #endregion
 		
 		public QlyDatVeXeDataContext() : 
@@ -164,11 +164,11 @@ namespace DAL
 			}
 		}
 		
-		public System.Data.Linq.Table<TinhThanh> TinhThanhs
+		public System.Data.Linq.Table<TinhThanh_DAL> TinhThanhs
 		{
 			get
 			{
-				return this.GetTable<TinhThanh>();
+				return this.GetTable<TinhThanh_DAL>();
 			}
 		}
 	}
@@ -2003,9 +2003,9 @@ namespace DAL
 		
 		private EntityRef<PhuongTien> _PhuongTien;
 		
-		private EntityRef<TinhThanh> _TinhThanh;
+		private EntityRef<TinhThanh_DAL> _TinhThanh;
 		
-		private EntityRef<TinhThanh> _TinhThanh1;
+		private EntityRef<TinhThanh_DAL> _TinhThanh1;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -2037,8 +2037,8 @@ namespace DAL
 		{
 			this._ChiTietDatVes = new EntitySet<ChiTietDatVe>(new Action<ChiTietDatVe>(this.attach_ChiTietDatVes), new Action<ChiTietDatVe>(this.detach_ChiTietDatVes));
 			this._PhuongTien = default(EntityRef<PhuongTien>);
-			this._TinhThanh = default(EntityRef<TinhThanh>);
-			this._TinhThanh1 = default(EntityRef<TinhThanh>);
+			this._TinhThanh = default(EntityRef<TinhThanh_DAL>);
+			this._TinhThanh1 = default(EntityRef<TinhThanh_DAL>);
 			OnCreated();
 		}
 		
@@ -2302,7 +2302,7 @@ namespace DAL
 		}
 		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TinhThanh_TuyenXe", Storage="_TinhThanh", ThisKey="DiemDen", OtherKey="MaTinh", IsForeignKey=true)]
-		public TinhThanh TinhThanh
+		public TinhThanh_DAL TinhThanh
 		{
 			get
 			{
@@ -2310,7 +2310,7 @@ namespace DAL
 			}
 			set
 			{
-				TinhThanh previousValue = this._TinhThanh.Entity;
+				TinhThanh_DAL previousValue = this._TinhThanh.Entity;
 				if (((previousValue != value) 
 							|| (this._TinhThanh.HasLoadedOrAssignedValue == false)))
 				{
@@ -2336,7 +2336,7 @@ namespace DAL
 		}
 		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TinhThanh_TuyenXe1", Storage="_TinhThanh1", ThisKey="DiemDi", OtherKey="MaTinh", IsForeignKey=true)]
-		public TinhThanh TinhThanh1
+		public TinhThanh_DAL TinhThanh1
 		{
 			get
 			{
@@ -2344,7 +2344,7 @@ namespace DAL
 			}
 			set
 			{
-				TinhThanh previousValue = this._TinhThanh1.Entity;
+				TinhThanh_DAL previousValue = this._TinhThanh1.Entity;
 				if (((previousValue != value) 
 							|| (this._TinhThanh1.HasLoadedOrAssignedValue == false)))
 				{
@@ -2403,7 +2403,7 @@ namespace DAL
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.TinhThanh")]
-	public partial class TinhThanh : INotifyPropertyChanging, INotifyPropertyChanged
+	public partial class TinhThanh_DAL : INotifyPropertyChanging, INotifyPropertyChanged
 	{
 		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
@@ -2426,7 +2426,7 @@ namespace DAL
     partial void OnTenTinhChanged();
     #endregion
 		
-		public TinhThanh()
+		public TinhThanh_DAL()
 		{
 			this._TuyenXes = new EntitySet<TuyenXe>(new Action<TuyenXe>(this.attach_TuyenXes), new Action<TuyenXe>(this.detach_TuyenXes));
 			this._TuyenXes1 = new EntitySet<TuyenXe>(new Action<TuyenXe>(this.attach_TuyenXes1), new Action<TuyenXe>(this.detach_TuyenXes1));

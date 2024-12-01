@@ -34,6 +34,13 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnTimKiem = new Guna.UI2.WinForms.Guna2Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.dtpNgayDi = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.cboDiemDen = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.cboDiemDi = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvDSTX = new Guna.UI2.WinForms.Guna2DataGridView();
             this.MaTuyenXe = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -59,12 +66,122 @@
             // 
             // guna2Panel1
             // 
+            this.guna2Panel1.Controls.Add(this.btnTimKiem);
+            this.guna2Panel1.Controls.Add(this.label7);
+            this.guna2Panel1.Controls.Add(this.dtpNgayDi);
+            this.guna2Panel1.Controls.Add(this.cboDiemDen);
+            this.guna2Panel1.Controls.Add(this.label3);
+            this.guna2Panel1.Controls.Add(this.cboDiemDi);
+            this.guna2Panel1.Controls.Add(this.label2);
             this.guna2Panel1.Controls.Add(this.label1);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(1946, 139);
             this.guna2Panel1.TabIndex = 14;
+            // 
+            // btnTimKiem
+            // 
+            this.btnTimKiem.AutoRoundedCorners = true;
+            this.btnTimKiem.BackColor = System.Drawing.Color.Transparent;
+            this.btnTimKiem.BorderRadius = 17;
+            this.btnTimKiem.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnTimKiem.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnTimKiem.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnTimKiem.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnTimKiem.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(147)))), ((int)(((byte)(81)))));
+            this.btnTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTimKiem.ForeColor = System.Drawing.Color.White;
+            this.btnTimKiem.Location = new System.Drawing.Point(828, 83);
+            this.btnTimKiem.Name = "btnTimKiem";
+            this.btnTimKiem.Size = new System.Drawing.Size(145, 36);
+            this.btnTimKiem.TabIndex = 81;
+            this.btnTimKiem.Text = "Tìm chuyến xe";
+            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.Black;
+            this.label7.Location = new System.Drawing.Point(564, 60);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(61, 20);
+            this.label7.TabIndex = 80;
+            this.label7.Text = "Ngày đi";
+            // 
+            // dtpNgayDi
+            // 
+            this.dtpNgayDi.BorderRadius = 15;
+            this.dtpNgayDi.Checked = true;
+            this.dtpNgayDi.CustomFormat = "";
+            this.dtpNgayDi.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.dtpNgayDi.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpNgayDi.Location = new System.Drawing.Point(552, 83);
+            this.dtpNgayDi.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.dtpNgayDi.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.dtpNgayDi.Name = "dtpNgayDi";
+            this.dtpNgayDi.Size = new System.Drawing.Size(197, 36);
+            this.dtpNgayDi.TabIndex = 79;
+            this.dtpNgayDi.Value = new System.DateTime(2024, 11, 16, 16, 28, 50, 632);
+            // 
+            // cboDiemDen
+            // 
+            this.cboDiemDen.BackColor = System.Drawing.Color.Transparent;
+            this.cboDiemDen.BorderColor = System.Drawing.Color.Gray;
+            this.cboDiemDen.BorderRadius = 15;
+            this.cboDiemDen.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cboDiemDen.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboDiemDen.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cboDiemDen.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cboDiemDen.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.cboDiemDen.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cboDiemDen.ItemHeight = 30;
+            this.cboDiemDen.Location = new System.Drawing.Point(292, 83);
+            this.cboDiemDen.Name = "cboDiemDen";
+            this.cboDiemDen.Size = new System.Drawing.Size(199, 36);
+            this.cboDiemDen.TabIndex = 76;
+            this.cboDiemDen.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cboDiemDi_KeyPress);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.Location = new System.Drawing.Point(302, 60);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(77, 20);
+            this.label3.TabIndex = 75;
+            this.label3.Text = "Điểm đến";
+            // 
+            // cboDiemDi
+            // 
+            this.cboDiemDi.BackColor = System.Drawing.Color.Transparent;
+            this.cboDiemDi.BorderColor = System.Drawing.Color.Gray;
+            this.cboDiemDi.BorderRadius = 15;
+            this.cboDiemDi.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cboDiemDi.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboDiemDi.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cboDiemDi.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cboDiemDi.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.cboDiemDi.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cboDiemDi.ItemHeight = 30;
+            this.cboDiemDi.Location = new System.Drawing.Point(28, 83);
+            this.cboDiemDi.Name = "cboDiemDi";
+            this.cboDiemDi.Size = new System.Drawing.Size(199, 36);
+            this.cboDiemDi.TabIndex = 74;
+            this.cboDiemDi.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cboDiemDi_KeyPress);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(41, 60);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(62, 20);
+            this.label2.TabIndex = 39;
+            this.label2.Text = "Điểm đi";
             // 
             // label1
             // 
@@ -261,5 +378,12 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn donGia;
         private System.Windows.Forms.DataGridViewTextBoxColumn bienSo;
         private System.Windows.Forms.DataGridViewButtonColumn Column1;
+        private System.Windows.Forms.Label label2;
+        private Guna.UI2.WinForms.Guna2ComboBox cboDiemDen;
+        private System.Windows.Forms.Label label3;
+        private Guna.UI2.WinForms.Guna2ComboBox cboDiemDi;
+        private System.Windows.Forms.Label label7;
+        private Guna.UI2.WinForms.Guna2DateTimePicker dtpNgayDi;
+        private Guna.UI2.WinForms.Guna2Button btnTimKiem;
     }
 }
