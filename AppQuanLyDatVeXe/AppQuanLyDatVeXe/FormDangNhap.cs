@@ -64,14 +64,6 @@ namespace AppQuanLyDatVeXe
                 MessageBox.Show("Lỗi kết nối cơ sở dữ liệu!");
         }
 
-        private void linkDK_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            
-            FormDangKy dk= new FormDangKy();
-            
-            dk.Show();
-            this.Hide();
-        }
 
     }
 }
