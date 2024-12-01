@@ -55,5 +55,16 @@ namespace DAL.Properties {
                 return ((string)(this["QL_DATVEXEConnectionString2"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=LAPTOP-6ML1GA94\\HOANGVI;Initial Catalog=QL_DATVEXE;User ID=sa;Passwor" +
+            "d=123;TrustServerCertificate=True")]
+        public string QL_DATVEXEConnectionString3 {
+            get {
+                return ((string)(this["QL_DATVEXEConnectionString3"]));
+            }
+        }
     }
 }
