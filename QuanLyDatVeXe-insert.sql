@@ -65,10 +65,10 @@ VALUES
 
 ---- Bảng Phiếu Đặt Vé
 
-INSERT INTO PhieuDatVe (MaPhieu, SoLuongGhe, TongTien, MaKH)
+INSERT INTO PhieuDatVe (SoLuongGhe, TongTien, MaKH)
 VALUES 
-(1, 2, 600000, 'KH0001'),
-(2, 1, 430000, 'KH0002');
+(2, 600000, 'KH0001'),
+(1, 430000, 'KH0002');
 
 
 ---- Bảng Chi Tiết Phiếu Đặt Vé

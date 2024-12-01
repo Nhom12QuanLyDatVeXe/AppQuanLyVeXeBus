@@ -12,6 +12,51 @@ namespace DAL
 
         QlyDatVeXeDataContext qldvx = new QlyDatVeXeDataContext();
 
+        public int createOne(int soluongghe, double tongtien, string makh, string matuyen, List<string> danhSachGheDaChon, double dongia)
+        {
+            try
+            {
+                DateTime currentDate = DateTime.Now;
+
+                PhieuDatVe phieu = new PhieuDatVe();
+                phieu.MaPhieu = currentDate.ToString("ddMMyyHHmm");
+                phieu.SoLuongGhe = soluongghe;
+                phieu.TongTien = (decimal)tongtien;
+                phieu.MaKH = makh;
+
+                qldvx.PhieuDatVes.InsertOnSubmit(phieu);
+                qldvx.SubmitChanges();
+
+                string maphieu = phieu.MaPhieu;
+                foreach(string maghe in danhSachGheDaChon)
+                {
+                    var existingDetail = qldvx.ChiTietDatVes
+                                      .FirstOrDefault(ctd => ctd.MaPhieu == maphieu && ctd.MaGhe == maghe);
+                    if (existingDetail == null)
+                    {
+                        ChiTietDatVe ctdv = new ChiTietDatVe();
+                        ctdv.MaPhieu = maphieu;
+                        ctdv.MaTuyenXe = int.Parse(matuyen);
+                        ctdv.MaGhe = maghe;
+                        ctdv.DonGia = (decimal)dongia;
+
+                        qldvx.ChiTietDatVes.InsertOnSubmit(ctdv);
+                    }    
+                    else
+                    {
+                        Console.WriteLine("Chi tiết vé này đã tồn tại.");
+                    }    
+                }
+
+                qldvx.SubmitChanges();
+
+                return 1;
+
+            }
+            catch (Exception e)
+            { return -1; }
+                
+        }
 
         public List<PhieuDatVe_DTO> GetPhieuDatVe()
         {
