@@ -50,11 +50,15 @@ namespace AppQuanLyDatVeXe
             acc.PassWord = txtPass.Text;
             if (tK_BUL.CheckLogin(acc) == 1)
             {
+                this.Hide();
                 TaiKhoan_DTO acc_login = new TaiKhoan_DTO();
                 acc_login = tK_BUL.getAccount(acc.UserName);
-                FormMain main = new FormMain(acc_login);
-                main.ShowDialog();
+                using (FormMain main = new FormMain(acc_login))
+                {
+                    main.ShowDialog();
+                }
                 this.Close();
+                
             }
             else if (tK_BUL.CheckLogin(acc) == 0)
             {
