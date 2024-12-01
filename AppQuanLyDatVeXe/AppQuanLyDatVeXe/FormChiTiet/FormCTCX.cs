@@ -37,7 +37,6 @@ namespace AppQuanLyDatVeXe.FormChiTiet
             TuyenXe_DTO tx = new TuyenXe_DTO();
             tx.MaTuyenXe = int.Parse(txtMaChuyen.Text);
             tx.TenTuyen = txtTenChuyen.Text;
-
         }
     }
 }

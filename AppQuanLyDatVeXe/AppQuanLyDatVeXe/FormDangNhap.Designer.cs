@@ -41,12 +41,9 @@
             this.btnDangNhap = new Guna.UI2.WinForms.Guna2Button();
             this.lblThongBaoSDT = new System.Windows.Forms.Label();
             this.lblThongBaoPass = new System.Windows.Forms.Label();
-            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.ckcHienPass = new Guna.UI2.WinForms.Guna2ImageCheckBox();
             this.txtPass = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtTenUser = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.linkDK = new System.Windows.Forms.LinkLabel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -84,7 +81,7 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(764, 46);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(295, 32);
+            this.label1.Size = new System.Drawing.Size(202, 24);
             this.label1.TabIndex = 4;
             this.label1.Text = "Đăng nhập tài khoản";
             // 
@@ -123,7 +120,7 @@
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(82)))), ((int)(((byte)(34)))));
             this.label2.Location = new System.Drawing.Point(687, 110);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(182, 29);
+            this.label2.Size = new System.Drawing.Size(119, 20);
             this.label2.TabIndex = 6;
             this.label2.Text = "Tên người dùng";
             // 
@@ -134,7 +131,7 @@
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(82)))), ((int)(((byte)(34)))));
             this.label3.Location = new System.Drawing.Point(687, 237);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(109, 29);
+            this.label3.Size = new System.Drawing.Size(75, 20);
             this.label3.TabIndex = 8;
             this.label3.Text = "Mật khẩu";
             // 
@@ -162,7 +159,7 @@
             this.lblThongBaoSDT.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(77)))), ((int)(((byte)(79)))));
             this.lblThongBaoSDT.Location = new System.Drawing.Point(688, 208);
             this.lblThongBaoSDT.Name = "lblThongBaoSDT";
-            this.lblThongBaoSDT.Size = new System.Drawing.Size(57, 25);
+            this.lblThongBaoSDT.Size = new System.Drawing.Size(40, 17);
             this.lblThongBaoSDT.TabIndex = 15;
             this.lblThongBaoSDT.Text = "lblTB";
             this.lblThongBaoSDT.Visible = false;
@@ -174,20 +171,10 @@
             this.lblThongBaoPass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(77)))), ((int)(((byte)(79)))));
             this.lblThongBaoPass.Location = new System.Drawing.Point(686, 335);
             this.lblThongBaoPass.Name = "lblThongBaoPass";
-            this.lblThongBaoPass.Size = new System.Drawing.Size(57, 25);
+            this.lblThongBaoPass.Size = new System.Drawing.Size(40, 17);
             this.lblThongBaoPass.TabIndex = 16;
             this.lblThongBaoPass.Text = "lblTB";
             this.lblThongBaoPass.Visible = false;
-            // 
-            // guna2HtmlLabel1
-            // 
-            this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Poppins", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(682, 438);
-            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(3, 2);
-            this.guna2HtmlLabel1.TabIndex = 17;
-            this.guna2HtmlLabel1.Text = null;
             // 
             // ckcHienPass
             // 
@@ -255,38 +242,11 @@
             this.txtTenUser.TabIndex = 7;
             this.txtTenUser.TextOffset = new System.Drawing.Point(20, 0);
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(678, 455);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(215, 29);
-            this.label4.TabIndex = 18;
-            this.label4.Text = "Chưa có tài khoản?";
-            // 
-            // linkDK
-            // 
-            this.linkDK.AutoSize = true;
-            this.linkDK.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkDK.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(82)))), ((int)(((byte)(34)))));
-            this.linkDK.Location = new System.Drawing.Point(825, 455);
-            this.linkDK.Name = "linkDK";
-            this.linkDK.Size = new System.Drawing.Size(92, 26);
-            this.linkDK.TabIndex = 20;
-            this.linkDK.TabStop = true;
-            this.linkDK.Text = "Đăng ký";
-            this.linkDK.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.linkDK.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkDK_LinkClicked);
-            // 
             // FormDangNhap
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1095, 505);
-            this.Controls.Add(this.linkDK);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.guna2HtmlLabel1);
             this.Controls.Add(this.lblThongBaoPass);
             this.Controls.Add(this.lblThongBaoSDT);
             this.Controls.Add(this.ckcHienPass);
@@ -326,8 +286,5 @@
         private Guna.UI2.WinForms.Guna2ImageCheckBox ckcHienPass;
         private System.Windows.Forms.Label lblThongBaoSDT;
         private System.Windows.Forms.Label lblThongBaoPass;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.LinkLabel linkDK;
     }
 }

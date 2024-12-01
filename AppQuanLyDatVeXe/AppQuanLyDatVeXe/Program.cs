@@ -17,7 +17,7 @@ namespace AppQuanLyDatVeXe
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormMain_KhachHang());
+            Application.Run(new FormDangNhap());
         }
     }
 }
