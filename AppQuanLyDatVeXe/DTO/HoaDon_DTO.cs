@@ -9,8 +9,6 @@ namespace DTO
     public class HoaDon_DTO
     {
         public int SoHD { get; set; }
-        public int? SoHD { get; set; }
->>>>>>> main
         public string MaPhieu { get; set; }
         public decimal? ThanhTien { get; set; }
         public string TrangThai { get; set; }

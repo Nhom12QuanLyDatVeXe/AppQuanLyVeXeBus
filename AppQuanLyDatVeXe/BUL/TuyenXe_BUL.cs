@@ -29,8 +29,6 @@ namespace BUL
             }
         }
 
-<<<<<<< HEAD
-
         public bool ThemTX(TuyenXe_DTO tx)
         {
 
@@ -38,11 +36,9 @@ namespace BUL
         }
 
 
-=======
         public object GetTuyenXe(string diemdi, string diemden, DateTime ngaydi)
         {
             return dal.GetTuyenXe(diemdi, diemden, ngaydi);
         }
->>>>>>> main
     }
 }

@@ -27,30 +27,23 @@ namespace DAL
                           SDT = nv.SDT,
                           Luong = nv.Luong,
                           TrangThai = nv.TrangThai,
-<<<<<<< HEAD
-                          MaChucVu = nv.MaChucVu,
-
-
-=======
-                          MaChucVu= nv.MaChucVu,
->>>>>>> main
+                          MaChucVu = nv.MaChucVu
                       };
 
 
             return tbl.ToList();
         }
 
-<<<<<<< HEAD
         public bool ThemNhanVien(NhanVien_DTO nhanvien)
         {
             try
             {
-                Console.WriteLine($"Ngày sinh: {nhanvien.NgaySinh}"); 
+                Console.WriteLine($"Ngày sinh: {nhanvien.NgaySinh}");
                 NhanVien newNhanVien = new NhanVien
                 {
                     MaNV = nhanvien.MaNV,
                     TenNV = nhanvien.HoTen,
-                    NgaySinh = nhanvien.NgaySinh, 
+                    NgaySinh = nhanvien.NgaySinh,
                     GioiTinh = nhanvien.GioiTinh,
                     CCCD = nhanvien.CCCD,
                     SDT = nhanvien.SDT,
@@ -69,7 +62,7 @@ namespace DAL
                 Console.WriteLine("Lỗi khi thêm nhân viên: " + ex.Message); // Log lỗi
                 return false;
             }
-=======
+        }
         public NhanVien_DTO getNhanVien(string ma)
         {
             try
@@ -90,7 +83,6 @@ namespace DAL
                 return nhanvien;
             }
             catch {  return null; }
->>>>>>> main
         }
     }
 }

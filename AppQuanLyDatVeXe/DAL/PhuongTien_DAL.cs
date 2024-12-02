@@ -30,7 +30,6 @@ namespace DAL
             return tbl.ToList();
         }
 
-<<<<<<< HEAD
         public bool ThemPhuongTien(PhuongTien_DTO phuongtien)
         {
             try
@@ -58,7 +57,7 @@ namespace DAL
                 Console.WriteLine("Lỗi khi thêm phương tiện !: " + ex.Message);
                 return false;
             }
-=======
+        }
         public PhuongTien_DTO GetPhuongTien(string biensoxe)
         {
             var phuongtien = qldvx.PhuongTiens.Where(t => t.BienSoXe == biensoxe).FirstOrDefault();
@@ -84,7 +83,6 @@ namespace DAL
                 return 1;
             }
             catch { return -1; }
->>>>>>> main
         }
     }
 }

@@ -37,8 +37,6 @@ namespace DAL
 
             return tbl.ToList();
         }
-
-<<<<<<< HEAD
         public bool ThemTuyenXe(TuyenXe_DTO tuyenxe)
         {
             try
@@ -72,7 +70,9 @@ namespace DAL
                 Console.WriteLine("Lỗi khi thêm khách hàng !: " + ex.Message);
                 return false;
             }
-=======
+        }
+
+
         public object GetTuyenXe(string diemdi, string diemden, DateTime ngaydi)
         {
             var tbl = from tx in qldvx.TuyenXes
@@ -91,7 +91,6 @@ namespace DAL
                           BienSoXe = tx.BienSoXe
                       };
             return tbl.ToList();
->>>>>>> main
         }
     }
 }
