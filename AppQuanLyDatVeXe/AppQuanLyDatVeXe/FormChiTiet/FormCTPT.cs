@@ -27,20 +27,54 @@ namespace AppQuanLyDatVeXe.FormChiTiet
         PhuongTien_BUL bul = new PhuongTien_BUL();
         private void btnLuu_Click(object sender, EventArgs e)
         {
-            PhuongTien_DTO pt = new PhuongTien_DTO();
-            pt.BienSoXe = txtBienSoXe.Text;
-            pt.TaiXephu = txtTaiXePhu.Text;
-            pt.TaiXeChinh = txtTaiXeChinh.Text;
-            pt.SoGhe = int.Parse(txtSLGhe.Text);
-
-            if(bul.insert(pt) == 1)
+            try
             {
-                MessageBox.Show("Thêm thành công!");
 
-                var parentForm = this.Owner as FormPhuongTien;
-                parentForm?.loadPT();
+                string biensoxe = txtBienSoXe.Text.Trim();
+                string taixechinh = txtTaiXeChinh.Text.Trim();
+                string taixephu = txtTaiXePhu.Text.Trim();
+                int soghe = int.Parse(txtSLGhe.Text);
 
-                this.Close();
+
+                if (string.IsNullOrEmpty(taixechinh))
+                {
+                    MessageBox.Show("Tài xế chính không được để trống.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                if (string.IsNullOrEmpty(taixephu))
+                {
+                    MessageBox.Show("Tài xế phụ không được để trống.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+
+                PhuongTien_DTO phuongTien = new PhuongTien_DTO
+                {
+                    BienSoXe = biensoxe,
+                    TaiXeChinh = taixechinh,
+                    TaiXephu = taixephu,
+                    SoGhe = soghe,
+                };
+
+
+                if (bul.ThemPT(phuongTien))
+                {
+                    MessageBox.Show("Thêm phương tiện thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    var parentForm = this.Owner as FormPhuongTien;
+                    parentForm?.loadPT();
+
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Thêm phương tiện thất bại.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Đã xảy ra lỗi: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using DTO;
 using DAL;
+
 namespace BUL
 {
     public class KhachHang_BUL
@@ -23,6 +24,12 @@ namespace BUL
                 Console.WriteLine($"Error : {ex.Message}");
                 throw;
             }
+        }
+
+        public bool ThemKH(KhachHang_DTO khachhang)
+        {
+
+            return dal.themKH(khachhang);
         }
     }
 }

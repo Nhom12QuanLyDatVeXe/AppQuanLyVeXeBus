@@ -56,5 +56,34 @@ namespace DAL
             }
             catch { return -1; }
         }
+
+        public bool ThemPhuongTien(PhuongTien_DTO phuongtien)
+        {
+            try
+            {
+                PhuongTien newPhuongTien = new PhuongTien
+                {
+
+                    BienSoXe = phuongtien.BienSoXe,
+                    TaiXeChinh = phuongtien.TaiXeChinh,
+                    TaiXePhu = phuongtien.TaiXephu,
+                    SoGhe = phuongtien.SoGhe,
+                };
+
+
+                qldvx.PhuongTiens.InsertOnSubmit(newPhuongTien);
+
+
+                qldvx.SubmitChanges();
+
+                return true;
+            }
+            catch (Exception ex)
+            {
+
+                Console.WriteLine("Lỗi khi thêm phương tiện !: " + ex.Message);
+                return false;
+            }
+        }
     }
 }

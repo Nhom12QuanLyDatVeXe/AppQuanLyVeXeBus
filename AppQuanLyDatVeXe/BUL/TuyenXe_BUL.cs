@@ -33,5 +33,11 @@ namespace BUL
         {
             return dal.GetTuyenXe(diemdi, diemden, ngaydi);
         }
+
+        public bool ThemTX(TuyenXe_DTO tx)
+        {
+
+            return dal.ThemTuyenXe(tx);
+        }
     }
 }

@@ -29,5 +29,11 @@ namespace BUL
         {
             return dal.getNhanVien(ma);
         }
+
+        public bool ThemNV(NhanVien_DTO nhanvien)
+        {
+
+            return dal.ThemNhanVien(nhanvien);
+        }
     }
 }

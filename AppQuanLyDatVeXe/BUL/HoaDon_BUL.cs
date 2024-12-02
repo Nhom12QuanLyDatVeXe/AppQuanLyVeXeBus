@@ -26,5 +26,11 @@ namespace BUL
             }
         }
 
+        public bool ThemHoaDon(HoaDon_DTO hoadon)
+        {
+
+            return dal.ThemHoaDon(hoadon);
+        }
+
     }
 }

@@ -15,7 +15,7 @@ namespace DTO
         public string DiemDen { get; set; }
         public TimeSpan  GioXuatBen { get; set; }
         public TimeSpan  GioDenNoi { get; set; }
-        public float?KhoangCach { get; set; }
+        public int KhoangCach { get; set; }
         public decimal?DonGia { get; set; }
         public string BienSoXe { get; set; }
 

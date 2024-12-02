@@ -239,16 +239,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\BUL\BUL.csproj">
-      <Project>{b41cacd3-395b-404c-8527-36008fc45403}</Project>
-      <Name>BUL</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\DTO\DTO.csproj">
-      <Project>{f14111c5-059c-49b3-b895-92aaecd47403}</Project>
-      <Name>DTO</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\icons8-bill-26.png" />
   </ItemGroup>
   <ItemGroup>
@@ -306,6 +296,16 @@
     <Content Include="Resources\icons8-find-26.png" />
     <Content Include="Resources\icons8-minus-26.png" />
     <Content Include="Resources\icons8-user-26.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BUL\BUL.csproj">
+      <Project>{b41cacd3-395b-404c-8527-36008fc45403}</Project>
+      <Name>BUL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DTO\DTO.csproj">
+      <Project>{f14111c5-059c-49b3-b895-92aaecd47403}</Project>
+      <Name>DTO</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

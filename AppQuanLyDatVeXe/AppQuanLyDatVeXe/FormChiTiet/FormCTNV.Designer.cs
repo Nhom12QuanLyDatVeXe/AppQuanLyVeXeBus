@@ -72,11 +72,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(30, 30);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(342, 39);
+            this.label1.Size = new System.Drawing.Size(255, 26);
             this.label1.TabIndex = 0;
             this.label1.Text = "Bảng chi tiết nhân viên";
             // 
@@ -113,7 +113,7 @@
             this.label5.ForeColor = System.Drawing.Color.Black;
             this.label5.Location = new System.Drawing.Point(628, 189);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(74, 29);
+            this.label5.Size = new System.Drawing.Size(48, 20);
             this.label5.TabIndex = 44;
             this.label5.Text = "Email";
             // 
@@ -150,7 +150,7 @@
             this.label6.ForeColor = System.Drawing.Color.Black;
             this.label6.Location = new System.Drawing.Point(324, 189);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(154, 29);
+            this.label6.Size = new System.Drawing.Size(102, 20);
             this.label6.TabIndex = 42;
             this.label6.Text = "Số điện thoại";
             // 
@@ -181,7 +181,7 @@
             this.label4.ForeColor = System.Drawing.Color.Black;
             this.label4.Location = new System.Drawing.Point(622, 109);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(101, 29);
+            this.label4.Size = new System.Drawing.Size(67, 20);
             this.label4.TabIndex = 40;
             this.label4.Text = "Giới tính";
             // 
@@ -218,7 +218,7 @@
             this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.Location = new System.Drawing.Point(326, 109);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(164, 29);
+            this.label3.Size = new System.Drawing.Size(108, 20);
             this.label3.TabIndex = 38;
             this.label3.Text = "Tên nhân viên";
             // 
@@ -255,7 +255,7 @@
             this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(32, 109);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(154, 29);
+            this.label2.Size = new System.Drawing.Size(103, 20);
             this.label2.TabIndex = 36;
             this.label2.Text = "Mã nhân viên";
             // 
@@ -280,7 +280,7 @@
             this.label7.ForeColor = System.Drawing.Color.Black;
             this.label7.Location = new System.Drawing.Point(32, 189);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(119, 29);
+            this.label7.Size = new System.Drawing.Size(78, 20);
             this.label7.TabIndex = 47;
             this.label7.Text = "Ngày sinh";
             // 
@@ -317,7 +317,7 @@
             this.label8.ForeColor = System.Drawing.Color.Black;
             this.label8.Location = new System.Drawing.Point(320, 274);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(80, 29);
+            this.label8.Size = new System.Drawing.Size(54, 20);
             this.label8.TabIndex = 50;
             this.label8.Text = "Lương";
             // 
@@ -354,7 +354,7 @@
             this.label9.ForeColor = System.Drawing.Color.Black;
             this.label9.Location = new System.Drawing.Point(32, 274);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(81, 29);
+            this.label9.Size = new System.Drawing.Size(54, 20);
             this.label9.TabIndex = 48;
             this.label9.Text = "CCCD";
             // 
@@ -382,7 +382,7 @@
             this.label10.ForeColor = System.Drawing.Color.Black;
             this.label10.Location = new System.Drawing.Point(629, 274);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(121, 29);
+            this.label10.Size = new System.Drawing.Size(80, 20);
             this.label10.TabIndex = 52;
             this.label10.Text = "Trạng thái";
             // 
@@ -410,7 +410,7 @@
             this.label11.ForeColor = System.Drawing.Color.Black;
             this.label11.Location = new System.Drawing.Point(799, 109);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(98, 29);
+            this.label11.Size = new System.Drawing.Size(66, 20);
             this.label11.TabIndex = 54;
             this.label11.Text = "Chức vụ";
             // 
@@ -424,13 +424,14 @@
             this.btnLuu.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnLuu.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnLuu.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(147)))), ((int)(((byte)(81)))));
-            this.btnLuu.Font = new System.Drawing.Font("Poppins", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLuu.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLuu.ForeColor = System.Drawing.Color.White;
             this.btnLuu.Location = new System.Drawing.Point(37, 35);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(103, 48);
             this.btnLuu.TabIndex = 0;
             this.btnLuu.Text = "Lưu";
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // btnDong
             // 
@@ -442,7 +443,7 @@
             this.btnDong.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnDong.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnDong.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
-            this.btnDong.Font = new System.Drawing.Font("Poppins", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDong.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDong.ForeColor = System.Drawing.Color.White;
             this.btnDong.Location = new System.Drawing.Point(163, 35);
             this.btnDong.Name = "btnDong";
@@ -471,7 +472,7 @@
             // 
             // FormCTNV
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 36F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1034, 474);
             this.Controls.Add(this.cboChucVu);
@@ -498,6 +499,7 @@
             this.Controls.Add(this.guna2Panel1);
             this.Name = "FormCTNV";
             this.Text = "FormCTNV";
+            this.Load += new System.EventHandler(this.FormCTNV_Load);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
             this.guna2CustomGradientPanel1.ResumeLayout(false);

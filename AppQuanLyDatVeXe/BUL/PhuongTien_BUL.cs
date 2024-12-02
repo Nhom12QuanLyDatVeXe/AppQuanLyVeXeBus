@@ -36,5 +36,10 @@ namespace BUL
         {
             return dal.insert(pt);
         }
+        public bool ThemPT(PhuongTien_DTO pt)
+        {
+
+            return dal.ThemPhuongTien(pt);
+        }
     }
 }
