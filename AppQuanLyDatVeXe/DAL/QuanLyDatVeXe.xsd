@@ -717,7 +717,7 @@ SELECT MaTuyenXe, TenTuyen, ThoiGianDi, DiemDi, DiemDen, GioXuatBen, GioDenNoi, 
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="QuanLyDatVeXe" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="QuanLyDatVeXe" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="QuanLyDatVeXe">
+  <xs:element name="QuanLyDatVeXe" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_UserDSName="QuanLyDatVeXe" msprop:Generator_DataSetName="QuanLyDatVeXe">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
         <xs:element name="ChiTietDatVe" msprop:Generator_RowEvHandlerName="ChiTietDatVeRowChangeEventHandler" msprop:Generator_RowDeletedName="ChiTietDatVeRowDeleted" msprop:Generator_RowDeletingName="ChiTietDatVeRowDeleting" msprop:Generator_RowEvArgName="ChiTietDatVeRowChangeEvent" msprop:Generator_TablePropName="ChiTietDatVe" msprop:Generator_RowChangedName="ChiTietDatVeRowChanged" msprop:Generator_RowChangingName="ChiTietDatVeRowChanging" msprop:Generator_TableClassName="ChiTietDatVeDataTable" msprop:Generator_RowClassName="ChiTietDatVeRow" msprop:Generator_TableVarName="tableChiTietDatVe" msprop:Generator_UserTableName="ChiTietDatVe">

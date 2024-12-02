@@ -12,7 +12,7 @@ namespace DAL.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "17.7.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "17.12.0.0")]
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
@@ -26,8 +26,19 @@ namespace DAL.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=WIN-H2TPF90416S;Initial Catalog=QL_DATVEXE;Persist Security Info=True" +
-            ";User ID=sa;Password=123;Encrypt=True;TrustServerCertificate=True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=WIN-H2TPF90416S;Initial Catalog=QL_DATVEXE;User ID=sa;Password=123;En" +
+            "crypt=False;TrustServerCertificate=True")]
+        public string QL_DATVEXEConnectionString1 {
+            get {
+                return ((string)(this["QL_DATVEXEConnectionString1"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=LAPTOP-6ML1GA94\\HOANGVI;Initial Catalog=QL_DATVEXE;Persist Security I" +
+            "nfo=True;User ID=sa;Password=123;Encrypt=True;TrustServerCertificate=True")]
         public string QL_DATVEXEConnectionString {
             get {
                 return ((string)(this["QL_DATVEXEConnectionString"]));
@@ -45,8 +56,24 @@ namespace DAL.Properties {
             "crypt=False;TrustServerCertificate=True")]
 >>>>>>> main
         public string QL_DATVEXEConnectionString1 {
+=======
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=LAPTOP-6ML1GA94\\HOANGVI;Initial Catalog=QL_DATVEXE;User ID=sa;Passwor" +
+            "d=123;Encrypt=False;TrustServerCertificate=True")]
+        public string QL_DATVEXEConnectionString2 {
+>>>>>>> Vi
             get {
-                return ((string)(this["QL_DATVEXEConnectionString1"]));
+                return ((string)(this["QL_DATVEXEConnectionString2"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=LAPTOP-6ML1GA94\\HOANGVI;Initial Catalog=QL_DATVEXE;User ID=sa;Passwor" +
+            "d=123;TrustServerCertificate=True")]
+        public string QL_DATVEXEConnectionString3 {
+            get {
+                return ((string)(this["QL_DATVEXEConnectionString3"]));
             }
         }
     }

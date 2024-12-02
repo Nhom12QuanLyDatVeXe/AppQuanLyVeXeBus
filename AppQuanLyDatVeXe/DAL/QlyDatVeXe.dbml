@@ -4,6 +4,9 @@
 =======
   <Connection Mode="AppSettings" ConnectionString="Data Source=LAPTOP-6ML1GA94\HOANGVI;Initial Catalog=QL_DATVEXE;User ID=sa;Encrypt=False;Trust Server Certificate=True" SettingsObjectName="DAL.Properties.Settings" SettingsPropertyName="QL_DATVEXEConnectionString1" Provider="System.Data.SqlClient" />
 >>>>>>> main
+=======
+  <Connection Mode="AppSettings" ConnectionString="Data Source=LAPTOP-6ML1GA94\HOANGVI;Initial Catalog=QL_DATVEXE;User ID=sa;Trust Server Certificate=True" SettingsObjectName="DAL.Properties.Settings" SettingsPropertyName="QL_DATVEXEConnectionString3" Provider="System.Data.SqlClient" />
+>>>>>>> Vi
   <Table Name="dbo.ChiTietDatVe" Member="ChiTietDatVes">
     <Type Name="ChiTietDatVe">
       <Column Name="MaPhieu" Type="System.String" DbType="Char(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />

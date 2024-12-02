@@ -52,6 +52,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>QlyDatVeXe.dbml</DependentUpon>
     </Compile>
+    <Compile Include="QuanLyDatVeXe.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLyDatVeXe.xsd</DependentUpon>
+    </Compile>
     <Compile Include="TinhThanh_DAL.cs" />
     <Compile Include="TuyenXe_DAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -59,11 +64,6 @@
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
-    </Compile>
-    <Compile Include="QuanLyDatVeXe.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>QuanLyDatVeXe.xsd</DependentUpon>
     </Compile>
     <Compile Include="TaiKhoan_DAL.cs" />
     <Compile Include="PhieuDatVe_DAL.cs" />

@@ -72,7 +72,7 @@ namespace DAL
     #endregion
 		
 		public QlyDatVeXeDataContext() : 
-				base(global::DAL.Properties.Settings.Default.QL_DATVEXEConnectionString1, mappingSource)
+				base(global::DAL.Properties.Settings.Default.QL_DATVEXEConnectionString3, mappingSource)
 		{
 			OnCreated();
 		}
