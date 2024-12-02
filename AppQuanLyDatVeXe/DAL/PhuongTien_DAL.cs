@@ -41,6 +41,24 @@ namespace DAL
             return pt;
         }
 
+        public object GetPhuongTiens(string text)
+        {
+            var tbl = from pt in qldvx.PhuongTiens
+                      where pt.BienSoXe.Contains(text)
+                      select new PhuongTien_DTO
+                      {
+
+                          BienSoXe = pt.BienSoXe,
+                          TaiXeChinh = pt.TaiXeChinh,
+                          TaiXephu = pt.TaiXePhu,
+                          SoGhe = pt.SoGhe,
+
+                      };
+
+
+            return tbl.ToList();
+        }
+
         public int insert(PhuongTien_DTO pt)
         {
             try

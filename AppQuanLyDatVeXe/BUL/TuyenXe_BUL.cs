@@ -44,5 +44,10 @@ namespace BUL
 
             return dal.ThemTuyenXe(tx);
         }
+
+        public object GetTuyenXe(string text)
+        {
+            return dal.GetTuyenXe(text);
+        }
     }
 }

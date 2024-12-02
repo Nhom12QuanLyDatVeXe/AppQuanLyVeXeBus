@@ -99,7 +99,7 @@ namespace AppQuanLyDatVeXe
 
         private void btnKhachHang_Click(object sender, EventArgs e)
         {
-            AddControls(new FormThongTinKhachHang());
+            AddControls(new FormThongTinKhachHang(nv));
         }
 
         private void btnHoaDon_Click(object sender, EventArgs e)

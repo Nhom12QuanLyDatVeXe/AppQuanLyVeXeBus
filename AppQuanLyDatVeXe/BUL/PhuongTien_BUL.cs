@@ -32,6 +32,11 @@ namespace BUL
             return dal.GetPhuongTien(biensoxe);
         }
 
+        public object GetPhuongTiens(string text)
+        {
+            return dal.GetPhuongTiens(text);
+        }
+
         public int insert(PhuongTien_DTO pt)
         {
             return dal.insert(pt);

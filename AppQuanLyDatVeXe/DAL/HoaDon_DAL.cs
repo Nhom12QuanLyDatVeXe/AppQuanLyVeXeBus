@@ -32,6 +32,26 @@ namespace DAL
             return tbl.ToList();
         }
 
+        public object GetHoaDon(string ma)
+        {
+            var tbl = from hd in qldvx.HoaDons
+                      where hd.MaPhieu.Contains(ma)
+                      select new HoaDon_DTO
+                      {
+
+                          SoHD = hd.SoHD,
+                          MaPhieu = hd.MaPhieu,
+                          ThanhTien = hd.ThanhTien,
+                          TrangThai = hd.TrangThai,
+                          PhuongThucThanhToan = hd.PhuongThucTT,
+                          MaNV = hd.MaNV,
+
+                      };
+
+
+            return tbl.ToList();
+        }
+
         public bool ThemHoaDon(HoaDon_DTO hoadon)
         {
             try
@@ -63,5 +83,7 @@ namespace DAL
                 return false;
             }
         }
+
+        
     }
 }
