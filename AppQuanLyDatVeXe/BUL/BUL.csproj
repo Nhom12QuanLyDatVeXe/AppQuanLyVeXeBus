@@ -68,6 +68,7 @@
     <Compile Include="NhanVien_BUL.cs" />
     <Compile Include="PhieuDatVe_BUL.cs" />
     <Compile Include="PhuongTien_BUL.cs" />
+    <Compile Include="TinhThanh_BUL.cs" />
     <Compile Include="TuyenXe_BUL.cs" />
     <Compile Include="TaiKhoan_BUL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

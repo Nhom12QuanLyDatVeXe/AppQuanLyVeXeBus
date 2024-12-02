@@ -104,6 +104,12 @@
     <Compile Include="FormDangNhap.Designer.cs">
       <DependentUpon>FormDangNhap.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormDatVeXe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDatVeXe.Designer.cs">
+      <DependentUpon>FormDatVeXe.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormHoaDon.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -177,6 +183,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormDangNhap.resx">
       <DependentUpon>FormDangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDatVeXe.resx">
+      <DependentUpon>FormDatVeXe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormHoaDon.resx">
       <DependentUpon>FormHoaDon.cs</DependentUpon>

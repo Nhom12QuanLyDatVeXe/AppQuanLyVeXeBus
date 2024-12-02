@@ -15,11 +15,22 @@ namespace AppQuanLyDatVeXe
     public partial class FormMain : Form
     {
         TaiKhoan_DTO acc = new TaiKhoan_DTO();
+        NhanVien_BUL bul_nv = new NhanVien_BUL();
+        NhanVien_DTO nv = new NhanVien_DTO();
         public FormMain(TaiKhoan_DTO login_acc)
         {
             InitializeComponent();
-            acc = login_acc;
-            lblTenUser.Text = acc.UserName;
+            if (login_acc.Quyen == "Admin") { 
+                labelTenNguoiDung.Text = acc.UserName;
+
+            }
+            else
+            {
+                nv = bul_nv.getNhanVien(login_acc.ID);
+                acc = login_acc;
+                labelTenNguoiDung.Text = nv.HoTen;
+            }
+            
         }
         public void AddControls(Form f)
         {
@@ -82,8 +93,15 @@ namespace AppQuanLyDatVeXe
         private void btnExit_Click(object sender, EventArgs e)
         {
             FormDangNhap dn = new FormDangNhap();
+
             dn.Show();
+
             this.Close();
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            AddControls(new FormDatVeXe());
         }
     }
 }

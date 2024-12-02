@@ -50,10 +50,18 @@ namespace DAL
 
         public int checkLogin(TaiKhoan_DTO acc)
         {
-            var tbl = qldvx.TaiKhoans.Where(t => t.UserName == acc.UserName && t.Pass == acc.PassWord).FirstOrDefault();
-            if (tbl != null)
-                return 1;
-            return 0;
+            try
+            {
+                var tbl = qldvx.TaiKhoans.Where(t => t.UserName == acc.UserName && t.Pass == acc.PassWord).FirstOrDefault();
+                if(tbl != null)
+                {
+                    if (tbl.TrangThai == "Hoạt động" && tbl.Quyen == "NV" || tbl.Quyen == "Admin")
+                        return 1;
+                }
+                return 0;
+            }
+            catch(Exception ex) { return -1;}
+            
         }
 
         public TaiKhoan_DTO getAccount(string userName)

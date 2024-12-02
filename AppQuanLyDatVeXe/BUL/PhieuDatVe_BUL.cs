@@ -12,6 +12,10 @@ namespace BUL
     {
         PhieuDatVe_DAL dal = new PhieuDatVe_DAL();
 
+        public int createOne(int soluongghe, double tongtien, string makh, string matuyen, List<string> danhSachGheDaChon, double dongia)
+        {
+            return dal.createOne(soluongghe, tongtien, makh, matuyen, danhSachGheDaChon, dongia);
+        }
 
         public List<PhieuDatVe_DTO> GetPhieuDatVe()
         {

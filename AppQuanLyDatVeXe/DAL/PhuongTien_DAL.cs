@@ -30,6 +30,7 @@ namespace DAL
             return tbl.ToList();
         }
 
+<<<<<<< HEAD
         public bool ThemPhuongTien(PhuongTien_DTO phuongtien)
         {
             try
@@ -57,6 +58,33 @@ namespace DAL
                 Console.WriteLine("Lỗi khi thêm phương tiện !: " + ex.Message);
                 return false;
             }
+=======
+        public PhuongTien_DTO GetPhuongTien(string biensoxe)
+        {
+            var phuongtien = qldvx.PhuongTiens.Where(t => t.BienSoXe == biensoxe).FirstOrDefault();
+            PhuongTien_DTO pt = new PhuongTien_DTO();
+            pt.BienSoXe = phuongtien.BienSoXe;
+            pt.TaiXephu = phuongtien.TaiXePhu;
+            pt.TaiXeChinh = phuongtien.TaiXeChinh;
+            pt.SoGhe = phuongtien.SoGhe;
+            return pt;
+        }
+
+        public int insert(PhuongTien_DTO pt)
+        {
+            try
+            {
+                PhuongTien phuongtien = new PhuongTien { 
+                BienSoXe = pt.BienSoXe,
+                TaiXeChinh = pt.TaiXeChinh,
+                TaiXePhu = pt.TaiXephu,
+                SoGhe = pt.SoGhe};
+                qldvx.PhuongTiens.InsertOnSubmit(phuongtien);
+                qldvx.SubmitChanges();
+                return 1;
+            }
+            catch { return -1; }
+>>>>>>> main
         }
     }
 }

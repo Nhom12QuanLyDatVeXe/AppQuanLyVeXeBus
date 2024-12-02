@@ -80,7 +80,11 @@
             this.label5.ForeColor = System.Drawing.Color.Black;
             this.label5.Location = new System.Drawing.Point(386, 182);
             this.label5.Name = "label5";
+<<<<<<< HEAD
             this.label5.Size = new System.Drawing.Size(75, 25);
+=======
+            this.label5.Size = new System.Drawing.Size(60, 20);
+>>>>>>> main
             this.label5.TabIndex = 46;
             this.label5.Text = "Số ghế";
             // 
@@ -117,7 +121,11 @@
             this.label6.ForeColor = System.Drawing.Color.Black;
             this.label6.Location = new System.Drawing.Point(32, 182);
             this.label6.Name = "label6";
+<<<<<<< HEAD
             this.label6.Size = new System.Drawing.Size(104, 25);
+=======
+            this.label6.Size = new System.Drawing.Size(81, 20);
+>>>>>>> main
             this.label6.TabIndex = 44;
             this.label6.Text = "Tài xế phụ";
             // 
@@ -154,7 +162,11 @@
             this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.Location = new System.Drawing.Point(386, 102);
             this.label3.Name = "label3";
+<<<<<<< HEAD
             this.label3.Size = new System.Drawing.Size(118, 25);
+=======
+            this.label3.Size = new System.Drawing.Size(92, 20);
+>>>>>>> main
             this.label3.TabIndex = 40;
             this.label3.Text = "Tài xế chính";
             // 
@@ -191,7 +203,11 @@
             this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(32, 102);
             this.label2.Name = "label2";
+<<<<<<< HEAD
             this.label2.Size = new System.Drawing.Size(103, 25);
+=======
+            this.label2.Size = new System.Drawing.Size(82, 20);
+>>>>>>> main
             this.label2.TabIndex = 38;
             this.label2.Text = "Biển số xe";
             // 
@@ -212,7 +228,11 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(30, 30);
             this.label1.Name = "label1";
+<<<<<<< HEAD
             this.label1.Size = new System.Drawing.Size(336, 31);
+=======
+            this.label1.Size = new System.Drawing.Size(276, 26);
+>>>>>>> main
             this.label1.TabIndex = 0;
             this.label1.Text = "Bảng chi tiết phương tiện";
             // 
@@ -274,7 +294,11 @@
             // 
             // FormCTPT
             // 
+<<<<<<< HEAD
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
+=======
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+>>>>>>> main
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(760, 389);
             this.Controls.Add(this.txtSLGhe);

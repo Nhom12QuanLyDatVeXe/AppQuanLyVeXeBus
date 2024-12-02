@@ -9,6 +9,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DTO;
+using BUL;
 
 namespace AppQuanLyDatVeXe.FormChiTiet
 {
@@ -32,6 +34,7 @@ namespace AppQuanLyDatVeXe.FormChiTiet
                     dtpGioDi.Value.TimeOfDay;
         }
 
+<<<<<<< HEAD
         TuyenXe_BUL bul = new TuyenXe_BUL();
         private void btnLuu_Click(object sender, EventArgs e)
         {
@@ -91,6 +94,13 @@ namespace AppQuanLyDatVeXe.FormChiTiet
             {
                 MessageBox.Show($"Đã xảy ra lỗi: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+=======
+        private void btnLuu_Click(object sender, EventArgs e)
+        {
+            TuyenXe_DTO tx = new TuyenXe_DTO();
+            tx.MaTuyenXe = int.Parse(txtMaChuyen.Text);
+            tx.TenTuyen = txtTenChuyen.Text;
+>>>>>>> main
         }
     }
 }

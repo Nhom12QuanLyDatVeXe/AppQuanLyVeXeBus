@@ -127,7 +127,11 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(30, 30);
             this.label1.Name = "label1";
+<<<<<<< HEAD
             this.label1.Size = new System.Drawing.Size(316, 31);
+=======
+            this.label1.Size = new System.Drawing.Size(260, 26);
+>>>>>>> main
             this.label1.TabIndex = 0;
             this.label1.Text = "Bảng chi tiết chuyến xe";
             // 
@@ -155,7 +159,11 @@
             this.label11.ForeColor = System.Drawing.Color.Black;
             this.label11.Location = new System.Drawing.Point(852, 102);
             this.label11.Name = "label11";
+<<<<<<< HEAD
             this.label11.Size = new System.Drawing.Size(95, 25);
+=======
+            this.label11.Size = new System.Drawing.Size(77, 20);
+>>>>>>> main
             this.label11.TabIndex = 74;
             this.label11.Text = "Điểm đến";
             // 
@@ -192,7 +200,11 @@
             this.label8.ForeColor = System.Drawing.Color.Black;
             this.label8.Location = new System.Drawing.Point(320, 267);
             this.label8.Name = "label8";
+<<<<<<< HEAD
             this.label8.Size = new System.Drawing.Size(79, 25);
+=======
+            this.label8.Size = new System.Drawing.Size(54, 20);
+>>>>>>> main
             this.label8.TabIndex = 70;
             this.label8.Text = "Đơn giá";
             // 
@@ -229,7 +241,11 @@
             this.label9.ForeColor = System.Drawing.Color.Black;
             this.label9.Location = new System.Drawing.Point(32, 267);
             this.label9.Name = "label9";
+<<<<<<< HEAD
             this.label9.Size = new System.Drawing.Size(128, 25);
+=======
+            this.label9.Size = new System.Drawing.Size(54, 20);
+>>>>>>> main
             this.label9.TabIndex = 68;
             this.label9.Text = "Khoảng cách";
             // 
@@ -240,7 +256,11 @@
             this.label7.ForeColor = System.Drawing.Color.Black;
             this.label7.Location = new System.Drawing.Point(32, 182);
             this.label7.Name = "label7";
+<<<<<<< HEAD
             this.label7.Size = new System.Drawing.Size(78, 25);
+=======
+            this.label7.Size = new System.Drawing.Size(61, 20);
+>>>>>>> main
             this.label7.TabIndex = 67;
             this.label7.Text = "Ngày đi";
             // 
@@ -292,7 +312,11 @@
             this.label5.ForeColor = System.Drawing.Color.Black;
             this.label5.Location = new System.Drawing.Point(765, 182);
             this.label5.Name = "label5";
+<<<<<<< HEAD
             this.label5.Size = new System.Drawing.Size(60, 25);
+=======
+            this.label5.Size = new System.Drawing.Size(48, 20);
+>>>>>>> main
             this.label5.TabIndex = 64;
             this.label5.Text = "Email";
             // 
@@ -329,7 +353,11 @@
             this.label6.ForeColor = System.Drawing.Color.Black;
             this.label6.Location = new System.Drawing.Point(461, 182);
             this.label6.Name = "label6";
+<<<<<<< HEAD
             this.label6.Size = new System.Drawing.Size(126, 25);
+=======
+            this.label6.Size = new System.Drawing.Size(102, 20);
+>>>>>>> main
             this.label6.TabIndex = 62;
             this.label6.Text = "Số điện thoại";
             // 
@@ -340,7 +368,11 @@
             this.label4.ForeColor = System.Drawing.Color.Black;
             this.label4.Location = new System.Drawing.Point(622, 102);
             this.label4.Name = "label4";
+<<<<<<< HEAD
             this.label4.Size = new System.Drawing.Size(77, 25);
+=======
+            this.label4.Size = new System.Drawing.Size(62, 20);
+>>>>>>> main
             this.label4.TabIndex = 60;
             this.label4.Text = "Điểm đi";
             // 
@@ -377,7 +409,11 @@
             this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.Location = new System.Drawing.Point(326, 102);
             this.label3.Name = "label3";
+<<<<<<< HEAD
             this.label3.Size = new System.Drawing.Size(142, 25);
+=======
+            this.label3.Size = new System.Drawing.Size(111, 20);
+>>>>>>> main
             this.label3.TabIndex = 58;
             this.label3.Text = "Tên chuyến xe";
             // 
@@ -414,7 +450,11 @@
             this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(32, 102);
             this.label2.Name = "label2";
+<<<<<<< HEAD
             this.label2.Size = new System.Drawing.Size(135, 25);
+=======
+            this.label2.Size = new System.Drawing.Size(106, 20);
+>>>>>>> main
             this.label2.TabIndex = 56;
             this.label2.Text = "Mã chuyến xe";
             // 
@@ -425,7 +465,11 @@
             this.label10.ForeColor = System.Drawing.Color.Black;
             this.label10.Location = new System.Drawing.Point(622, 267);
             this.label10.Name = "label10";
+<<<<<<< HEAD
             this.label10.Size = new System.Drawing.Size(103, 25);
+=======
+            this.label10.Size = new System.Drawing.Size(80, 20);
+>>>>>>> main
             this.label10.TabIndex = 72;
             this.label10.Text = "Biển số xe";
             // 
@@ -453,7 +497,11 @@
             this.label12.ForeColor = System.Drawing.Color.Black;
             this.label12.Location = new System.Drawing.Point(249, 182);
             this.label12.Name = "label12";
+<<<<<<< HEAD
             this.label12.Size = new System.Drawing.Size(62, 25);
+=======
+            this.label12.Size = new System.Drawing.Size(50, 20);
+>>>>>>> main
             this.label12.TabIndex = 78;
             this.label12.Text = "Giờ đi";
             // 
@@ -507,7 +555,11 @@
             // 
             // FormCTCX
             // 
+<<<<<<< HEAD
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
+=======
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+>>>>>>> main
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1112, 474);
             this.Controls.Add(this.label12);

@@ -48,18 +48,30 @@ namespace AppQuanLyDatVeXe
             TaiKhoan_DTO acc = new TaiKhoan_DTO();
             acc.UserName = txtTenUser.Text;
             acc.PassWord = txtPass.Text;
-            if(tK_BUL.CheckLogin(acc) == 1)
+            if (tK_BUL.CheckLogin(acc) == 1)
             {
+                this.Hide();
                 TaiKhoan_DTO acc_login = new TaiKhoan_DTO();
                 acc_login = tK_BUL.getAccount(acc.UserName);
-                FormMain main = new FormMain(acc_login);
-                main.ShowDialog();
-                this.Hide();
-                this.Visible = false;
+                using (FormMain main = new FormMain(acc_login))
+                {
+                    main.ShowDialog();
+                }
+                this.Close();
+                
             }
+            else if (tK_BUL.CheckLogin(acc) == 0)
+            {
+                MessageBox.Show("Sai thông tin đăng nhập!");
+            }
+            else
+                MessageBox.Show("Lỗi kết nối cơ sở dữ liệu!");
         }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> main
 
     }
 }
