@@ -7,6 +7,9 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using OfficeOpenXml;
+using OfficeOpenXml.Style;
+using System.IO;
 using System.Windows.Forms;
 using BUL;
 using DTO;
@@ -22,11 +25,6 @@ namespace AppQuanLyDatVeXe
             InitializeComponent();
         }
 
-        private void btnThem_Click(object sender, EventArgs e)
-        {
-            FormCTVX ctvx=  new FormCTVX();
-            ctvx.ShowDialog();
-        }
 
         private void FormVeXe_Load(object sender, EventArgs e)
         {
@@ -165,6 +163,69 @@ namespace AppQuanLyDatVeXe
                     }
                 }
             }
+        }
+
+        private void txtTimKiem_TextChanged(object sender, EventArgs e)
+        {
+            dgvDSVX.DataSource = null;
+            dgvDSVX.DataSource = PDV_BUL.GetPhieuDatVe(txtTimKiem.Text);
+
+        }
+
+        public void XuatDanhSachHuyTrongTuan()
+        {
+            // Lấy danh sách phiếu đặt vé đã hủy trong tuần
+            DataTable dataTable = PDV_BUL.GetPhieuDatVeDaHuyTrongTuan();
+
+            // Đường dẫn lưu file Excel
+            string filePath = @"D:\hufi\Hk1_2024_2025\PTPMUDTM\AppQuanLyVeXeBus-main\AppQuanLyDatVeXe\FileExcel\DanhSachPhieuHuy.xlsx";
+
+            // Gọi hàm xuất Excel
+            XuatPhieuDatVeHuyRaExcel(dataTable, filePath);
+        }
+        private void btnXuatExcel_Click(object sender, EventArgs e)
+        {
+            //XuatDanhSachHuyTrongTuan();
+        }
+
+        public void XuatPhieuDatVeHuyRaExcel(DataTable dataTable, string filePath)
+        {
+            // Bật giấy phép không thương mại của EPPlus
+            ExcelPackage.LicenseContext = OfficeOpenXml.LicenseContext.NonCommercial;
+
+            using (ExcelPackage excelPackage = new ExcelPackage())
+            {
+                // Tạo một worksheet mới
+                ExcelWorksheet worksheet = excelPackage.Workbook.Worksheets.Add("Phiếu Đặt Vé Hủy");
+
+                // Thêm header vào file Excel
+                for (int col = 0; col < dataTable.Columns.Count; col++)
+                {
+                    worksheet.Cells[1, col + 1].Value = dataTable.Columns[col].ColumnName;
+                    worksheet.Cells[1, col + 1].Style.Font.Bold = true;
+                    worksheet.Cells[1, col + 1].Style.Fill.PatternType = ExcelFillStyle.Solid;
+                    worksheet.Cells[1, col + 1].Style.Fill.BackgroundColor.SetColor(System.Drawing.Color.LightGray);
+                    worksheet.Cells[1, col + 1].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+                }
+
+                // Thêm dữ liệu từ DataTable vào Excel
+                for (int row = 0; row < dataTable.Rows.Count; row++)
+                {
+                    for (int col = 0; col < dataTable.Columns.Count; col++)
+                    {
+                        worksheet.Cells[row + 2, col + 1].Value = dataTable.Rows[row][col];
+                    }
+                }
+
+                // Tự động điều chỉnh kích thước cột
+                worksheet.Cells[worksheet.Dimension.Address].AutoFitColumns();
+
+                // Lưu file Excel
+                FileInfo fileInfo = new FileInfo(filePath);
+                excelPackage.SaveAs(fileInfo);
+            }
+
+            Console.WriteLine("Xuất file Excel thành công!");
         }
     }
 }

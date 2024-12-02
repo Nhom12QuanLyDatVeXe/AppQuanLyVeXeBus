@@ -23,7 +23,8 @@ namespace AppQuanLyDatVeXe
 
         private void FormNhanVien_Load(object sender, EventArgs e)
         {
-            LoadNV();   
+            LoadNV();
+            dgvDSNV.AutoGenerateColumns = false;
         }
         
         NhanVien_BUL NV_BUL = new NhanVien_BUL();
@@ -43,6 +44,12 @@ namespace AppQuanLyDatVeXe
         private void dgvDSNV_RowPostPaint(object sender, DataGridViewRowPostPaintEventArgs e)
         {
             dgvDSNV.Rows[e.RowIndex].Cells[0].Value = (e.RowIndex + 1).ToString();
+        }
+
+        private void txtTimKiem_TextChanged(object sender, EventArgs e)
+        {
+            dgvDSNV.DataSource = null;
+            dgvDSNV.DataSource = NV_BUL.GetNhanVien(txtTimKiem.Text);
         }
     }
 }

@@ -53,5 +53,12 @@ namespace AppQuanLyDatVeXe
                 }
             }
         }
+
+        private void txtTimKiem_TextChanged(object sender, EventArgs e)
+        {
+            BindingSource bindingSource = new BindingSource();
+            bindingSource.DataSource = PT_BUL.GetPhuongTiens(txtTimKiem.Text);
+            dgvDSPT.DataSource = bindingSource;
+        }
     }
 }

@@ -31,6 +31,11 @@ namespace BUL
             return dal.GetKhachHang(v);
         }
 
+        public object GetKhachHang1(string text)
+        {
+            return dal.GetKhachHang1(text);
+        }
+
         public bool ThemKH(KhachHang_DTO khachhang)
         {
 

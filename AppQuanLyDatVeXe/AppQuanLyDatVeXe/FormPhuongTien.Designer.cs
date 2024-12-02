@@ -93,7 +93,7 @@
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(1082, 102);
+            this.guna2Panel1.Size = new System.Drawing.Size(1580, 102);
             this.guna2Panel1.TabIndex = 10;
             // 
             // txtTimKiem
@@ -126,6 +126,7 @@
             this.txtTimKiem.Size = new System.Drawing.Size(346, 43);
             this.txtTimKiem.TabIndex = 8;
             this.txtTimKiem.TextOffset = new System.Drawing.Point(20, 0);
+            this.txtTimKiem.TextChanged += new System.EventHandler(this.txtTimKiem_TextChanged);
             // 
             // dgvDSPT
             // 
@@ -165,7 +166,7 @@
             this.dgvDSPT.RowHeadersVisible = false;
             this.dgvDSPT.RowHeadersWidth = 62;
             this.dgvDSPT.RowTemplate.Height = 28;
-            this.dgvDSPT.Size = new System.Drawing.Size(1056, 800);
+            this.dgvDSPT.Size = new System.Drawing.Size(1580, 800);
             this.dgvDSPT.TabIndex = 11;
             this.dgvDSPT.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvDSPT.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -245,7 +246,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1082, 800);
+            this.ClientSize = new System.Drawing.Size(1580, 800);
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.dgvDSPT);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

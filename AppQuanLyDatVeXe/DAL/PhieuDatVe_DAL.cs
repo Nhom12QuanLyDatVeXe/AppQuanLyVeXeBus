@@ -5,6 +5,12 @@ using System.Text;
 using System.Threading.Tasks;
 using DTO;
 
+using OfficeOpenXml;
+using OfficeOpenXml.Style;
+using System.Drawing;
+using System.IO;
+using System.Data;
+
 namespace DAL
 {
     public class PhieuDatVe_DAL
@@ -175,6 +181,22 @@ namespace DAL
             return tbl.ToList();
         }
 
+        public object GetPhieuDatVe(string text)
+        {
+            var tbl = from pdv in qldvx.PhieuDatVes
+                      where pdv.MaKH.Contains(text)
+                      select new PhieuDatVe_DTO
+                      {
+                          MaPhieu = pdv.MaPhieu,
+                          SoLuongGhe = pdv.SoLuongGhe,
+                          TongTien = (decimal)pdv.TongTien,
+                          MaKH = pdv.MaKH,
+                          TrangThai = pdv.TrangThai
+                      };
+
+            return tbl.ToList();
+        }
+
         public string getTenKH(string maphieu)
         {
             var phieu = qldvx.PhieuDatVes.Where(p => p.MaPhieu == maphieu).FirstOrDefault();
@@ -208,6 +230,7 @@ namespace DAL
                             MaNV = manv
                         };
 
+                        
                         qldvx.HoaDons.InsertOnSubmit(hd);
                         qldvx.SubmitChanges();
                     }
@@ -226,6 +249,8 @@ namespace DAL
             catch
             { return false; }
         }
+
+
 
         public bool ThemPhieuDat(PhieuDatVe_DTO phieuDatVe)
         {
@@ -262,5 +287,46 @@ namespace DAL
             decimal phi = phieu.TongTien.Value * 0.2m;
             return phi;
         }
+
+        public DataTable GetPhieuDatVeDaHuyTrongTuan()
+        {
+            DateTime startOfWeek = DateTime.Now.AddDays(-(int)DateTime.Now.DayOfWeek + 1); // Bắt đầu tuần
+            DateTime endOfWeek = startOfWeek.AddDays(6); // Kết thúc tuần
+
+            var danhSachPhieuHuy = from pdv in qldvx.PhieuDatVes
+                                   join kh in qldvx.KhachHangs on pdv.MaKH equals kh.MaKH
+                                   where pdv.TrangThai == "Vé đã hủy"
+                                   && DateTime.ParseExact(pdv.MaPhieu.Substring(0, 8), "yyyyMMdd", null) >= startOfWeek
+                                   && DateTime.ParseExact(pdv.MaPhieu.Substring(0, 8), "yyyyMMdd", null) <= endOfWeek
+                                   select new
+                                   {
+                                       pdv.MaPhieu,
+                                       pdv.SoLuongGhe,
+                                       pdv.TrangThai,
+                                       pdv.TongTien,
+                                       pdv.MaKH,
+                                       kh.HoTen,
+                                       kh.SDT
+                                   };
+
+            // Tạo DataTable
+            DataTable dt = new DataTable();
+            dt.Columns.Add("Mã Phiếu", typeof(string));
+            dt.Columns.Add("Số Lượng Ghế", typeof(int));
+            dt.Columns.Add("Trạng Thái", typeof(string));
+            dt.Columns.Add("Tổng Tiền", typeof(decimal));
+            dt.Columns.Add("Mã Khách Hàng", typeof(string));
+            dt.Columns.Add("Tên Khách Hàng", typeof(string));
+            dt.Columns.Add("Số Điện Thoại", typeof(string));
+
+            // Thêm dữ liệu vào DataTable
+            foreach (var item in danhSachPhieuHuy)
+            {
+                dt.Rows.Add(item.MaPhieu, item.SoLuongGhe, item.TrangThai, item.TongTien, item.MaKH, item.HoTen, item.SDT);
+            }
+
+            return dt;
+        }
+
     }
 }

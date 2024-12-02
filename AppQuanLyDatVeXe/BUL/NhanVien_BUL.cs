@@ -30,6 +30,11 @@ namespace BUL
             return dal.getNhanVien(ma);
         }
 
+        public object GetNhanVien(string text)
+        {
+            return dal.getNhanViens(text);
+        }
+
         public bool ThemNV(NhanVien_DTO nhanvien)
         {
 

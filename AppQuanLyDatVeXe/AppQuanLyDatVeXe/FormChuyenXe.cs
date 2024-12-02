@@ -30,6 +30,7 @@ namespace AppQuanLyDatVeXe
 
         private void FormChuyenXe_Load(object sender, EventArgs e)
         {
+            dgvDSTX.AutoGenerateColumns = false;
             LoadCX();
         }
         public void LoadCX()
@@ -45,6 +46,12 @@ namespace AppQuanLyDatVeXe
                 e.Value = dateTime.ToString("dd/MM/yyyy");
                 e.FormattingApplied = true;
             }
+        }
+
+        private void txtTimKiem_TextChanged(object sender, EventArgs e)
+        {
+            dgvDSTX.DataSource = null;
+            dgvDSTX.DataSource = CX_BUL.GetTuyenXe(txtTimKiem.Text);
         }
     }
 }
