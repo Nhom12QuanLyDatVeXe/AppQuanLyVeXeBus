@@ -58,7 +58,7 @@ namespace DAL
             catch (Exception ex)
             {
 
-                Console.WriteLine("Lỗi khi thêm khách hàng !: " + ex.Message);
+                Console.WriteLine("Lỗi khi thêm hóa đơn !: " + ex.Message);
                 return false;
             }
         }

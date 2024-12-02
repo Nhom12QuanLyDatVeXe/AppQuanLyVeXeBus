@@ -13,6 +13,22 @@ namespace DAL
     {
         QlyDatVeXeDataContext qldvx = new QlyDatVeXeDataContext();
 
+        public TuyenXe_DTO Get1TuyenXe(int matuyenxe)
+        {
+            var tx = qldvx.TuyenXes.Where(t => t.MaTuyenXe == matuyenxe).FirstOrDefault();
+            if(tx!= null)
+            {
+                TuyenXe_DTO tuyenxe = new TuyenXe_DTO();
+                tuyenxe.TenTuyen = tx.TenTuyen;
+                tuyenxe.BienSoXe = tx.BienSoXe;
+                tuyenxe.ThoiGianDi = (DateTime)tx.ThoiGianDi;
+                tuyenxe.GioXuatBen = (TimeSpan)tx.GioXuatBen;
+
+                return tuyenxe;
+            }
+            return null;
+        }
+
         public List<TuyenXe_DTO> GetTuyenXe()
         {
 
@@ -55,6 +71,11 @@ namespace DAL
                           BienSoXe = tx.BienSoXe
                       };
             return tbl.ToList();
+        }
+
+        public TuyenXe_DTO GetTuyenXe(int matuyenxe)
+        {
+            throw new NotImplementedException();
         }
 
         public bool ThemTuyenXe(TuyenXe_DTO tuyenxe)

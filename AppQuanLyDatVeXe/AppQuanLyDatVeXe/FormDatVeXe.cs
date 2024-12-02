@@ -28,6 +28,7 @@ namespace AppQuanLyDatVeXe
         {
             LoadCX();
             loadDiemDi_den();
+            loadComboKH();
             dgvDSTX.Width = 1580;
             cboDiemDen.DropDownStyle = ComboBoxStyle.DropDown;
             cboDiemDi.DropDownStyle = ComboBoxStyle.DropDown;
@@ -84,7 +85,10 @@ namespace AppQuanLyDatVeXe
             LoadCX(cboDiemDi.SelectedValue.ToString(), cboDiemDen.SelectedValue.ToString(), dtpNgayDi.Value);
         }
 
+
+
         private List<string> danhSachGheDaChon = new List<string>();
+
 
         void taoGhe(int soghe, bool tang) //true là dưới, false là trên
         {
@@ -97,6 +101,9 @@ namespace AppQuanLyDatVeXe
             Color toggledColor = Color.Gray;
             string prefix = tang ? "SB" : "ST";
 
+            // Lấy danh sách các ghế đã được đặt từ CSDL
+            var gheDaDat = bul_phieudv.GetGheDaDat(matuyen);
+
             // Hiển thị ghế
             for (int i = 1; i <= soghe / 2; i++)
             {
@@ -107,6 +114,20 @@ namespace AppQuanLyDatVeXe
                 btn.Height = 55;
                 btn.Left = left;
                 btn.Top = top;
+
+                btn.BackColor = Color.WhiteSmoke;
+
+                // Kiểm tra nếu ghế đã được đặt
+                if (gheDaDat.Contains(btn.Name))
+                {
+                    btn.BackColor = toggledColor;
+                    btn.Enabled = false;
+                }
+                else
+                {
+                    btn.BackColor = backgroundColor; // Hiển thị màu sáng mặc định
+                }
+
                 if (danhSachGheDaChon.Contains(btn.Name))
                 {
                     btn.BackColor = toggledColor; // Hiển thị màu "tối" nếu đã được chọn
@@ -206,19 +227,73 @@ namespace AppQuanLyDatVeXe
 
         private void btnDatVe_Click(object sender, EventArgs e)
         {
-            string makh = "KH0001 ";
-            int soluongghe = danhSachGheDaChon.Count();
-            if(makh.Length > 0 && soluongghe > 0 && tongtien > 0)
+            if(makh != "")
             {
-                //tạo mới phiếu đặt vé
-                if(bul_phieudv.createOne(soluongghe, tongtien, makh, matuyen, danhSachGheDaChon, dongia) == 1)
+                int soluongghe = danhSachGheDaChon.Count();
+                if (makh.Length > 0 && soluongghe > 0 && tongtien > 0)
                 {
-                    MessageBox.Show("Tạo phiếu đặt vé thành công!");
-                    dgvDSTX.Width = 1580;
-                    setNull(false);
-                    danhSachGheDaChon = null;
+                    //tạo mới phiếu đặt vé
+                    if (bul_phieudv.createOne(soluongghe, tongtien, makh, matuyen, danhSachGheDaChon, dongia) == 1)
+                    {
+                        MessageBox.Show("Tạo phiếu đặt vé thành công!");
+                        dgvDSTX.Width = 1580;
+                        setNull(false);
+                        danhSachGheDaChon = null;
+                    }
                 }
-            }    
+            }
+            else
+            { MessageBox.Show("Chưa chọn khách hàng!"); }
+               
+        }
+
+        KhachHang_BUL bul_kh = new KhachHang_BUL();
+        string makh;
+        void loadComboKH()
+        {
+            cboKH.DataSource = bul_kh.GetKhachHang();
+            cboKH.DisplayMember = "HoTen";
+            cboKH.ValueMember = "MaKH";
+        }
+        private void cboKH_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(cboKH.SelectedIndex >= 0)
+            {
+                KhachHang_DTO kh = new KhachHang_DTO();
+                kh = bul_kh.GetKhachHang(cboKH.SelectedValue.ToString());
+                if (kh != null)
+                {
+                    txtSDT.Text = kh.SDT;
+                    txtMaKH.Text = kh.MaKH;
+                    makh = kh.MaKH;
+                }
+                else
+                {
+                    txtSDT.Text = "";
+                    txtMaKH.Text = "";
+                    makh = "";
+                }
+
+            }
+        }
+
+        private void txtMaKH_TextChanged(object sender, EventArgs e)
+        {
+            KhachHang_DTO kh = new KhachHang_DTO();
+            kh = bul_kh.TimKHTheoMa(txtMaKH.Text);
+            if(kh != null)
+            {
+                cboKH.SelectedValue = kh.MaKH;
+                txtSDT.Text = kh.SDT;
+                makh = kh.MaKH;
+            }
+            else
+            {
+                cboKH.SelectedIndex = -1;
+                txtSDT.Text = "";
+                makh = "";
+            }
+
         }
     }
 }

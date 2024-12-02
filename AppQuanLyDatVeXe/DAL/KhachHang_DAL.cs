@@ -30,6 +30,24 @@ namespace DAL
             return tbl.ToList();
         }
 
+        public KhachHang_DTO GetKhachHang(string v)
+        {
+            var tbl = qldvx.KhachHangs.Where(t => t.MaKH == v).FirstOrDefault();
+            if (tbl != null)
+            {
+                KhachHang_DTO kh = new KhachHang_DTO
+                { 
+                    MaKH = tbl.MaKH,
+                    HoTen= tbl.HoTen,
+                    SDT= tbl.SDT,
+                    Email = tbl.Email,
+                    GioiTinh = tbl.GioiTinh
+                };
+                return kh;
+            }    
+            return null;
+        }
+
         public bool themKH(KhachHang_DTO khachHang)
         {
             try
@@ -57,6 +75,24 @@ namespace DAL
                 Console.WriteLine("Lỗi khi thêm khách hàng !: " + ex.Message);
                 return false;
             }
+        }
+
+        public KhachHang_DTO TimKHTheoMa(string text)
+        {
+            var tbl = qldvx.KhachHangs.Where(t => t.MaKH == text).FirstOrDefault();
+            if(tbl != null)
+            {
+                KhachHang_DTO kh = new KhachHang_DTO
+                {
+                    MaKH = tbl.MaKH,
+                    HoTen = tbl.HoTen,
+                    SDT = tbl.SDT,
+                    Email = tbl.Email,
+                    GioiTinh = tbl.GioiTinh
+                };
+                return kh;
+            }
+            return null;
         }
     }
 }

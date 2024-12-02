@@ -62,7 +62,7 @@ namespace AppQuanLyDatVeXe
 
         private void btnVeXe_Click(object sender, EventArgs e)
         {
-            AddControls(new FormVeXe());
+            AddControls(new FormVeXe(nv));
         }
 
         private void btnKhachHang_Click(object sender, EventArgs e)

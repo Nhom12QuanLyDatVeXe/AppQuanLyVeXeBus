@@ -26,10 +26,20 @@ namespace BUL
             }
         }
 
+        public KhachHang_DTO GetKhachHang(string v)
+        {
+            return dal.GetKhachHang(v);
+        }
+
         public bool ThemKH(KhachHang_DTO khachhang)
         {
 
             return dal.themKH(khachhang);
+        }
+
+        public KhachHang_DTO TimKHTheoMa(string text)
+        {
+            return dal.TimKHTheoMa(text);
         }
     }
 }
