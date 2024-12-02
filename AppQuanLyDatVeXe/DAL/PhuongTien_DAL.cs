@@ -19,10 +19,10 @@ namespace DAL
                       select new PhuongTien_DTO
                       {
 
-                        BienSoXe = pt.BienSoXe,
-                        TaiXeChinh = pt.TaiXeChinh,
-                        TaiXephu = pt.TaiXePhu,
-                        SoGhe = pt.SoGhe,
+                          BienSoXe = pt.BienSoXe,
+                          TaiXeChinh = pt.TaiXeChinh,
+                          TaiXephu = pt.TaiXePhu,
+                          SoGhe = pt.SoGhe,
 
                       };
 
@@ -30,6 +30,35 @@ namespace DAL
             return tbl.ToList();
         }
 
+<<<<<<< HEAD
+        public bool ThemPhuongTien(PhuongTien_DTO phuongtien)
+        {
+            try
+            {
+                PhuongTien newPhuongTien = new PhuongTien
+                {
+
+                    BienSoXe = phuongtien.BienSoXe,
+                    TaiXeChinh = phuongtien.TaiXeChinh,
+                    TaiXePhu = phuongtien.TaiXephu,
+                    SoGhe = phuongtien.SoGhe,
+                };
+
+
+                qldvx.PhuongTiens.InsertOnSubmit(newPhuongTien);
+
+
+                qldvx.SubmitChanges();
+
+                return true;
+            }
+            catch (Exception ex)
+            {
+
+                Console.WriteLine("Lỗi khi thêm phương tiện !: " + ex.Message);
+                return false;
+            }
+=======
         public PhuongTien_DTO GetPhuongTien(string biensoxe)
         {
             var phuongtien = qldvx.PhuongTiens.Where(t => t.BienSoXe == biensoxe).FirstOrDefault();
@@ -55,6 +84,7 @@ namespace DAL
                 return 1;
             }
             catch { return -1; }
+>>>>>>> main
         }
     }
 }

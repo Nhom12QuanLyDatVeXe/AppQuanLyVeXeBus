@@ -37,7 +37,10 @@ namespace AppQuanLyDatVeXe
         private void btnThem_Click(object sender, EventArgs e)
         {
             FormCTNV ctnv=new FormCTNV();
-            ctnv.ShowDialog();
+            if (ctnv.ShowDialog() == DialogResult.OK) 
+            {
+                LoadNV(); 
+            }   
         }
 
         private void dgvDSNV_RowPostPaint(object sender, DataGridViewRowPostPaintEventArgs e)

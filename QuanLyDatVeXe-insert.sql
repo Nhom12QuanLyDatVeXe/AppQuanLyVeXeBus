@@ -65,23 +65,23 @@ VALUES
 
 ---- Bảng Phiếu Đặt Vé
 
-INSERT INTO PhieuDatVe (SoLuongGhe, TongTien, MaKH)
+INSERT INTO PhieuDatVe (MaPhieu, SoLuongGhe, TongTien, MaKH)
 VALUES 
-(2, 600000, 'KH0001'),
-(1, 430000, 'KH0002');
+('P01', 2, 600000, 'KH0001'),
+('P02', 1, 430000, 'KH0002');
 
 
 ---- Bảng Chi Tiết Phiếu Đặt Vé
 
 INSERT INTO ChiTietDatVe (MaPhieu, MaTuyenXe, MaGhe, DonGia)
 VALUES 
-(1, 1, 'SA01', 300000),  
-(1, 1, 'SA02', 300000),  
-(2, 2, 'SB01', 430000);  
+('P01', 1, 'SA01', 300000),  
+('P01', 1, 'SA02', 300000),  
+('P02', 2, 'SB01', 430000);  
 	
 ---- Bảng Hóa Đơn
 
 INSERT INTO HoaDon (SoHD, MaPhieu, ThanhTien, TrangThai, PhuongThucTT, MaNV)
 VALUES 
-(1001, 1, 600000, N'Đã thanh toán', N'Tiền mặt', 'NV0001'),
-(1002, 2, 430000, N'Chưa thanh toán', N'Chuyển khoản', 'NV0002');
+(1001, 'P01', 600000, N'Đã thanh toán', N'Tiền mặt', 'NV0001'),
+(1002, 'P02', 430000, N'Chưa thanh toán', N'Chuyển khoản', 'NV0002');

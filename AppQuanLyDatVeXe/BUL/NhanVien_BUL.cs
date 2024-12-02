@@ -25,9 +25,17 @@ namespace BUL
             }
         }
 
+<<<<<<< HEAD
+
+        public bool ThemNV(NhanVien_DTO nhanvien)
+        {
+
+            return dal.ThemNhanVien(nhanvien);
+=======
         public NhanVien_DTO getNhanVien(string ma)
         {
             return dal.getNhanVien(ma);
+>>>>>>> main
         }
     }
 }

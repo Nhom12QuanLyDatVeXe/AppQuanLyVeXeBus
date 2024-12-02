@@ -32,5 +32,13 @@ namespace BUL
                 throw;
             }
         }
+
+        public bool ThemPDV(PhieuDatVe_DTO pdv)
+        {
+
+            return dal.ThemPhieuDat(pdv);
+        }
+
+
     }
 }
