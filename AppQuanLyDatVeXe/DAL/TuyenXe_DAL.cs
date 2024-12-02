@@ -31,8 +31,9 @@ namespace DAL
 
         public List<TuyenXe_DTO> GetTuyenXe()
         {
-
+            DateTime currentDate = DateTime.Now;
             var tbl = from tx in qldvx.TuyenXes
+                      where tx.ThoiGianDi > currentDate
                       select new TuyenXe_DTO
                       {
 

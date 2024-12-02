@@ -44,8 +44,6 @@ namespace BUL
 
         public List<PhieuDatVe_DTO> GetPhieuDatVe()
         {
-
-
             try
             {
                 return dal.GetPhieuDatVe();
@@ -63,9 +61,9 @@ namespace BUL
             return dal.getTenKH(maphieu);
         }
 
-        public bool huyVe(string maPhieu)
+        public bool huyVe(string maPhieu, decimal phiHuyVe, string maNV)
         {
-            return dal.huyVe(maPhieu);
+            return dal.huyVe(maPhieu, phiHuyVe, maNV);
         }
 
         public bool ThemPDV(PhieuDatVe_DTO pdv)

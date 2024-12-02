@@ -17,20 +17,52 @@ namespace AppQuanLyDatVeXe
         TaiKhoan_DTO acc = new TaiKhoan_DTO();
         NhanVien_BUL bul_nv = new NhanVien_BUL();
         NhanVien_DTO nv = new NhanVien_DTO();
+
+        void QuyenNhanVienDatVe(bool check)
+        {
+            btnChuyenXe.Enabled = check;
+            btnPhuongTien.Enabled = check;
+            btnNhanVien.Enabled = check;
+        }
+        void QuyenNhanVienKeToan(bool check)
+        {
+            btnChuyenXe.Enabled = check;
+            btnPhuongTien.Enabled = check;
+            btnNhanVien.Enabled = check;
+            btnVeXe.Enabled = check;
+            btnDatVe.Enabled = check;
+            btnKhachHang.Enabled = check;
+        }
+
         public FormMain(TaiKhoan_DTO login_acc)
         {
             InitializeComponent();
             if (login_acc.Quyen == "Admin") { 
                 labelTenNguoiDung.Text = acc.UserName;
-
+                acc = login_acc;
             }
             else
             {
                 nv = bul_nv.getNhanVien(login_acc.ID);
-                acc = login_acc;
-                labelTenNguoiDung.Text = nv.HoTen;
+                //Kiểm tra quyền hiển thị hệ thống
+                if(nv.MaChucVu == 1 || nv.MaChucVu == 2)
+                {
+                    acc = login_acc;
+                    labelTenNguoiDung.Text = nv.HoTen;
+                }
+                else if (nv.MaChucVu == 3)
+                {
+                    acc = login_acc;
+                    labelTenNguoiDung.Text = nv.HoTen;
+                    QuyenNhanVienDatVe(false);
+                }
+                else
+                {
+                    acc = login_acc;
+                    labelTenNguoiDung.Text = nv.HoTen;
+                    QuyenNhanVienKeToan(false);
+                }
             }
-            
         }
         public void AddControls(Form f)
         {

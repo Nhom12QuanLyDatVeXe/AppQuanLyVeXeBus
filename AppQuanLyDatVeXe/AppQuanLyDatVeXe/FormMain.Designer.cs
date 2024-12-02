@@ -31,7 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.btnDatVe = new Guna.UI2.WinForms.Guna2Button();
             this.labelTenNguoiDung = new System.Windows.Forms.Label();
             this.btnExit = new Guna.UI2.WinForms.Guna2Button();
             this.btnNhanVien = new Guna.UI2.WinForms.Guna2Button();
@@ -57,7 +57,7 @@
             this.guna2Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(238)))), ((int)(((byte)(201)))));
             this.guna2Panel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(147)))), ((int)(((byte)(81)))));
             this.guna2Panel1.BorderThickness = 3;
-            this.guna2Panel1.Controls.Add(this.guna2Button1);
+            this.guna2Panel1.Controls.Add(this.btnDatVe);
             this.guna2Panel1.Controls.Add(this.labelTenNguoiDung);
             this.guna2Panel1.Controls.Add(this.btnExit);
             this.guna2Panel1.Controls.Add(this.btnNhanVien);
@@ -74,35 +74,35 @@
             this.guna2Panel1.Size = new System.Drawing.Size(263, 719);
             this.guna2Panel1.TabIndex = 0;
             // 
-            // guna2Button1
+            // btnDatVe
             // 
-            this.guna2Button1.AutoRoundedCorners = true;
-            this.guna2Button1.BorderRadius = 22;
-            this.guna2Button1.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.guna2Button1.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(147)))), ((int)(((byte)(81)))));
-            this.guna2Button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2Button1.CustomizableEdges.BottomRight = false;
-            this.guna2Button1.CustomizableEdges.TopRight = false;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.Color.White;
-            this.guna2Button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button1.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button1.Image = global::AppQuanLyDatVeXe.Properties.Resources.icons8_ticket_26;
-            this.guna2Button1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button1.ImageOffset = new System.Drawing.Point(20, 0);
-            this.guna2Button1.Location = new System.Drawing.Point(9, 289);
-            this.guna2Button1.Margin = new System.Windows.Forms.Padding(2);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
-            this.guna2Button1.Size = new System.Drawing.Size(251, 47);
-            this.guna2Button1.TabIndex = 9;
-            this.guna2Button1.Text = "Đặt vé";
-            this.guna2Button1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button1.TextOffset = new System.Drawing.Point(30, 0);
-            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
+            this.btnDatVe.AutoRoundedCorners = true;
+            this.btnDatVe.BorderRadius = 22;
+            this.btnDatVe.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btnDatVe.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(147)))), ((int)(((byte)(81)))));
+            this.btnDatVe.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDatVe.CustomizableEdges.BottomRight = false;
+            this.btnDatVe.CustomizableEdges.TopRight = false;
+            this.btnDatVe.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnDatVe.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnDatVe.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnDatVe.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnDatVe.FillColor = System.Drawing.Color.White;
+            this.btnDatVe.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDatVe.ForeColor = System.Drawing.Color.Black;
+            this.btnDatVe.Image = global::AppQuanLyDatVeXe.Properties.Resources.icons8_ticket_26;
+            this.btnDatVe.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnDatVe.ImageOffset = new System.Drawing.Point(20, 0);
+            this.btnDatVe.Location = new System.Drawing.Point(9, 289);
+            this.btnDatVe.Margin = new System.Windows.Forms.Padding(2);
+            this.btnDatVe.Name = "btnDatVe";
+            this.btnDatVe.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
+            this.btnDatVe.Size = new System.Drawing.Size(251, 47);
+            this.btnDatVe.TabIndex = 9;
+            this.btnDatVe.Text = "Đặt vé";
+            this.btnDatVe.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnDatVe.TextOffset = new System.Drawing.Point(30, 0);
+            this.btnDatVe.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
             // labelTenNguoiDung
             // 
@@ -452,7 +452,7 @@
         private System.Windows.Forms.ImageList imageList1;
         private Guna.UI2.WinForms.Guna2Button btnExit;
         private System.Windows.Forms.Label labelTenNguoiDung;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button btnDatVe;
     }
 }
 

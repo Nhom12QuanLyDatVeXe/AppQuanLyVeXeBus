@@ -36,6 +36,7 @@ namespace DAL
         {
             try
             {
+                var phieu = qldvx.PhieuDatVes.Where(t => t.MaPhieu == hoadon.MaPhieu).FirstOrDefault();
                 HoaDon newHoaDon = new HoaDon
                 {
 
@@ -49,7 +50,7 @@ namespace DAL
 
 
                 qldvx.HoaDons.InsertOnSubmit(newHoaDon);
-
+                phieu.TrangThai = "Đã thanh toán";
 
                 qldvx.SubmitChanges();
 

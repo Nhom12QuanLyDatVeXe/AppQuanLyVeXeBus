@@ -92,6 +92,8 @@ namespace AppQuanLyDatVeXe
                     if (hd_bul.ThemHoaDon(hoadon) == true)
                     {
                         MessageBox.Show("Thanh toán hóa đơn " + hoadon.SoHD + " thành công!");
+                        LoadPDV();
+                        dgvCTPDV.DataSource = null;
                     }
                     else
                     {
@@ -105,7 +107,12 @@ namespace AppQuanLyDatVeXe
                     string maPhieu = selectedRow.Cells["MaPhieu"].Value.ToString();
                     if (PDV_BUL.checkDieuKienHuy(maPhieu) == 1) // Đã thanh toán và cách thời gian đi trên 12 tiếng
                     {
-                        MessageBox.Show("Đủ điều kiện hủy!");
+                        if(PDV_BUL.huyVe(maphieu,0,nhanvien.MaNV))
+                        {
+                            MessageBox.Show("Hủy vé thành công!");
+                            LoadPDV();
+                            dgvCTPDV.DataSource = null;
+                        }    
                     }
                     else if (PDV_BUL.checkDieuKienHuy(maPhieu) == 0) // Đã thanh toán nhưng các thời gian đi dưới 12 tiếng
                     {
@@ -123,9 +130,11 @@ namespace AppQuanLyDatVeXe
                         if (result == DialogResult.OK)
                         {
                             // Người dùng nhấn OK, thực hiện hủy vé
-                            if (PDV_BUL.huyVe(maPhieu))
+                            if (PDV_BUL.huyVe(maPhieu, phiHuyVe, nhanvien.MaNV))
                             {
                                 MessageBox.Show("Hủy vé thành công!", "Thông báo");
+                                LoadPDV();
+                                dgvCTPDV.DataSource = null;
                             }
                             else
                             {
@@ -144,11 +153,16 @@ namespace AppQuanLyDatVeXe
                         {
                             MessageBox.Show("Hủy vé " + maPhieu + " thành công!");
                             LoadPDV();
+                            dgvCTPDV.DataSource = null;
                         }
                         else
                         { MessageBox.Show("Không thể xóa phiếu đặt vé này!"); }
                             
-                    }    
+                    } 
+                    else
+                    {
+                        MessageBox.Show("Tuyến xe này đã chạy! Không thể hủy vé này nữa!");
+                    }
                 }
             }
         }

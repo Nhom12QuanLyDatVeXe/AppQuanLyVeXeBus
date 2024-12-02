@@ -27,20 +27,21 @@ namespace DAL
                         DateTime currentDate = DateTime.Now;
                         TimeSpan timeDifference = (TimeSpan)(tuyenxe.ThoiGianDi - currentDate);
                         //Xét điều kiện phải hủy cách giờ xuất phát là 12 tiếng
-                        if (timeDifference.TotalHours > 12)
+                        if (timeDifference.TotalHours > 12 && tuyenxe.ThoiGianDi > currentDate)
                         {
-                            return 1;
+                            return 1; //Đủ điều kiện hủy
                         }
-                        else 
+                        else if (timeDifference.TotalHours < 12 && tuyenxe.ThoiGianDi > currentDate)
                             return 0;
+                        else return -1;
                     }
                 }
                 else
                 {
-                    return 2;
+                    return 2; // Phiếu chưa thanh toán
                 }
             }
-            return 2; 
+            return 3; //Phiếu không tồn tại 
         }
 
         public int createOne(int soluongghe, double tongtien, string makh, string matuyen, List<string> danhSachGheDaChon, double dongia)
@@ -54,7 +55,7 @@ namespace DAL
                 phieu.SoLuongGhe = soluongghe;
                 phieu.TongTien = (decimal)tongtien;
                 phieu.MaKH = makh;
-
+                phieu.TrangThai = "Đặt chỗ";
                 qldvx.PhieuDatVes.InsertOnSubmit(phieu);
                 qldvx.SubmitChanges();
 
@@ -70,7 +71,6 @@ namespace DAL
                         ctdv.MaTuyenXe = int.Parse(matuyen);
                         ctdv.MaGhe = maghe;
                         ctdv.DonGia = (decimal)dongia;
-
                         qldvx.ChiTietDatVes.InsertOnSubmit(ctdv);
                     }    
                     else
@@ -168,7 +168,8 @@ namespace DAL
                         MaPhieu = pdv.MaPhieu,
                         SoLuongGhe = pdv.SoLuongGhe,
                         TongTien = (decimal)pdv.TongTien,
-                        MaKH = pdv.MaKH,    
+                        MaKH = pdv.MaKH,
+                        TrangThai = pdv.TrangThai
                       };
 
             return tbl.ToList();
@@ -185,18 +186,45 @@ namespace DAL
             return null;
         }
 
-        public bool huyVe(string maPhieu)
+        public bool huyVe(string maPhieu, decimal phiHuyVe, string manv)
         {
-            var phieu = qldvx.PhieuDatVes.Where(t => t.MaPhieu == maPhieu).FirstOrDefault();
-            if (phieu != null) 
+            try
             {
-                phieu.TrangThai = "Vé đã hủy";
+                DateTime currentDate = DateTime.Now;
+                var phieu = qldvx.PhieuDatVes.Where(t => t.MaPhieu == maPhieu).FirstOrDefault();
+                var hoadon = qldvx.HoaDons.Where(h => h.MaPhieu == maPhieu).FirstOrDefault();
+                if (phieu != null && hoadon != null)
+                {
+                    if (phiHuyVe > 0)
+                    {
+                        phieu.TrangThai = "Vé đã hủy";
+                        HoaDon hd = new HoaDon()
+                        {
+                            SoHD = int.Parse(currentDate.ToString("ddMMyyHHmm")),
+                            MaPhieu = maPhieu,
+                            ThanhTien = phiHuyVe,
+                            TrangThai = "Thanh toán phí hủy",
+                            PhuongThucTT = "Tiền mặt",
+                            MaNV = manv
+                        };
 
-                qldvx.SubmitChanges();
+                        qldvx.HoaDons.InsertOnSubmit(hd);
+                        qldvx.SubmitChanges();
+                    }
+                    else
+                    {
+                        qldvx.HoaDons.DeleteOnSubmit(hoadon);
+                        qldvx.SubmitChanges();
 
-                return true;
+                        qldvx.PhieuDatVes.DeleteOnSubmit(phieu);
+                        qldvx.SubmitChanges();
+                    }
+                    return true;
+                }
+                return false;
             }
-            return false;
+            catch
+            { return false; }
         }
 
         public bool ThemPhieuDat(PhieuDatVe_DTO phieuDatVe)
