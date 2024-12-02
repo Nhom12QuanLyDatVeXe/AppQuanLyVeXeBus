@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.InteropServices;
+using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Threading.Tasks;
 using DTO;
@@ -85,5 +86,47 @@ namespace DAL
                 return false;
             }
         }
+        public bool SuaNhanVien(NhanVien_DTO nv)
+        {
+            try
+            {
+                NhanVien suaNhanVien = qldvx.NhanViens.FirstOrDefault(n => n.MaNV == nv.MaNV);
+
+                suaNhanVien.TenNV = nv.HoTen;
+                suaNhanVien.NgaySinh = nv.NgaySinh;
+                suaNhanVien.GioiTinh = nv.GioiTinh;
+                suaNhanVien.CCCD = nv.CCCD;
+                suaNhanVien.SDT = nv.SDT;
+                suaNhanVien.Luong = nv.Luong;
+                suaNhanVien.TrangThai = nv.TrangThai;
+                suaNhanVien.MaChucVu = nv.MaChucVu;
+
+                qldvx.SubmitChanges();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Lỗi khi sửa nhân viên: " + ex.Message); // Log lỗi
+                return false;
+            }
+        }
+        public bool XoaNhanVien(NhanVien_DTO nv)
+        {
+            try
+            {
+                NhanVien xoaNhanVien = qldvx.NhanViens.FirstOrDefault(n => n.MaNV == nv.MaNV);
+
+                qldvx.NhanViens.DeleteOnSubmit(xoaNhanVien);
+                qldvx.SubmitChanges();
+                return true;
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Lỗi khi xóa nhân viên: " + ex.Message); // Log lỗi
+                return false;
+            }
+        }
+
     }
 }

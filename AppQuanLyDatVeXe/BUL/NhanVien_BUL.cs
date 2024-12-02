@@ -35,5 +35,13 @@ namespace BUL
 
             return dal.ThemNhanVien(nhanvien);
         }
+        public bool SuaNV(NhanVien_DTO nhanvien)
+        {
+            return dal.SuaNhanVien(nhanvien);
+        }
+        public bool XoaNV(NhanVien_DTO nhanvien)
+        {
+            return dal.XoaNhanVien(nhanvien);
+        }
     }
 }
