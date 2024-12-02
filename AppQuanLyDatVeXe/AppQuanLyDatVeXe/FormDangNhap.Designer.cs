@@ -267,17 +267,7 @@
             // 
             // linkDK
             // 
-            this.linkDK.AutoSize = true;
-            this.linkDK.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkDK.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(82)))), ((int)(((byte)(34)))));
-            this.linkDK.Location = new System.Drawing.Point(825, 455);
-            this.linkDK.Name = "linkDK";
-            this.linkDK.Size = new System.Drawing.Size(92, 26);
-            this.linkDK.TabIndex = 20;
-            this.linkDK.TabStop = true;
-            this.linkDK.Text = "Đăng ký";
-            this.linkDK.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.linkDK.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkDK_LinkClicked);
+
             // 
             // FormDangNhap
             // 

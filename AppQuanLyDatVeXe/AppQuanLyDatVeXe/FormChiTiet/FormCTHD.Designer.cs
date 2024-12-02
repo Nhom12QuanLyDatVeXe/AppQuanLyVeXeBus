@@ -353,6 +353,7 @@
             this.Controls.Add(this.guna2Panel1);
             this.Name = "FormCTHD";
             this.Text = "FormCTHD";
+            this.Load += new System.EventHandler(this.FormCTHD_Load);
             this.guna2CustomGradientPanel1.ResumeLayout(false);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();

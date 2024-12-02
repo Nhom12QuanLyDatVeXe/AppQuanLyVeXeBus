@@ -68,5 +68,16 @@ namespace AppQuanLyDatVeXe
                 MessageBox.Show($"Đã xảy ra lỗi: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void FormCTHD_Load(object sender, EventArgs e)
+        {
+            cboTrangThai.Items.Clear();
+            cboTrangThai.Items.Add("Đã thanh toán");
+            cboTrangThai.Items.Add("Chưa thanh toán");
+
+            cboPhuongThuc.Items.Clear();
+            cboPhuongThuc.Items.Add("Tiền mặt");
+            cboPhuongThuc.Items.Add("Chuyển khoản");
+        }
     }
 }

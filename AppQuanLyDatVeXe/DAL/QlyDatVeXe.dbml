@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="QL_DATVEXE" Class="QlyDatVeXeDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=NKD\NKD;Initial Catalog=QL_DATVEXE;Persist Security Info=True;User ID=sa;Trust Server Certificate=True" SettingsObjectName="DAL.Properties.Settings" SettingsPropertyName="QL_DATVEXEConnectionString1" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=NKD\NKD;Initial Catalog=QL_DATVEXE;Persist Security Info=True;User ID=sa;Encrypt=True;Trust Server Certificate=True" SettingsObjectName="DAL.Properties.Settings" SettingsPropertyName="QL_DATVEXEConnectionString" Provider="System.Data.SqlClient" />
   <Table Name="dbo.ChiTietDatVe" Member="ChiTietDatVes">
     <Type Name="ChiTietDatVe">
       <Column Name="MaPhieu" Type="System.String" DbType="Char(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
@@ -8,13 +8,6 @@
       <Column Name="DonGia" Type="System.Decimal" DbType="Money" CanBeNull="true" />
       <Association Name="PhieuDatVe_ChiTietDatVe" Member="PhieuDatVe" ThisKey="MaPhieu" OtherKey="MaPhieu" Type="PhieuDatVe" IsForeignKey="true" />
       <Association Name="TuyenXe_ChiTietDatVe" Member="TuyenXe" ThisKey="MaTuyenXe" OtherKey="MaTuyenXe" Type="TuyenXe" IsForeignKey="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.ChucVu" Member="ChucVus">
-    <Type Name="ChucVu">
-      <Column Name="MaChucVu" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="TenChucVu" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
-      <Association Name="ChucVu_NhanVien" Member="NhanViens" ThisKey="MaChucVu" OtherKey="MaChucVu" Type="NhanVien" />
     </Type>
   </Table>
   <Table Name="dbo.HoaDon" Member="HoaDons">
@@ -27,6 +20,13 @@
       <Column Name="MaNV" Type="System.String" DbType="Char(7)" CanBeNull="true" />
       <Association Name="NhanVien_HoaDon" Member="NhanVien" ThisKey="MaNV" OtherKey="MaNV" Type="NhanVien" IsForeignKey="true" />
       <Association Name="PhieuDatVe_HoaDon" Member="PhieuDatVe" ThisKey="MaPhieu" OtherKey="MaPhieu" Type="PhieuDatVe" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ChucVu" Member="ChucVus">
+    <Type Name="ChucVu">
+      <Column Name="MaChucVu" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TenChucVu" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Association Name="ChucVu_NhanVien" Member="NhanViens" ThisKey="MaChucVu" OtherKey="MaChucVu" Type="NhanVien" />
     </Type>
   </Table>
   <Table Name="dbo.KhachHang" Member="KhachHangs">
@@ -52,7 +52,6 @@
       <Column Name="MaChucVu" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Association Name="NhanVien_HoaDon" Member="HoaDons" ThisKey="MaNV" OtherKey="MaNV" Type="HoaDon" />
       <Association Name="ChucVu_NhanVien" Member="ChucVu" ThisKey="MaChucVu" OtherKey="MaChucVu" Type="ChucVu" IsForeignKey="true" />
-      <Association Name="TaiKhoan_NhanVien" Member="TaiKhoan" ThisKey="MaNV" OtherKey="ID" Type="TaiKhoan" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.PhieuDatVe" Member="PhieuDatVes">
@@ -82,7 +81,6 @@
       <Column Name="Pass" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
       <Column Name="Quyen" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
       <Column Name="TrangThai" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
-      <Association Name="TaiKhoan_NhanVien" Member="NhanVien" ThisKey="ID" OtherKey="MaNV" Type="NhanVien" Cardinality="One" />
     </Type>
   </Table>
   <Table Name="dbo.TinhThanh" Member="TinhThanhs">

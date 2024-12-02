@@ -19,12 +19,12 @@ namespace DAL
                       select new HoaDon_DTO
                       {
 
-                        SoHD = hd.SoHD,
-                        MaPhieu = hd.MaPhieu,
-                        ThanhTien = hd.ThanhTien,
-                        TrangThai = hd.TrangThai,
-                        PhuongThucThanhToan = hd.PhuongThucTT,
-                        MaNV = hd.MaNV,
+                          SoHD = hd.SoHD,
+                          MaPhieu = hd.MaPhieu,
+                          ThanhTien = hd.ThanhTien,
+                          TrangThai = hd.TrangThai,
+                          PhuongThucThanhToan = hd.PhuongThucTT,
+                          MaNV = hd.MaNV,
 
                       };
 
@@ -39,12 +39,12 @@ namespace DAL
                 HoaDon newHoaDon = new HoaDon
                 {
 
-                   SoHD = hoadon.SoHD,
-                   MaNV= hoadon.MaNV,
-                   MaPhieu= hoadon.MaPhieu,
-                   ThanhTien= hoadon.ThanhTien,
-                   TrangThai= hoadon.TrangThai,
-                   PhuongThucTT = hoadon.PhuongThucThanhToan,
+                    SoHD = hoadon.SoHD,
+                    MaNV = hoadon.MaNV,
+                    MaPhieu = hoadon.MaPhieu,
+                    ThanhTien = hoadon.ThanhTien,
+                    TrangThai = hoadon.TrangThai,
+                    PhuongThucTT = hoadon.PhuongThucThanhToan,
                 };
 
 
@@ -62,4 +62,5 @@ namespace DAL
                 return false;
             }
         }
+    }
 }

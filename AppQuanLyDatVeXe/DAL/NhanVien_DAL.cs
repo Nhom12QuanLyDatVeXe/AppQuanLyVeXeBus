@@ -40,12 +40,12 @@ namespace DAL
         {
             try
             {
+                Console.WriteLine($"Ngày sinh: {nhanvien.NgaySinh}"); 
                 NhanVien newNhanVien = new NhanVien
                 {
-
                     MaNV = nhanvien.MaNV,
                     TenNV = nhanvien.HoTen,
-                    NgaySinh = nhanvien.NgaySinh,
+                    NgaySinh = nhanvien.NgaySinh, 
                     GioiTinh = nhanvien.GioiTinh,
                     CCCD = nhanvien.CCCD,
                     SDT = nhanvien.SDT,
@@ -54,18 +54,14 @@ namespace DAL
                     MaChucVu = nhanvien.MaChucVu,
                 };
 
-
                 qldvx.NhanViens.InsertOnSubmit(newNhanVien);
-
-
                 qldvx.SubmitChanges();
 
                 return true;
             }
             catch (Exception ex)
             {
-
-                Console.WriteLine("Lỗi khi thêm khách hàng !: " + ex.Message);
+                Console.WriteLine("Lỗi khi thêm nhân viên: " + ex.Message); // Log lỗi
                 return false;
             }
         }

@@ -19,10 +19,10 @@ namespace DAL
                       select new PhuongTien_DTO
                       {
 
-                        BienSoXe = pt.BienSoXe,
-                        TaiXeChinh = pt.TaiXeChinh,
-                        TaiXephu = pt.TaiXePhu,
-                        SoGhe = pt.SoGhe,
+                          BienSoXe = pt.BienSoXe,
+                          TaiXeChinh = pt.TaiXeChinh,
+                          TaiXephu = pt.TaiXePhu,
+                          SoGhe = pt.SoGhe,
 
                       };
 
@@ -34,7 +34,7 @@ namespace DAL
         {
             try
             {
-                PhuongTien newPhuongTien= new PhuongTien
+                PhuongTien newPhuongTien = new PhuongTien
                 {
 
                     BienSoXe = phuongtien.BienSoXe,
@@ -58,4 +58,5 @@ namespace DAL
                 return false;
             }
         }
+    }
 }

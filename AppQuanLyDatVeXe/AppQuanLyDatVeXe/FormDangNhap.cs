@@ -59,14 +59,7 @@ namespace AppQuanLyDatVeXe
             }
         }
 
-        private void linkDK_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            
-            FormDangKy dk= new FormDangKy();
-            
-            dk.Show();
-            this.Hide();
-        }
+
 
     }
 }

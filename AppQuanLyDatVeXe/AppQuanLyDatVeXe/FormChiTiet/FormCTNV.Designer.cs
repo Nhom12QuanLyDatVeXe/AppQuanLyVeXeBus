@@ -499,6 +499,7 @@
             this.Controls.Add(this.guna2Panel1);
             this.Name = "FormCTNV";
             this.Text = "FormCTNV";
+            this.Load += new System.EventHandler(this.FormCTNV_Load);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
             this.guna2CustomGradientPanel1.ResumeLayout(false);

@@ -98,12 +98,6 @@
     <Compile Include="FormChiTiet\FormCTHD.Designer.cs">
       <DependentUpon>FormCTHD.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormDangKy.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormDangKy.designer.cs">
-      <DependentUpon>FormDangKy.cs</DependentUpon>
-    </Compile>
     <Compile Include="FormDangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -180,9 +174,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormChiTiet\FormCTHD.resx">
       <DependentUpon>FormCTHD.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormDangKy.resx">
-      <DependentUpon>FormDangKy.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormDangNhap.resx">
       <DependentUpon>FormDangNhap.cs</DependentUpon>
