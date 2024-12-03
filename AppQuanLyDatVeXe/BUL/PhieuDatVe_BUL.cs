@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using DTO;
 using DAL;
+using System.Data;
 
 namespace BUL
 {
@@ -56,6 +57,11 @@ namespace BUL
             }
         }
 
+        public object GetPhieuDatVe(string text)
+        {
+            return dal.GetPhieuDatVe(text);
+        }
+
         public string getTenKH(string maphieu)
         {
             return dal.getTenKH(maphieu);
@@ -66,6 +72,7 @@ namespace BUL
             return dal.huyVe(maPhieu, phiHuyVe, maNV);
         }
 
+
         public bool ThemPDV(PhieuDatVe_DTO pdv)
         {
 
@@ -75,6 +82,11 @@ namespace BUL
         public decimal tinhPhiHuyVe(string maphieu)
         {
             return dal.tinhPhiHuyVe(maphieu);
+        }
+
+        public DataTable GetPhieuDatVeDaHuyTrongTuan()
+        {
+            return dal.GetPhieuDatVeDaHuyTrongTuan();
         }
     }
 }

@@ -38,6 +38,13 @@
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.txtTimKiem = new Guna.UI2.WinForms.Guna2TextBox();
             this.dgvDSVX = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.maPhieu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.maKH = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.slGhe = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tongTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TrangThai = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnHuy = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.btnThanhToan = new System.Windows.Forms.DataGridViewButtonColumn();
             this.dgvCTPDV = new Guna.UI2.WinForms.Guna2DataGridView();
             this.column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -49,13 +56,7 @@
             this.lbNgayDi = new System.Windows.Forms.Label();
             this.lbTuyenXe = new System.Windows.Forms.Label();
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            this.maPhieu = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.maKH = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.slGhe = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tongTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TrangThai = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnHuy = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.btnThanhToan = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.btnXuatExcel = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSVX)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCTPDV)).BeginInit();
@@ -75,6 +76,7 @@
             // 
             // guna2Panel1
             // 
+            this.guna2Panel1.Controls.Add(this.btnXuatExcel);
             this.guna2Panel1.Controls.Add(this.txtTimKiem);
             this.guna2Panel1.Controls.Add(this.label1);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -114,6 +116,7 @@
             this.txtTimKiem.Size = new System.Drawing.Size(346, 43);
             this.txtTimKiem.TabIndex = 8;
             this.txtTimKiem.TextOffset = new System.Drawing.Point(20, 0);
+            this.txtTimKiem.TextChanged += new System.EventHandler(this.txtTimKiem_TextChanged);
             // 
             // dgvDSVX
             // 
@@ -179,6 +182,73 @@
             this.dgvDSVX.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvDSVX.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.dgvDSVX.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDSNV_CellContentClick);
+            // 
+            // maPhieu
+            // 
+            this.maPhieu.DataPropertyName = "MaPhieu";
+            this.maPhieu.FillWeight = 74.03846F;
+            this.maPhieu.HeaderText = "Mã phiếu";
+            this.maPhieu.MinimumWidth = 8;
+            this.maPhieu.Name = "maPhieu";
+            this.maPhieu.ReadOnly = true;
+            // 
+            // maKH
+            // 
+            this.maKH.DataPropertyName = "MaKH";
+            this.maKH.FillWeight = 74.03846F;
+            this.maKH.HeaderText = "Mã khách hàng";
+            this.maKH.MinimumWidth = 8;
+            this.maKH.Name = "maKH";
+            this.maKH.ReadOnly = true;
+            // 
+            // slGhe
+            // 
+            this.slGhe.DataPropertyName = "SoLuongGhe";
+            this.slGhe.FillWeight = 74.03846F;
+            this.slGhe.HeaderText = "Số lượng ghế";
+            this.slGhe.MinimumWidth = 8;
+            this.slGhe.Name = "slGhe";
+            this.slGhe.ReadOnly = true;
+            // 
+            // tongTien
+            // 
+            this.tongTien.DataPropertyName = "TongTien";
+            this.tongTien.FillWeight = 74.03846F;
+            this.tongTien.HeaderText = "Tổng tiền";
+            this.tongTien.MinimumWidth = 8;
+            this.tongTien.Name = "tongTien";
+            this.tongTien.ReadOnly = true;
+            // 
+            // TrangThai
+            // 
+            this.TrangThai.DataPropertyName = "TrangThai";
+            this.TrangThai.HeaderText = "Trạng thái";
+            this.TrangThai.Name = "TrangThai";
+            this.TrangThai.ReadOnly = true;
+            // 
+            // btnHuy
+            // 
+            this.btnHuy.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.btnHuy.FillWeight = 50F;
+            this.btnHuy.HeaderText = "";
+            this.btnHuy.MinimumWidth = 8;
+            this.btnHuy.Name = "btnHuy";
+            this.btnHuy.ReadOnly = true;
+            this.btnHuy.Text = "Hủy";
+            this.btnHuy.UseColumnTextForButtonValue = true;
+            this.btnHuy.Width = 40;
+            // 
+            // btnThanhToan
+            // 
+            this.btnThanhToan.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.btnThanhToan.FillWeight = 50F;
+            this.btnThanhToan.HeaderText = "";
+            this.btnThanhToan.MinimumWidth = 8;
+            this.btnThanhToan.Name = "btnThanhToan";
+            this.btnThanhToan.ReadOnly = true;
+            this.btnThanhToan.Text = "Thanh toán";
+            this.btnThanhToan.UseColumnTextForButtonValue = true;
+            this.btnThanhToan.Width = 140;
             // 
             // dgvCTPDV
             // 
@@ -335,72 +405,24 @@
             this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(8, 8);
             this.guna2CustomGradientPanel1.TabIndex = 18;
             // 
-            // maPhieu
+            // btnXuatExcel
             // 
-            this.maPhieu.DataPropertyName = "MaPhieu";
-            this.maPhieu.FillWeight = 74.03846F;
-            this.maPhieu.HeaderText = "Mã phiếu";
-            this.maPhieu.MinimumWidth = 8;
-            this.maPhieu.Name = "maPhieu";
-            this.maPhieu.ReadOnly = true;
-            // 
-            // maKH
-            // 
-            this.maKH.DataPropertyName = "MaKH";
-            this.maKH.FillWeight = 74.03846F;
-            this.maKH.HeaderText = "Mã khách hàng";
-            this.maKH.MinimumWidth = 8;
-            this.maKH.Name = "maKH";
-            this.maKH.ReadOnly = true;
-            // 
-            // slGhe
-            // 
-            this.slGhe.DataPropertyName = "SoLuongGhe";
-            this.slGhe.FillWeight = 74.03846F;
-            this.slGhe.HeaderText = "Số lượng ghế";
-            this.slGhe.MinimumWidth = 8;
-            this.slGhe.Name = "slGhe";
-            this.slGhe.ReadOnly = true;
-            // 
-            // tongTien
-            // 
-            this.tongTien.DataPropertyName = "TongTien";
-            this.tongTien.FillWeight = 74.03846F;
-            this.tongTien.HeaderText = "Tổng tiền";
-            this.tongTien.MinimumWidth = 8;
-            this.tongTien.Name = "tongTien";
-            this.tongTien.ReadOnly = true;
-            // 
-            // TrangThai
-            // 
-            this.TrangThai.DataPropertyName = "TrangThai";
-            this.TrangThai.HeaderText = "Trạng thái";
-            this.TrangThai.Name = "TrangThai";
-            this.TrangThai.ReadOnly = true;
-            // 
-            // btnHuy
-            // 
-            this.btnHuy.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.btnHuy.FillWeight = 50F;
-            this.btnHuy.HeaderText = "";
-            this.btnHuy.MinimumWidth = 8;
-            this.btnHuy.Name = "btnHuy";
-            this.btnHuy.ReadOnly = true;
-            this.btnHuy.Text = "Hủy";
-            this.btnHuy.UseColumnTextForButtonValue = true;
-            this.btnHuy.Width = 40;
-            // 
-            // btnThanhToan
-            // 
-            this.btnThanhToan.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.btnThanhToan.FillWeight = 50F;
-            this.btnThanhToan.HeaderText = "";
-            this.btnThanhToan.MinimumWidth = 8;
-            this.btnThanhToan.Name = "btnThanhToan";
-            this.btnThanhToan.ReadOnly = true;
-            this.btnThanhToan.Text = "Thanh toán";
-            this.btnThanhToan.UseColumnTextForButtonValue = true;
-            this.btnThanhToan.Width = 140;
+            this.btnXuatExcel.AutoRoundedCorners = true;
+            this.btnXuatExcel.BackColor = System.Drawing.Color.Transparent;
+            this.btnXuatExcel.BorderRadius = 23;
+            this.btnXuatExcel.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnXuatExcel.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnXuatExcel.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnXuatExcel.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnXuatExcel.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(147)))), ((int)(((byte)(81)))));
+            this.btnXuatExcel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXuatExcel.ForeColor = System.Drawing.Color.White;
+            this.btnXuatExcel.Location = new System.Drawing.Point(28, 50);
+            this.btnXuatExcel.Name = "btnXuatExcel";
+            this.btnXuatExcel.Size = new System.Drawing.Size(180, 48);
+            this.btnXuatExcel.TabIndex = 9;
+            this.btnXuatExcel.Text = "Xuất Excel";
+            this.btnXuatExcel.Click += new System.EventHandler(this.btnXuatExcel_Click);
             // 
             // FormVeXe
             // 
@@ -451,5 +473,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn TrangThai;
         private System.Windows.Forms.DataGridViewButtonColumn btnHuy;
         private System.Windows.Forms.DataGridViewButtonColumn btnThanhToan;
+        private Guna.UI2.WinForms.Guna2Button btnXuatExcel;
     }
 }

@@ -47,6 +47,7 @@ namespace AppQuanLyDatVeXe
             dgvDSNV.Rows[e.RowIndex].Cells[0].Value = (e.RowIndex + 1).ToString();
         }
 
+<<<<<<< HEAD
         private void dgvDSNV_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if(e.ColumnIndex == dgvDSNV.Columns["btnSua"].Index && e.RowIndex>=0)
@@ -122,6 +123,12 @@ namespace AppQuanLyDatVeXe
                     MessageBox.Show($"Lỗi: {ex.Message}", "Lỗi");
                 }
             }
+=======
+        private void txtTimKiem_TextChanged(object sender, EventArgs e)
+        {
+            dgvDSNV.DataSource = null;
+            dgvDSNV.DataSource = NV_BUL.GetNhanVien(txtTimKiem.Text);
+>>>>>>> 86d14a05274a6ab402011a7ef63e44d3f63c6c58
         }
     }
 }

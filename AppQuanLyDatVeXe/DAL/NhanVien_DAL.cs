@@ -57,14 +57,45 @@ namespace DAL
             catch {  return null; }
         }
 
+        public object getNhanViens(string text)
+        {
+            var tbl = from nv in qldvx.NhanViens
+                      where nv.TenNV.Contains(text) 
+                      select new NhanVien_DTO
+                      {
+                          MaNV = nv.MaNV,
+                          HoTen = nv.TenNV,
+                          NgaySinh = nv.NgaySinh.Value,
+                          GioiTinh = nv.GioiTinh,
+                          CCCD = nv.CCCD,
+                          SDT = nv.SDT,
+                          Luong = nv.Luong,
+                          TrangThai = nv.TrangThai,
+                          MaChucVu = nv.MaChucVu,
+                      };
+
+
+            return tbl.ToList();
+        }
+
         public bool ThemNhanVien(NhanVien_DTO nhanvien)
         {
             try
             {
+                DateTime current = DateTime.Now;
+                TaiKhoan tk = new TaiKhoan();
+                tk.ID = "NV" + current.ToString("HHmm");
+                tk.UserName = tk.ID;
+                tk.Pass = tk.ID;
+                tk.Quyen = "NV";
+                tk.TrangThai = "Hoạt động";
+                qldvx.TaiKhoans.InsertOnSubmit(tk);
+                qldvx.SubmitChanges();
+
                 Console.WriteLine($"Ngày sinh: {nhanvien.NgaySinh}");
                 NhanVien newNhanVien = new NhanVien
                 {
-                    MaNV = nhanvien.MaNV,
+                    MaNV = tk.ID,
                     TenNV = nhanvien.HoTen,
                     NgaySinh = nhanvien.NgaySinh,
                     GioiTinh = nhanvien.GioiTinh,

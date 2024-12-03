@@ -18,15 +18,10 @@ namespace AppQuanLyDatVeXe
             InitializeComponent();
         }
 
-        private void btnThem_Click(object sender, EventArgs e)
-        {
-            FormCTHD cthd=new FormCTHD();
-            cthd.ShowDialog();
-        }
-
         private void FormHoaDon_Load(object sender, EventArgs e)
         {
             LoadHD();
+            dgvDSHD.AutoGenerateColumns = false;
         }
 
         HoaDon_BUL HD_BUL = new HoaDon_BUL();
@@ -34,6 +29,17 @@ namespace AppQuanLyDatVeXe
         {
             dgvDSHD.DataSource = null;
             dgvDSHD.DataSource = HD_BUL.GetHoaDon();
+        }
+
+        private void txtTimKiem_TextChanged(object sender, EventArgs e)
+        {
+            dgvDSHD.DataSource = null;
+            dgvDSHD.DataSource = HD_BUL.GetHoaDon(txtTimKiem.Text);
+        }
+
+        private void btnXuatExcel_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

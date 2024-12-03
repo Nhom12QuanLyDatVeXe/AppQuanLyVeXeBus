@@ -48,6 +48,25 @@ namespace DAL
             return null;
         }
 
+        public object GetKhachHang1(string text)
+        {
+            var tbl = from kh in qldvx.KhachHangs
+                      where kh.HoTen.Contains(text)
+                      select new KhachHang_DTO
+                      {
+
+                          MaKH = kh.MaKH,
+                          HoTen = kh.HoTen,
+                          SDT = kh.SDT,
+                          Email = kh.Email,
+                          GioiTinh = kh.GioiTinh,
+
+                      };
+
+
+            return tbl.ToList();
+        }
+
         public bool themKH(KhachHang_DTO khachHang)
         {
             try
