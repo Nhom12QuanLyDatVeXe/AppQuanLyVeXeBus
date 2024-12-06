@@ -133,5 +133,50 @@ namespace DAL
                 return false;
             }
         }
+        public bool SuaTuyenXe(TuyenXe_DTO tuyenxe)
+        {
+            try
+            {
+                var tbl = from tx in qldvx.TuyenXes
+                          where tx.DiemDi == tuyenxe.DiemDi && tx.DiemDen == tuyenxe.DiemDen && tx.ThoiGianDi.HasValue && tx.ThoiGianDi.Value.Date == tuyenxe.ThoiGianDi.Date
+                          select new TuyenXe_DTO
+                          {
+                              MaTuyenXe = tx.MaTuyenXe,
+                              TenTuyen = tx.TenTuyen,
+                              ThoiGianDi = tx.ThoiGianDi.Value,
+                              DiemDi = tx.DiemDi,
+                              DiemDen = tx.DiemDen,
+                              GioXuatBen = tx.GioXuatBen.Value,
+                              GioDenNoi = tx.GioDenNoi.Value,
+                              KhoangCach = (int)tx.KhoangCach,
+                              DonGia = tx.DonGia,
+                              BienSoXe = tx.BienSoXe
+                          };
+                List<TuyenXe_DTO> lst = tbl.ToList();
+                if(lst.Count > 0 )
+                {
+                    return false;
+                }
+
+                TuyenXe txe = qldvx.TuyenXes.Where(n => n.MaTuyenXe == tuyenxe.MaTuyenXe).FirstOrDefault();
+                txe.TenTuyen = tuyenxe.TenTuyen;
+                txe.ThoiGianDi = tuyenxe.ThoiGianDi;
+                txe.DiemDi = tuyenxe.DiemDi;
+                txe.DiemDen = tuyenxe.DiemDen;
+                txe.GioXuatBen = tuyenxe.GioXuatBen;
+                txe.GioDenNoi = tuyenxe.GioDenNoi;
+                txe.KhoangCach = tuyenxe.KhoangCach;
+                txe.DonGia = tuyenxe.DonGia;
+                txe.BienSoXe = tuyenxe.BienSoXe;
+
+                qldvx.SubmitChanges();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Lỗi khi sửa tuyến xe: " + ex.Message);
+                return false;
+            }
+        }
     }
 }

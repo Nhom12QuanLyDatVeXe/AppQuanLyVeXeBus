@@ -75,7 +75,7 @@ namespace AppQuanLyDatVeXe
                     MessageBox.Show($"Lỗi: {ex.Message}", "Lỗi");
                 }
             }
-            else if(e.RowIndex == dgvDSPT.Columns["btnXoa"].Index && e.RowIndex >= 0)
+            else if(e.ColumnIndex == dgvDSPT.Columns["btnXoa"].Index && e.RowIndex >= 0)
             {
                 try
                 {

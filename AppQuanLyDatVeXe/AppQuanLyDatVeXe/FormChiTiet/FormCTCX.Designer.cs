@@ -123,7 +123,7 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(30, 30);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(316, 31);
+            this.label1.Size = new System.Drawing.Size(368, 37);
             this.label1.TabIndex = 0;
             this.label1.Text = "Bảng chi tiết chuyến xe";
             // 
@@ -151,7 +151,7 @@
             this.label11.ForeColor = System.Drawing.Color.Black;
             this.label11.Location = new System.Drawing.Point(852, 102);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(95, 25);
+            this.label11.Size = new System.Drawing.Size(117, 29);
             this.label11.TabIndex = 74;
             this.label11.Text = "Điểm đến";
             // 
@@ -188,7 +188,7 @@
             this.label8.ForeColor = System.Drawing.Color.Black;
             this.label8.Location = new System.Drawing.Point(490, 182);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(79, 25);
+            this.label8.Size = new System.Drawing.Size(96, 29);
             this.label8.TabIndex = 70;
             this.label8.Text = "Đơn giá";
             // 
@@ -225,7 +225,7 @@
             this.label9.ForeColor = System.Drawing.Color.Black;
             this.label9.Location = new System.Drawing.Point(32, 267);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(128, 25);
+            this.label9.Size = new System.Drawing.Size(152, 29);
             this.label9.TabIndex = 68;
             this.label9.Text = "Khoảng cách";
             // 
@@ -236,7 +236,7 @@
             this.label7.ForeColor = System.Drawing.Color.Black;
             this.label7.Location = new System.Drawing.Point(32, 182);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(78, 25);
+            this.label7.Size = new System.Drawing.Size(95, 29);
             this.label7.TabIndex = 67;
             this.label7.Text = "Ngày đi";
             // 
@@ -254,6 +254,7 @@
             this.dtpNgayDi.Size = new System.Drawing.Size(177, 36);
             this.dtpNgayDi.TabIndex = 66;
             this.dtpNgayDi.Value = new System.DateTime(2024, 11, 16, 16, 28, 50, 632);
+            this.dtpNgayDi.ValueChanged += new System.EventHandler(this.dtpNgayDi_ValueChanged);
             // 
             // label4
             // 
@@ -262,7 +263,7 @@
             this.label4.ForeColor = System.Drawing.Color.Black;
             this.label4.Location = new System.Drawing.Point(622, 102);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(77, 25);
+            this.label4.Size = new System.Drawing.Size(96, 29);
             this.label4.TabIndex = 60;
             this.label4.Text = "Điểm đi";
             // 
@@ -299,7 +300,7 @@
             this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.Location = new System.Drawing.Point(326, 102);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(142, 25);
+            this.label3.Size = new System.Drawing.Size(169, 29);
             this.label3.TabIndex = 58;
             this.label3.Text = "Tên chuyến xe";
             // 
@@ -336,7 +337,7 @@
             this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(32, 102);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(135, 25);
+            this.label2.Size = new System.Drawing.Size(159, 29);
             this.label2.TabIndex = 56;
             this.label2.Text = "Mã chuyến xe";
             // 
@@ -347,7 +348,7 @@
             this.label10.ForeColor = System.Drawing.Color.Black;
             this.label10.Location = new System.Drawing.Point(792, 182);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(103, 25);
+            this.label10.Size = new System.Drawing.Size(125, 29);
             this.label10.TabIndex = 72;
             this.label10.Text = "Biển số xe";
             // 
@@ -375,7 +376,7 @@
             this.label12.ForeColor = System.Drawing.Color.Black;
             this.label12.Location = new System.Drawing.Point(249, 182);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(62, 25);
+            this.label12.Size = new System.Drawing.Size(77, 29);
             this.label12.TabIndex = 78;
             this.label12.Text = "Giờ đi";
             // 
@@ -393,6 +394,7 @@
             this.dtpGioDi.Size = new System.Drawing.Size(176, 36);
             this.dtpGioDi.TabIndex = 77;
             this.dtpGioDi.Value = new System.DateTime(2024, 11, 16, 16, 28, 50, 632);
+            this.dtpGioDi.ValueChanged += new System.EventHandler(this.dtpGioDi_ValueChanged);
             // 
             // guna2BorderlessForm1
             // 
@@ -420,7 +422,7 @@
             // 
             // FormCTCX
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 36F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1112, 474);
             this.Controls.Add(this.cbBienSoXe);
