@@ -18,6 +18,7 @@ namespace DAL
         {
 
             var tbl = from nv in qldvx.NhanViens
+                      where nv.TrangThai.Contains("Hoạt động")
                       select new NhanVien_DTO
                       {
                           MaNV = nv.MaNV,
@@ -147,14 +148,14 @@ namespace DAL
             {
                 NhanVien xoaNhanVien = qldvx.NhanViens.FirstOrDefault(n => n.MaNV == nv.MaNV);
 
-                qldvx.NhanViens.DeleteOnSubmit(xoaNhanVien);
+                xoaNhanVien.TrangThai = "Hủy";
                 qldvx.SubmitChanges();
                 return true;
 
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Lỗi khi xóa nhân viên: " + ex.Message); // Log lỗi
+                Console.WriteLine("Lỗi khi hủy tài khoản nhân viên: " + ex.Message); // Log lỗi
                 return false;
             }
         }

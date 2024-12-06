@@ -46,8 +46,12 @@ namespace AppQuanLyDatVeXe
         {
             dgvDSNV.Rows[e.RowIndex].Cells[0].Value = (e.RowIndex + 1).ToString();
         }
+        private void txtTimKiem_TextChanged(object sender, EventArgs e)
+        {
+            dgvDSNV.DataSource = null;
+            dgvDSNV.DataSource = NV_BUL.GetNhanVien(txtTimKiem.Text);
+        }
 
-<<<<<<< HEAD
         private void dgvDSNV_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if(e.ColumnIndex == dgvDSNV.Columns["btnSua"].Index && e.RowIndex>=0)
@@ -89,8 +93,8 @@ namespace AppQuanLyDatVeXe
                 {
                     DataGridViewRow row = dgvDSNV.Rows[e.RowIndex];
                     DialogResult dialogResult = MessageBox.Show(
-                       "Bạn có chắc chắn muốn xóa nhân viên này không?",
-                       "Xác nhận xóa",
+                       "Bạn có chắc chắn muốn hủy nhân viên này không?",
+                       "Xác nhận hủy",
                        MessageBoxButtons.YesNo,
                        MessageBoxIcon.Warning
                    );
@@ -105,17 +109,17 @@ namespace AppQuanLyDatVeXe
                         bool result = NV_BUL.XoaNV(nv);
                         if (result)
                         {
-                            MessageBox.Show("Xóa nhân viên thành công", "Thông báo");
+                            MessageBox.Show("Hủy tài khoản nhân viên thành công", "Thông báo");
                             LoadNV(); 
                         }
                         else
                         {
-                            MessageBox.Show("Xóa nhân viên thất bại", "Lỗi");
+                            MessageBox.Show("Hủy tài khoản nhân viên thất bại", "Lỗi");
                         }
                     }
                     else
                     {
-                        MessageBox.Show("Hủy thao tác xóa.", "Thông báo");
+                        MessageBox.Show("Hủy thao tác.", "Thông báo");
                     }
                 }
                 catch (Exception ex)
@@ -123,12 +127,6 @@ namespace AppQuanLyDatVeXe
                     MessageBox.Show($"Lỗi: {ex.Message}", "Lỗi");
                 }
             }
-=======
-        private void txtTimKiem_TextChanged(object sender, EventArgs e)
-        {
-            dgvDSNV.DataSource = null;
-            dgvDSNV.DataSource = NV_BUL.GetNhanVien(txtTimKiem.Text);
->>>>>>> 86d14a05274a6ab402011a7ef63e44d3f63c6c58
         }
     }
 }

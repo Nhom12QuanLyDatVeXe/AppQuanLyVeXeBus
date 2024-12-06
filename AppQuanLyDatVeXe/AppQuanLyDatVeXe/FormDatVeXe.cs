@@ -29,7 +29,7 @@ namespace AppQuanLyDatVeXe
             LoadCX();
             loadDiemDi_den();
             loadComboKH();
-            dgvDSTX.Width = 1580;
+            dgvDSTX.Width = 900;
             cboDiemDen.DropDownStyle = ComboBoxStyle.DropDown;
             cboDiemDi.DropDownStyle = ComboBoxStyle.DropDown;
             dgvDSTX.AutoGenerateColumns = false;
@@ -93,7 +93,7 @@ namespace AppQuanLyDatVeXe
         void taoGhe(int soghe, bool tang) //true là dưới, false là trên
         {
             int top = 70;
-            int left = 40;
+            int left = 30;
             panelThongTinDatve.Controls.Clear();
 
             // Xác định màu nền và tiền tố tên nút dựa trên tầng
@@ -110,8 +110,8 @@ namespace AppQuanLyDatVeXe
                 Button btn = new Button();
                 btn.Text = $"{prefix}{i}";
                 btn.Name = $"{prefix}{i}"; // Tạo tên duy nhất cho mỗi nút ghế
-                btn.Width = 41;
-                btn.Height = 55;
+                btn.Width = 30;
+                btn.Height = 40;
                 btn.Left = left;
                 btn.Top = top;
 
@@ -169,17 +169,17 @@ namespace AppQuanLyDatVeXe
                 // Cập nhật vị trí nút tiếp theo
                 if (i > 18)
                 {
-                    left += 50; // Khoảng cách hẹp hơn sau hàng thứ 18
+                    left += 30; // Khoảng cách hẹp hơn sau hàng thứ 18
                 }
                 else
                 {
-                    left += 100;
+                    left += 60;
                 }
 
                 if (i % 3 == 0 && i <= 18)
                 {
-                    left = 40;
-                    top += 60;
+                    left = 30;
+                    top += 50;
                 }
             }
         }
@@ -207,7 +207,7 @@ namespace AppQuanLyDatVeXe
 
                 taoGhe(soghe, true);
 
-                dgvDSTX.Width = 820;
+                dgvDSTX.Width = 500;
 
                 setNull(true);
                 
@@ -236,7 +236,7 @@ namespace AppQuanLyDatVeXe
                     if (bul_phieudv.createOne(soluongghe, tongtien, makh, matuyen, danhSachGheDaChon, dongia) == 1)
                     {
                         MessageBox.Show("Tạo phiếu đặt vé thành công!");
-                        dgvDSTX.Width = 1580;
+                        dgvDSTX.Width = 1200;
                         setNull(false);
                         danhSachGheDaChon = null;
                     }
@@ -293,6 +293,11 @@ namespace AppQuanLyDatVeXe
                 txtSDT.Text = "";
                 makh = "";
             }
+
+        }
+
+        private void guna2Panel1_Paint(object sender, PaintEventArgs e)
+        {
 
         }
     }

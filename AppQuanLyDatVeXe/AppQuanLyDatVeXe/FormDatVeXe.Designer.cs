@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.txtMaKH = new Guna.UI2.WinForms.Guna2TextBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -119,8 +119,9 @@
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(1946, 242);
+            this.guna2Panel1.Size = new System.Drawing.Size(1946, 240);
             this.guna2Panel1.TabIndex = 14;
+            this.guna2Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel1_Paint);
             // 
             // txtMaKH
             // 
@@ -137,14 +138,14 @@
             this.txtMaKH.HoverState.BorderColor = System.Drawing.Color.Transparent;
             this.txtMaKH.HoverState.FillColor = System.Drawing.Color.Transparent;
             this.txtMaKH.IconLeftOffset = new System.Drawing.Point(10, 0);
-            this.txtMaKH.Location = new System.Drawing.Point(1614, 128);
+            this.txtMaKH.Location = new System.Drawing.Point(1133, 109);
             this.txtMaKH.Margin = new System.Windows.Forms.Padding(8, 9, 8, 9);
             this.txtMaKH.Name = "txtMaKH";
-            this.txtMaKH.Padding = new System.Windows.Forms.Padding(20, 20, 20, 20);
+            this.txtMaKH.Padding = new System.Windows.Forms.Padding(20);
             this.txtMaKH.PasswordChar = '\0';
             this.txtMaKH.PlaceholderText = "";
             this.txtMaKH.SelectedText = "";
-            this.txtMaKH.Size = new System.Drawing.Size(292, 55);
+            this.txtMaKH.Size = new System.Drawing.Size(292, 36);
             this.txtMaKH.TabIndex = 88;
             this.txtMaKH.TextOffset = new System.Drawing.Point(10, 0);
             this.txtMaKH.TextChanged += new System.EventHandler(this.txtMaKH_TextChanged);
@@ -154,7 +155,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(1630, 88);
+            this.label9.Location = new System.Drawing.Point(1149, 69);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(174, 29);
@@ -173,7 +174,7 @@
             this.cboKH.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.cboKH.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cboKH.ItemHeight = 30;
-            this.cboKH.Location = new System.Drawing.Point(1186, 128);
+            this.cboKH.Location = new System.Drawing.Point(733, 109);
             this.cboKH.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cboKH.Name = "cboKH";
             this.cboKH.Size = new System.Drawing.Size(360, 36);
@@ -198,7 +199,7 @@
             this.txtSDT.Location = new System.Drawing.Point(1994, 128);
             this.txtSDT.Margin = new System.Windows.Forms.Padding(8, 9, 8, 9);
             this.txtSDT.Name = "txtSDT";
-            this.txtSDT.Padding = new System.Windows.Forms.Padding(20, 20, 20, 20);
+            this.txtSDT.Padding = new System.Windows.Forms.Padding(20);
             this.txtSDT.PasswordChar = '\0';
             this.txtSDT.PlaceholderText = "";
             this.txtSDT.SelectedText = "";
@@ -223,7 +224,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(1203, 88);
+            this.label6.Location = new System.Drawing.Point(750, 69);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(139, 29);
@@ -234,7 +235,7 @@
             // 
             this.btnTimKiem.AutoRoundedCorners = true;
             this.btnTimKiem.BackColor = System.Drawing.Color.Transparent;
-            this.btnTimKiem.BorderRadius = 26;
+            this.btnTimKiem.BorderRadius = 17;
             this.btnTimKiem.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnTimKiem.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnTimKiem.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -242,10 +243,10 @@
             this.btnTimKiem.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(147)))), ((int)(((byte)(81)))));
             this.btnTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTimKiem.ForeColor = System.Drawing.Color.White;
-            this.btnTimKiem.Location = new System.Drawing.Point(928, 128);
+            this.btnTimKiem.Location = new System.Drawing.Point(522, 176);
             this.btnTimKiem.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnTimKiem.Name = "btnTimKiem";
-            this.btnTimKiem.Size = new System.Drawing.Size(184, 55);
+            this.btnTimKiem.Size = new System.Drawing.Size(184, 36);
             this.btnTimKiem.TabIndex = 81;
             this.btnTimKiem.Text = "Tìm chuyến";
             this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
@@ -255,7 +256,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(669, 92);
+            this.label7.Location = new System.Drawing.Point(536, 73);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(95, 29);
@@ -269,12 +270,12 @@
             this.dtpNgayDi.CustomFormat = "";
             this.dtpNgayDi.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.dtpNgayDi.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpNgayDi.Location = new System.Drawing.Point(651, 128);
+            this.dtpNgayDi.Location = new System.Drawing.Point(522, 109);
             this.dtpNgayDi.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dtpNgayDi.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dtpNgayDi.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dtpNgayDi.Name = "dtpNgayDi";
-            this.dtpNgayDi.Size = new System.Drawing.Size(216, 55);
+            this.dtpNgayDi.Size = new System.Drawing.Size(184, 36);
             this.dtpNgayDi.TabIndex = 79;
             this.dtpNgayDi.Value = new System.DateTime(2024, 11, 16, 16, 28, 50, 632);
             // 
@@ -290,10 +291,10 @@
             this.cboDiemDen.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.cboDiemDen.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cboDiemDen.ItemHeight = 30;
-            this.cboDiemDen.Location = new System.Drawing.Point(333, 128);
+            this.cboDiemDen.Location = new System.Drawing.Point(282, 109);
             this.cboDiemDen.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cboDiemDen.Name = "cboDiemDen";
-            this.cboDiemDen.Size = new System.Drawing.Size(232, 36);
+            this.cboDiemDen.Size = new System.Drawing.Size(180, 36);
             this.cboDiemDen.TabIndex = 76;
             this.cboDiemDen.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cboDiemDi_KeyPress);
             // 
@@ -302,7 +303,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(348, 92);
+            this.label3.Location = new System.Drawing.Point(297, 73);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(117, 29);
@@ -321,10 +322,10 @@
             this.cboDiemDi.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.cboDiemDi.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cboDiemDi.ItemHeight = 30;
-            this.cboDiemDi.Location = new System.Drawing.Point(42, 128);
+            this.cboDiemDi.Location = new System.Drawing.Point(42, 109);
             this.cboDiemDi.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cboDiemDi.Name = "cboDiemDi";
-            this.cboDiemDi.Size = new System.Drawing.Size(234, 36);
+            this.cboDiemDi.Size = new System.Drawing.Size(178, 36);
             this.cboDiemDi.TabIndex = 74;
             this.cboDiemDi.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cboDiemDi_KeyPress);
             // 
@@ -333,7 +334,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(62, 92);
+            this.label2.Location = new System.Drawing.Point(62, 73);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(96, 29);
@@ -353,17 +354,17 @@
             // dgvDSTX
             // 
             this.dgvDSTX.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.dgvDSTX.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            this.dgvDSTX.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvDSTX.BackgroundColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvDSTX.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvDSTX.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvDSTX.ColumnHeadersHeight = 42;
             this.dgvDSTX.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.dgvDSTX.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -378,21 +379,21 @@
             this.donGia,
             this.bienSo,
             this.btnChon});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvDSTX.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvDSTX.DefaultCellStyle = dataGridViewCellStyle6;
             this.dgvDSTX.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvDSTX.Location = new System.Drawing.Point(42, 248);
             this.dgvDSTX.Name = "dgvDSTX";
             this.dgvDSTX.RowHeadersVisible = false;
             this.dgvDSTX.RowHeadersWidth = 62;
             this.dgvDSTX.RowTemplate.Height = 28;
-            this.dgvDSTX.Size = new System.Drawing.Size(1400, 900);
+            this.dgvDSTX.Size = new System.Drawing.Size(720, 900);
             this.dgvDSTX.TabIndex = 15;
             this.dgvDSTX.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvDSTX.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -524,10 +525,10 @@
             this.panelThongTinDatve.Controls.Add(this.guna2Button7);
             this.panelThongTinDatve.Controls.Add(this.guna2Button2);
             this.panelThongTinDatve.Controls.Add(this.guna2Button1);
-            this.panelThongTinDatve.Location = new System.Drawing.Point(1290, 248);
+            this.panelThongTinDatve.Location = new System.Drawing.Point(774, 248);
             this.panelThongTinDatve.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panelThongTinDatve.Name = "panelThongTinDatve";
-            this.panelThongTinDatve.Size = new System.Drawing.Size(474, 789);
+            this.panelThongTinDatve.Size = new System.Drawing.Size(474, 637);
             this.panelThongTinDatve.TabIndex = 16;
             // 
             // guna2Button35
@@ -879,7 +880,7 @@
             // 
             this.btnTangDuoi.AutoRoundedCorners = true;
             this.btnTangDuoi.BackColor = System.Drawing.Color.Transparent;
-            this.btnTangDuoi.BorderRadius = 36;
+            this.btnTangDuoi.BorderRadius = 23;
             this.btnTangDuoi.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnTangDuoi.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnTangDuoi.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -887,10 +888,10 @@
             this.btnTangDuoi.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(147)))), ((int)(((byte)(81)))));
             this.btnTangDuoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTangDuoi.ForeColor = System.Drawing.Color.White;
-            this.btnTangDuoi.Location = new System.Drawing.Point(1290, 1046);
+            this.btnTangDuoi.Location = new System.Drawing.Point(774, 894);
             this.btnTangDuoi.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnTangDuoi.Name = "btnTangDuoi";
-            this.btnTangDuoi.Size = new System.Drawing.Size(218, 75);
+            this.btnTangDuoi.Size = new System.Drawing.Size(169, 49);
             this.btnTangDuoi.TabIndex = 82;
             this.btnTangDuoi.Text = "Tầng dưới";
             this.btnTangDuoi.Click += new System.EventHandler(this.btnTangDuoi_Click);
@@ -899,7 +900,7 @@
             // 
             this.btnTangTren.AutoRoundedCorners = true;
             this.btnTangTren.BackColor = System.Drawing.Color.Transparent;
-            this.btnTangTren.BorderRadius = 36;
+            this.btnTangTren.BorderRadius = 23;
             this.btnTangTren.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnTangTren.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnTangTren.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -907,10 +908,10 @@
             this.btnTangTren.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.btnTangTren.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTangTren.ForeColor = System.Drawing.Color.White;
-            this.btnTangTren.Location = new System.Drawing.Point(1546, 1046);
+            this.btnTangTren.Location = new System.Drawing.Point(957, 895);
             this.btnTangTren.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnTangTren.Name = "btnTangTren";
-            this.btnTangTren.Size = new System.Drawing.Size(218, 74);
+            this.btnTangTren.Size = new System.Drawing.Size(169, 48);
             this.btnTangTren.TabIndex = 83;
             this.btnTangTren.Text = "Tầng trên";
             this.btnTangTren.Click += new System.EventHandler(this.btnTangTren_Click);
@@ -926,10 +927,10 @@
             this.panelDsGheChon.Controls.Add(this.lbDSGhe);
             this.panelDsGheChon.Controls.Add(this.label5);
             this.panelDsGheChon.Controls.Add(this.label4);
-            this.panelDsGheChon.Location = new System.Drawing.Point(1773, 342);
+            this.panelDsGheChon.Location = new System.Drawing.Point(1127, 356);
             this.panelDsGheChon.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panelDsGheChon.Name = "panelDsGheChon";
-            this.panelDsGheChon.Size = new System.Drawing.Size(620, 485);
+            this.panelDsGheChon.Size = new System.Drawing.Size(371, 485);
             this.panelDsGheChon.TabIndex = 84;
             // 
             // lbBienSoXe
@@ -1003,10 +1004,10 @@
             this.btnDatVe.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.btnDatVe.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDatVe.ForeColor = System.Drawing.Color.White;
-            this.btnDatVe.Location = new System.Drawing.Point(76, 388);
+            this.btnDatVe.Location = new System.Drawing.Point(36, 385);
             this.btnDatVe.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnDatVe.Name = "btnDatVe";
-            this.btnDatVe.Size = new System.Drawing.Size(468, 74);
+            this.btnDatVe.Size = new System.Drawing.Size(270, 74);
             this.btnDatVe.TabIndex = 83;
             this.btnDatVe.Text = "Đặt vé";
             this.btnDatVe.Click += new System.EventHandler(this.btnDatVe_Click);
@@ -1018,7 +1019,7 @@
             this.lbDSGhe.Location = new System.Drawing.Point(6, 45);
             this.lbDSGhe.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbDSGhe.Name = "lbDSGhe";
-            this.lbDSGhe.Size = new System.Drawing.Size(609, 111);
+            this.lbDSGhe.Size = new System.Drawing.Size(352, 111);
             this.lbDSGhe.TabIndex = 77;
             // 
             // label5

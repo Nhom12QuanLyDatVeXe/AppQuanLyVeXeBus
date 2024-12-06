@@ -29,7 +29,12 @@ namespace AppQuanLyDatVeXe.FormChiTiet
             dtpGioDi.Format = DateTimePickerFormat.Time;
             dtpGioDi.ShowUpDown = true;
             DateTime myDate = dtpNgayDi.Value.Date +
-                    dtpGioDi.Value.TimeOfDay;
+                    dtpGioDi.Value.TimeOfDay; 
+
+            cboDiemDen.Items.Add("77");
+            cboDiemDen.Items.Add("39");
+
+            cboDiemDi.Items.Add("79");
         }
 
         private void btnLuu_Click(object sender, EventArgs e)
@@ -40,7 +45,7 @@ namespace AppQuanLyDatVeXe.FormChiTiet
                 string tenTuyen = txtTenChuyen.Text.Trim();
                 string diemDi = cboDiemDen.SelectedItem?.ToString();
                 string diemDen = cboDiemDen.SelectedItem?.ToString();
-                DateTime ngayDi = dtpNgayDi.Value;
+                DateTime ngayDi = dtpNgayDi.Value.Date;
                 TimeSpan gioxuatBen = dtpGioDi.Value.TimeOfDay;
                 int khoangcach = int.Parse(txtKhoangcach.Text.Trim());
                 decimal donGia = decimal.Parse(txtDonGia.Text.Trim());

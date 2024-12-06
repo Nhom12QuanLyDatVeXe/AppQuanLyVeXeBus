@@ -90,11 +90,7 @@
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel1.Name = "guna2Panel1";
-<<<<<<< HEAD
             this.guna2Panel1.Size = new System.Drawing.Size(1400, 153);
-=======
-            this.guna2Panel1.Size = new System.Drawing.Size(1580, 102);
->>>>>>> 86d14a05274a6ab402011a7ef63e44d3f63c6c58
             this.guna2Panel1.TabIndex = 10;
             // 
             // txtTimKiem
@@ -166,11 +162,7 @@
             this.dgvDSPT.RowHeadersVisible = false;
             this.dgvDSPT.RowHeadersWidth = 62;
             this.dgvDSPT.RowTemplate.Height = 28;
-<<<<<<< HEAD
             this.dgvDSPT.Size = new System.Drawing.Size(1400, 900);
-=======
-            this.dgvDSPT.Size = new System.Drawing.Size(1580, 800);
->>>>>>> 86d14a05274a6ab402011a7ef63e44d3f63c6c58
             this.dgvDSPT.TabIndex = 11;
             this.dgvDSPT.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvDSPT.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -252,11 +244,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(144F, 144F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.White;
-<<<<<<< HEAD
             this.ClientSize = new System.Drawing.Size(1400, 900);
-=======
-            this.ClientSize = new System.Drawing.Size(1580, 800);
->>>>>>> 86d14a05274a6ab402011a7ef63e44d3f63c6c58
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.dgvDSPT);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

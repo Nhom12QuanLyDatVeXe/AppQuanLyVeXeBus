@@ -55,11 +55,7 @@
             // btnThem
             // 
             this.btnThem.AutoRoundedCorners = true;
-<<<<<<< HEAD
             this.btnThem.BorderRadius = 31;
-=======
-            this.btnThem.BorderRadius = 20;
->>>>>>> 86d14a05274a6ab402011a7ef63e44d3f63c6c58
             this.btnThem.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.ToogleButton;
             this.btnThem.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnThem.CustomizableEdges.TopLeft = false;
@@ -73,19 +69,11 @@
             this.btnThem.Image = global::AppQuanLyDatVeXe.Properties.Resources.icons8_add_26;
             this.btnThem.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnThem.ImageOffset = new System.Drawing.Point(10, 0);
-<<<<<<< HEAD
             this.btnThem.Location = new System.Drawing.Point(53, 76);
             this.btnThem.Margin = new System.Windows.Forms.Padding(2);
             this.btnThem.Name = "btnThem";
             this.btnThem.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnThem.Size = new System.Drawing.Size(206, 65);
-=======
-            this.btnThem.Location = new System.Drawing.Point(35, 50);
-            this.btnThem.Margin = new System.Windows.Forms.Padding(2);
-            this.btnThem.Name = "btnThem";
-            this.btnThem.Padding = new System.Windows.Forms.Padding(6, 0, 0, 0);
-            this.btnThem.Size = new System.Drawing.Size(138, 43);
->>>>>>> 86d14a05274a6ab402011a7ef63e44d3f63c6c58
             this.btnThem.TabIndex = 9;
             this.btnThem.Text = "Thêm";
             this.btnThem.TextOffset = new System.Drawing.Point(10, 0);
@@ -95,17 +83,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-<<<<<<< HEAD
             this.label1.Location = new System.Drawing.Point(36, 22);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(324, 32);
-=======
-            this.label1.Location = new System.Drawing.Point(24, 14);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(225, 24);
->>>>>>> 86d14a05274a6ab402011a7ef63e44d3f63c6c58
             this.label1.TabIndex = 0;
             this.label1.Text = "> Danh sách nhân viên";
             // 
@@ -118,11 +99,7 @@
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Panel1.Name = "guna2Panel1";
-<<<<<<< HEAD
             this.guna2Panel1.Size = new System.Drawing.Size(1400, 154);
-=======
-            this.guna2Panel1.Size = new System.Drawing.Size(1580, 102);
->>>>>>> 86d14a05274a6ab402011a7ef63e44d3f63c6c58
             this.guna2Panel1.TabIndex = 5;
             // 
             // txtTimKiem
@@ -145,23 +122,14 @@
             this.txtTimKiem.IconRightCursor = System.Windows.Forms.Cursors.Hand;
             this.txtTimKiem.IconRightOffset = new System.Drawing.Point(20, 0);
             this.txtTimKiem.IconRightSize = new System.Drawing.Size(30, 30);
-<<<<<<< HEAD
             this.txtTimKiem.Location = new System.Drawing.Point(931, 83);
             this.txtTimKiem.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-=======
-            this.txtTimKiem.Location = new System.Drawing.Point(621, 55);
-            this.txtTimKiem.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
->>>>>>> 86d14a05274a6ab402011a7ef63e44d3f63c6c58
             this.txtTimKiem.Name = "txtTimKiem";
             this.txtTimKiem.PasswordChar = '\0';
             this.txtTimKiem.PlaceholderForeColor = System.Drawing.Color.Black;
             this.txtTimKiem.PlaceholderText = "";
             this.txtTimKiem.SelectedText = "";
-<<<<<<< HEAD
             this.txtTimKiem.Size = new System.Drawing.Size(520, 65);
-=======
-            this.txtTimKiem.Size = new System.Drawing.Size(346, 43);
->>>>>>> 86d14a05274a6ab402011a7ef63e44d3f63c6c58
             this.txtTimKiem.TabIndex = 8;
             this.txtTimKiem.TextOffset = new System.Drawing.Point(20, 0);
             this.txtTimKiem.TextChanged += new System.EventHandler(this.txtTimKiem_TextChanged);
@@ -204,21 +172,13 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvDSNV.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvDSNV.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-<<<<<<< HEAD
             this.dgvDSNV.Location = new System.Drawing.Point(40, 168);
-=======
-            this.dgvDSNV.Location = new System.Drawing.Point(26, 112);
->>>>>>> 86d14a05274a6ab402011a7ef63e44d3f63c6c58
             this.dgvDSNV.Margin = new System.Windows.Forms.Padding(2);
             this.dgvDSNV.Name = "dgvDSNV";
             this.dgvDSNV.RowHeadersVisible = false;
             this.dgvDSNV.RowHeadersWidth = 62;
             this.dgvDSNV.RowTemplate.Height = 28;
-<<<<<<< HEAD
-            this.dgvDSNV.Size = new System.Drawing.Size(1400, 900);
-=======
-            this.dgvDSNV.Size = new System.Drawing.Size(1580, 800);
->>>>>>> 86d14a05274a6ab402011a7ef63e44d3f63c6c58
+            this.dgvDSNV.Size = new System.Drawing.Size(1200, 900);
             this.dgvDSNV.TabIndex = 6;
             this.dgvDSNV.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvDSNV.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -339,17 +299,10 @@
             // 
             // FormNhanVien
             // 
-<<<<<<< HEAD
             this.AutoScaleDimensions = new System.Drawing.SizeF(144F, 144F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1400, 900);
-=======
-            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1580, 800);
->>>>>>> 86d14a05274a6ab402011a7ef63e44d3f63c6c58
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.dgvDSNV);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

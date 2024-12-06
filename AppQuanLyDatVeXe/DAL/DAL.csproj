@@ -99,11 +99,7 @@
     <Compile Include="PhieuDatVe_DAL.cs" />
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
-    <None Include="app.config" />
-=======
     <None Include="packages.config" />
->>>>>>> 86d14a05274a6ab402011a7ef63e44d3f63c6c58
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
