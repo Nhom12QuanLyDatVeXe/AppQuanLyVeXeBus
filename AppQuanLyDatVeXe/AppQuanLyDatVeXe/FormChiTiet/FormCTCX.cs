@@ -33,6 +33,8 @@ namespace AppQuanLyDatVeXe.FormChiTiet
 
             cboDiemDen.Items.Add("77");
             cboDiemDen.Items.Add("39");
+            cboDiemDen.Items.Add("50");
+            cboDiemDen.Items.Add("80");
 
             cboDiemDi.Items.Add("79");
         }

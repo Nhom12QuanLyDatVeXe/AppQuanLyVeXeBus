@@ -26,7 +26,7 @@ namespace DAL.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=WIN-H2TPF90416S;Initial Catalog=QL_DATVEXE;User ID=sa;Password=123;En" +
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=NKD\\NKD;Initial Catalog=QL_DATVEXE;User ID=sa;Password=123;En" +
             "crypt=False;TrustServerCertificate=True")]
         public string QL_DATVEXEConnectionString1 {
             get {
