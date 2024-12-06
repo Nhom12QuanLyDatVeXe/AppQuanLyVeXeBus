@@ -199,6 +199,7 @@
             this.MaKH.HeaderText = "Mã khách hàng";
             this.MaKH.MinimumWidth = 8;
             this.MaKH.Name = "MaKH";
+            this.MaKH.ReadOnly = true;
             // 
             // hoTen
             // 

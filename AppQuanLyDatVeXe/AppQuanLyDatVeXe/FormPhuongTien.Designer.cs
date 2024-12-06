@@ -157,7 +157,7 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvDSPT.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvDSPT.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvDSPT.Location = new System.Drawing.Point(39, 168);
+            this.dgvDSPT.Location = new System.Drawing.Point(31, 159);
             this.dgvDSPT.Name = "dgvDSPT";
             this.dgvDSPT.RowHeadersVisible = false;
             this.dgvDSPT.RowHeadersWidth = 62;
@@ -193,6 +193,7 @@
             this.bienSo.HeaderText = "Biển số xe";
             this.bienSo.MinimumWidth = 8;
             this.bienSo.Name = "bienSo";
+            this.bienSo.ReadOnly = true;
             // 
             // taiXeChinh
             // 
