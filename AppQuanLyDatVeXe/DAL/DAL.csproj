@@ -87,11 +87,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>QlyDatVeXe.dbml</DependentUpon>
     </Compile>
-    <Compile Include="QuanLyDatVeXe.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>QuanLyDatVeXe.xsd</DependentUpon>
-    </Compile>
     <Compile Include="TinhThanh_DAL.cs" />
     <Compile Include="TuyenXe_DAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -116,17 +111,6 @@
     </None>
     <None Include="QlyDatVeXe.dbml.layout">
       <DependentUpon>QlyDatVeXe.dbml</DependentUpon>
-    </None>
-    <None Include="QuanLyDatVeXe.xsc">
-      <DependentUpon>QuanLyDatVeXe.xsd</DependentUpon>
-    </None>
-    <None Include="QuanLyDatVeXe.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>QuanLyDatVeXe.Designer.cs</LastGenOutput>
-    </None>
-    <None Include="QuanLyDatVeXe.xss">
-      <DependentUpon>QuanLyDatVeXe.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

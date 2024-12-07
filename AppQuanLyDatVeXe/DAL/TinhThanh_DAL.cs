@@ -16,5 +16,26 @@ namespace DAL
             var tbl = qldvx.TinhThanhs.ToList();
             return tbl;
         }
+
+
+        public List<TinhThanh_DTO> getAll1()
+        {
+            try
+            {
+                return qldvx.TinhThanhs
+                    .Select(t => new TinhThanh_DTO
+                    {
+                        MaTinh = t.MaTinh,  
+                        TenTinh = t.TenTinh
+                    })
+                    .ToList();
+            }
+            catch (Exception ex)
+            {
+              
+                throw new Exception("Loi.", ex);
+            }
+        }
     }
+
 }

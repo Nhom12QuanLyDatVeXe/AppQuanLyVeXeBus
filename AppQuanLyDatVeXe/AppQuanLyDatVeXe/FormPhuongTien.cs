@@ -9,6 +9,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BUL;
+using DTO;
+using System.Web.WebSockets;
+
 namespace AppQuanLyDatVeXe
 {
     public partial class FormPhuongTien : Form
@@ -44,12 +47,72 @@ namespace AppQuanLyDatVeXe
 
         private void dgvDSPT_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0) 
+            if (e.ColumnIndex == dgvDSPT.Columns["btnSua"].Index && e.RowIndex>=0)
             {
-                if (dgvDSPT.Columns[e.RowIndex].Name == "ColumnSua")
+                try
                 {
                     DataGridViewRow row = dgvDSPT.Rows[e.RowIndex];
-                    
+                    PhuongTien_DTO pt = new PhuongTien_DTO
+                    {
+                        BienSoXe = row.Cells["bienSo"].Value.ToString(),
+                        TaiXeChinh = row.Cells["taiXeChinh"].Value.ToString(),
+                        TaiXePhu = row.Cells["taiXePhu"].Value.ToString(),
+                        SoGhe = Convert.ToInt32(row.Cells["soGhe"].Value),
+                    };
+                    bool result = PT_BUL.SuaPT(pt);
+                    if(result)
+                    {
+                        MessageBox.Show("Cập nhật phương tiện thành công");
+                        loadPT();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Cập nhật phương tiện thất bại");
+                    }
+                }
+                catch(Exception ex)
+                {
+                    MessageBox.Show($"Lỗi: {ex.Message}", "Lỗi");
+                }
+            }
+            else if(e.ColumnIndex == dgvDSPT.Columns["btnXoa"].Index && e.RowIndex >= 0)
+            {
+                try
+                {
+                    DataGridViewRow row = dgvDSPT.Rows[e.RowIndex];
+                    DialogResult dialogResult = MessageBox.Show(
+                       "Bạn có chắc chắn muốn xóa phương tiện này không?",
+                       "Xác nhận xóa",
+                       MessageBoxButtons.YesNo,
+                       MessageBoxIcon.Warning
+                   );
+
+                    if (dialogResult == DialogResult.Yes)
+                    {
+                        PhuongTien_DTO pt = new PhuongTien_DTO
+                        {
+                            BienSoXe = row.Cells["bienSo"].Value.ToString(),
+                        };
+
+                        bool result = PT_BUL.XoaPT(pt);
+                        if (result)
+                        {
+                            MessageBox.Show("Xóa phương tiện thành công", "Thông báo");
+                            loadPT();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Xóa phương tiện thất bại", "Lỗi");
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Hủy thao tác.", "Thông báo");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Lỗi: {ex.Message}", "Lỗi");
                 }
             }
         }

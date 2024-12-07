@@ -103,6 +103,23 @@ namespace DAL
         {
             try
             {
+
+                
+                DateTime ngayKhoiHanh = tuyenxe.ThoiGianDi.Date; 
+                string bienSoXe = tuyenxe.BienSoXe;
+
+                
+                var existingTuyenXe = qldvx.TuyenXes
+                    .Where(tx => tx.BienSoXe == bienSoXe && tx.ThoiGianDi.HasValue && tx.ThoiGianDi.Value.Date == ngayKhoiHanh)
+                    .FirstOrDefault();
+
+                if (existingTuyenXe != null)
+                {
+
+
+                    Console.WriteLine("Lỗi khi thêm tuyến xe ! ");
+                    return false; 
+                }
                 TuyenXe newTuyenXe = new TuyenXe
                 {
 
@@ -129,7 +146,56 @@ namespace DAL
             catch (Exception ex)
             {
 
-                Console.WriteLine("Lỗi khi thêm khách hàng !: " + ex.Message);
+                Console.WriteLine("Lỗi khi thêm tuyến xe !: " + ex.Message);
+                return false;
+            }
+        }
+        public bool SuaTuyenXe(TuyenXe_DTO tuyenxe)
+        {
+            try
+            {
+                var tbl = from tx in qldvx.TuyenXes
+                          where tx.ThoiGianDi.HasValue && tx.ThoiGianDi.Value.Date == tuyenxe.ThoiGianDi.Date && tx.MaTuyenXe != tuyenxe.MaTuyenXe
+                          select new TuyenXe_DTO 
+                          {
+                              MaTuyenXe = tx.MaTuyenXe,
+                              TenTuyen = tx.TenTuyen,
+                              ThoiGianDi = tx.ThoiGianDi.Value,
+                              DiemDi = tx.DiemDi,
+                              DiemDen = tx.DiemDen,
+                              GioXuatBen = tx.GioXuatBen.Value,
+                              GioDenNoi = tx.GioDenNoi.Value,
+                              KhoangCach = (int)tx.KhoangCach,
+                              DonGia = tx.DonGia,
+                              BienSoXe = tx.BienSoXe
+                          };
+                List<TuyenXe_DTO> lst = tbl.ToList();
+                foreach (TuyenXe_DTO t in lst)
+                {
+                    if (t.BienSoXe == tuyenxe.BienSoXe)
+                    {
+                        Console.WriteLine("Xe đã có tuyến xe cùng giờ");
+                        return false;
+                    }
+                }
+
+                TuyenXe txe = qldvx.TuyenXes.Where(n => n.MaTuyenXe == tuyenxe.MaTuyenXe).FirstOrDefault();
+                txe.TenTuyen = tuyenxe.TenTuyen;
+                txe.ThoiGianDi = tuyenxe.ThoiGianDi;
+                txe.DiemDi = tuyenxe.DiemDi;
+                txe.DiemDen = tuyenxe.DiemDen;
+                txe.GioXuatBen = tuyenxe.GioXuatBen;
+                txe.GioDenNoi = tuyenxe.GioDenNoi;
+                txe.KhoangCach = tuyenxe.KhoangCach;
+                txe.DonGia = tuyenxe.DonGia;
+                txe.BienSoXe = tuyenxe.BienSoXe;
+
+                qldvx.SubmitChanges();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Lỗi khi sửa tuyến xe: " + ex.Message);
                 return false;
             }
         }

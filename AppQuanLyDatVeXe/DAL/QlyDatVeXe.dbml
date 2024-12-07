@@ -9,6 +9,24 @@
       <Association Name="PhieuDatVe_ChiTietDatVe" Member="PhieuDatVe" ThisKey="MaPhieu" OtherKey="MaPhieu" Type="PhieuDatVe" IsForeignKey="true" />
     </Type>
   </Table>
+  <Table Name="dbo.TuyenXe" Member="TuyenXes">
+    <Type Name="TuyenXe">
+      <Column Name="MaTuyenXe" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TenTuyen" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="ThoiGianDi" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DiemDi" Type="System.String" DbType="Char(5)" CanBeNull="true" />
+      <Column Name="DiemDen" Type="System.String" DbType="Char(5)" CanBeNull="true" />
+      <Column Name="GioXuatBen" Type="System.TimeSpan" DbType="Time" CanBeNull="true" />
+      <Column Name="GioDenNoi" Type="System.TimeSpan" DbType="Time" CanBeNull="true" />
+      <Column Name="KhoangCach" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DonGia" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="BienSoXe" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Association Name="TuyenXe_ChiTietDatVe" Member="ChiTietDatVes" ThisKey="MaTuyenXe" OtherKey="MaTuyenXe" Type="ChiTietDatVe" />
+      <Association Name="PhuongTien_TuyenXe" Member="PhuongTien" ThisKey="BienSoXe" OtherKey="BienSoXe" Type="PhuongTien" IsForeignKey="true" />
+      <Association Name="TinhThanh_TuyenXe" Member="TinhThanh" ThisKey="DiemDen" OtherKey="MaTinh" Type="TinhThanh" IsForeignKey="true" />
+      <Association Name="TinhThanh_TuyenXe1" Member="TinhThanh1" ThisKey="DiemDi" OtherKey="MaTinh" Type="TinhThanh" IsForeignKey="true" />
+    </Type>
+  </Table>
   <Table Name="dbo.ChucVu" Member="ChucVus">
     <Type Name="ChucVu">
       <Column Name="MaChucVu" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
@@ -54,6 +72,18 @@
       <Association Name="TaiKhoan_NhanVien" Member="TaiKhoan" ThisKey="MaNV" OtherKey="ID" Type="TaiKhoan" IsForeignKey="true" />
     </Type>
   </Table>
+  <Table Name="dbo.PhieuDatVe" Member="PhieuDatVes">
+    <Type Name="PhieuDatVe">
+      <Column Name="MaPhieu" Type="System.String" DbType="Char(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="SoLuongGhe" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TongTien" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="MaKH" Type="System.String" DbType="Char(7)" CanBeNull="true" />
+      <Column Name="TrangThai" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Association Name="PhieuDatVe_ChiTietDatVe" Member="ChiTietDatVes" ThisKey="MaPhieu" OtherKey="MaPhieu" Type="ChiTietDatVe" />
+      <Association Name="PhieuDatVe_HoaDon" Member="HoaDons" ThisKey="MaPhieu" OtherKey="MaPhieu" Type="HoaDon" />
+      <Association Name="KhachHang_PhieuDatVe" Member="KhachHang" ThisKey="MaKH" OtherKey="MaKH" Type="KhachHang" IsForeignKey="true" />
+    </Type>
+  </Table>
   <Table Name="dbo.PhuongTien" Member="PhuongTiens">
     <Type Name="PhuongTien">
       <Column Name="BienSoXe" Type="System.String" DbType="Char(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
@@ -79,36 +109,6 @@
       <Column Name="TenTinh" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
       <Association Name="TinhThanh_TuyenXe" Member="TuyenXes" ThisKey="MaTinh" OtherKey="DiemDen" Type="TuyenXe" />
       <Association Name="TinhThanh_TuyenXe1" Member="TuyenXes1" ThisKey="MaTinh" OtherKey="DiemDi" Type="TuyenXe" />
-    </Type>
-  </Table>
-  <Table Name="dbo.TuyenXe" Member="TuyenXes">
-    <Type Name="TuyenXe">
-      <Column Name="MaTuyenXe" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="TenTuyen" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
-      <Column Name="ThoiGianDi" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
-      <Column Name="DiemDi" Type="System.String" DbType="Char(5)" CanBeNull="true" />
-      <Column Name="DiemDen" Type="System.String" DbType="Char(5)" CanBeNull="true" />
-      <Column Name="GioXuatBen" Type="System.TimeSpan" DbType="Time" CanBeNull="true" />
-      <Column Name="GioDenNoi" Type="System.TimeSpan" DbType="Time" CanBeNull="true" />
-      <Column Name="KhoangCach" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="DonGia" Type="System.Decimal" DbType="Money" CanBeNull="true" />
-      <Column Name="BienSoXe" Type="System.String" DbType="Char(10)" CanBeNull="true" />
-      <Association Name="TuyenXe_ChiTietDatVe" Member="ChiTietDatVes" ThisKey="MaTuyenXe" OtherKey="MaTuyenXe" Type="ChiTietDatVe" />
-      <Association Name="PhuongTien_TuyenXe" Member="PhuongTien" ThisKey="BienSoXe" OtherKey="BienSoXe" Type="PhuongTien" IsForeignKey="true" />
-      <Association Name="TinhThanh_TuyenXe" Member="TinhThanh" ThisKey="DiemDen" OtherKey="MaTinh" Type="TinhThanh" IsForeignKey="true" />
-      <Association Name="TinhThanh_TuyenXe1" Member="TinhThanh1" ThisKey="DiemDi" OtherKey="MaTinh" Type="TinhThanh" IsForeignKey="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.PhieuDatVe" Member="PhieuDatVes">
-    <Type Name="PhieuDatVe">
-      <Column Name="MaPhieu" Type="System.String" DbType="Char(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="SoLuongGhe" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="TongTien" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
-      <Column Name="MaKH" Type="System.String" DbType="Char(7)" CanBeNull="true" />
-      <Column Name="TrangThai" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
-      <Association Name="PhieuDatVe_ChiTietDatVe" Member="ChiTietDatVes" ThisKey="MaPhieu" OtherKey="MaPhieu" Type="ChiTietDatVe" />
-      <Association Name="PhieuDatVe_HoaDon" Member="HoaDons" ThisKey="MaPhieu" OtherKey="MaPhieu" Type="HoaDon" />
-      <Association Name="KhachHang_PhieuDatVe" Member="KhachHang" ThisKey="MaKH" OtherKey="MaKH" Type="KhachHang" IsForeignKey="true" />
     </Type>
   </Table>
 </Database>
