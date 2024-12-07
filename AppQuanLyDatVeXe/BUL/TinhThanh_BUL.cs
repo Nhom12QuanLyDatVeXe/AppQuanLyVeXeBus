@@ -14,5 +14,18 @@ namespace BUL
         {
             return dal_tt.getAll();
         }
+
+        public List<TinhThanh_DTO> getAll1()
+        {
+            try
+            {
+                return dal_tt.getAll1();
+            }
+            catch (Exception ex)
+            {
+              
+                throw new Exception("Loi", ex);
+            }
+        }
     }
 }

@@ -35,19 +35,41 @@ namespace AppQuanLyDatVeXe.FormChiTiet
                     dtpGioDi.Value.TimeOfDay;
             ///
             cboDiemDen.Items.Clear();
-            cboDiemDen.Items.Add("77");
-            cboDiemDen.Items.Add("39");
-            cboDiemDen.Items.Add("50");
-            cboDiemDen.Items.Add("80");
+            loadDiemDen();
             ///
             cboDiemDi.Items.Clear();
-            cboDiemDi.Items.Add("79");
+            loadDiemDi();
             ///
 
             cbBienSoXe.Items.Clear();
-            cbBienSoXe.Items.Add("51B-67890");
-            cbBienSoXe.Items.Add("51B-12345");
+            loadBienXe();
         }
+
+
+        TinhThanh_BUL tt_bul = new TinhThanh_BUL();
+        public void loadDiemDen()
+        {
+            cboDiemDen.DataSource = tt_bul.getAll1();
+            cboDiemDen.DisplayMember = "TenTinh";
+            cboDiemDen.ValueMember = "MaTinh";
+        }
+
+        public void loadDiemDi()
+        {
+            cboDiemDi.DataSource = tt_bul.getAll1();
+            cboDiemDi.DisplayMember = "TenTinh";
+            cboDiemDi.ValueMember = "MaTinh";
+        }
+
+        public void loadBienXe()
+        {
+            PhuongTien_BUL pt = new PhuongTien_BUL();
+            cbBienSoXe.DataSource = pt.GetPhuongTien();
+            cbBienSoXe.DisplayMember = "BienSoXe";
+            cbBienSoXe.ValueMember = "BienSoXe";
+        }
+
+
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
@@ -55,17 +77,25 @@ namespace AppQuanLyDatVeXe.FormChiTiet
             {
                 int maTx = int.Parse(txtMaChuyen.Text.Trim());
                 string tenTuyen = txtTenChuyen.Text.Trim();
-                string diemDi = cboDiemDen.SelectedItem?.ToString();
-                string diemDen = cboDiemDen.SelectedItem?.ToString();
+                string diemDi = cboDiemDi.SelectedValue?.ToString();
+                string diemDen = cboDiemDen.SelectedValue?.ToString();
                 DateTime ngayDi = dtpNgayDi.Value.Date;
                 TimeSpan gioxuatBen = dtpGioDi.Value.TimeOfDay;
                 int khoangcach = int.Parse(txtKhoangcach.Text.Trim());
                 decimal donGia = decimal.Parse(txtDonGia.Text.Trim());
-                string biensoxe = cbBienSoXe.SelectedItem?.ToString();
+                string biensoxe = cbBienSoXe.SelectedValue?.ToString();
 
                 if (string.IsNullOrEmpty(tenTuyen))
                 {
                     MessageBox.Show("Họ tên không được để trống.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                TimeSpan gioDenNoi = TinhThoiGianDenNoi();
+
+                if (gioDenNoi == TimeSpan.Zero)
+                {
+                   
                     return;
                 }
 
@@ -76,6 +106,7 @@ namespace AppQuanLyDatVeXe.FormChiTiet
                     DiemDi = diemDi,
                     DiemDen = diemDen,
                     ThoiGianDi = ngayDi,
+                    GioDenNoi = gioDenNoi,
                     GioXuatBen = gioxuatBen,
                     KhoangCach = khoangcach,
                     DonGia = donGia,
@@ -96,6 +127,41 @@ namespace AppQuanLyDatVeXe.FormChiTiet
             catch (Exception ex)
             {
                 MessageBox.Show($"Đã xảy ra lỗi: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private TimeSpan TinhThoiGianDenNoi()
+        {
+            try
+            {
+
+                TimeSpan gioKhoiHanh = dtpGioDi.Value.TimeOfDay;
+                if (!int.TryParse(txtKhoangcach.Text.Trim(), out int khoangCach))
+                {
+                    throw new Exception("Khoảng cách phải là số nguyên hợp lệ.");
+                }
+
+                double vanTocTrungBinh = 60.0; // km/h
+                double gioNghi = 1;
+
+                double thoiGianDiChuyen = khoangCach / vanTocTrungBinh + gioNghi;
+                DateTime thoiGianKhoiHanh = DateTime.Today.Add(gioKhoiHanh);
+                DateTime thoiGianDenNoi = thoiGianKhoiHanh.AddHours(thoiGianDiChuyen);
+
+                if (thoiGianDenNoi.TimeOfDay.TotalHours >= 24)
+                {
+
+                    thoiGianDenNoi = thoiGianDenNoi.AddDays(-1);
+                }
+
+                return thoiGianDenNoi.TimeOfDay;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Đã xảy ra lỗi khi tính thời gian đến nơi: {ex.Message}",
+                                "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                return TimeSpan.Zero;
             }
         }
 

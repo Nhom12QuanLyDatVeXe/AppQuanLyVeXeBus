@@ -103,6 +103,23 @@ namespace DAL
         {
             try
             {
+
+                
+                DateTime ngayKhoiHanh = tuyenxe.ThoiGianDi.Date; 
+                string bienSoXe = tuyenxe.BienSoXe;
+
+                
+                var existingTuyenXe = qldvx.TuyenXes
+                    .Where(tx => tx.BienSoXe == bienSoXe && tx.ThoiGianDi.HasValue && tx.ThoiGianDi.Value.Date == ngayKhoiHanh)
+                    .FirstOrDefault();
+
+                if (existingTuyenXe != null)
+                {
+
+
+                    Console.WriteLine("Lỗi khi thêm khách hàng ! ");
+                    return false; 
+                }
                 TuyenXe newTuyenXe = new TuyenXe
                 {
 

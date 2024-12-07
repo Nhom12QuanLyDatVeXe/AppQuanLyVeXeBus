@@ -20,6 +20,7 @@ namespace AppQuanLyDatVeXe
         public FormChuyenXe()
         {
             InitializeComponent();
+            
         }
 
         private void btnThem_Click(object sender, EventArgs e)
@@ -32,6 +33,10 @@ namespace AppQuanLyDatVeXe
         {
             dgvDSTX.AutoGenerateColumns = false;
             LoadCX();
+
+            dgvDSTX.Columns["DonGia"].DefaultCellStyle.Format = "0";
+            dgvDSTX.Columns["GioXuatBen"].DefaultCellStyle.Format = @"hh\:mm\:ss";
+            dgvDSTX.Columns["GioDenNoi"].DefaultCellStyle.Format = @"hh\:mm\:ss";
         }
         public void LoadCX()
         {
@@ -45,6 +50,33 @@ namespace AppQuanLyDatVeXe
             {
                 e.Value = dateTime.ToString("dd/MM/yyyy");
                 e.FormattingApplied = true;
+            }
+            if (dgvDSTX.Columns[e.ColumnIndex].Name == "GioXuatBen" || dgvDSTX.Columns[e.ColumnIndex].Name == "GioDenNoi")
+            {
+                if (e.Value is TimeSpan time)
+            
+                    
+                    e.Value = time.ToString(@"HH\:mm\:ss");
+                    e.FormattingApplied = true; 
+               
+            }
+
+            if (dgvDSTX.Columns[e.ColumnIndex].Name == "GioDenNoi" && e.Value is TimeSpan)
+            {
+                TimeSpan timeSpan = (TimeSpan)e.Value;
+               
+                e.Value = timeSpan.ToString(@"HH\:mm\:ss");
+                e.FormattingApplied = true;
+            }
+
+            if (dgvDSTX.Columns[e.ColumnIndex].Name == "DonGia")
+            {
+                if (e.Value is decimal donGia)
+                {
+                  
+                    e.Value = donGia.ToString("0");  
+                    e.FormattingApplied = true; 
+                }
             }
         }
 
@@ -72,7 +104,7 @@ namespace AppQuanLyDatVeXe
                         GioDenNoi = Convert.ToDateTime(row.Cells["gioDenNoi"].Value).TimeOfDay,
                         KhoangCach = Convert.ToInt32(row.Cells["khoangCach"].Value),
                         DonGia = Convert.ToInt32(row.Cells["donGia"].Value),
-                        BienSoXe = row.Cells["bienSoXe"].Value.ToString(),
+                        BienSoXe = row.Cells["bienSo"].Value.ToString(),
                     };
                     bool result = CX_BUL.SuaTX(txe);
                     if(result)
@@ -87,6 +119,7 @@ namespace AppQuanLyDatVeXe
                 }
                 catch(Exception ex)
                 {
+                    Console.WriteLine(ex.Message);
                     MessageBox.Show($"Lỗi: {ex.Message}", "Lỗi");
                 }
             }
