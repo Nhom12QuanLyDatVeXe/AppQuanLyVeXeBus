@@ -113,5 +113,39 @@ namespace DAL
             }
             return null;
         }
+        public bool SuaKhachHang(KhachHang_DTO kh)
+        {
+            try
+            {
+                KhachHang suakh = qldvx.KhachHangs.FirstOrDefault(n => n.MaKH == kh.MaKH);
+
+                suakh.HoTen = kh.HoTen;
+                suakh.SDT = kh.SDT;
+                suakh.Email = kh.Email;
+                suakh.GioiTinh = kh.GioiTinh;
+
+                qldvx.SubmitChanges();
+                return true;
+            }
+            catch { return false; }
+
+        }
+        public bool XoaKhachHang(KhachHang_DTO kh)
+        {
+            try
+            {
+                KhachHang xoaKhachHang = qldvx.KhachHangs.Where(n => n.MaKH == kh.MaKH).FirstOrDefault();
+
+                qldvx.KhachHangs.DeleteOnSubmit(xoaKhachHang);
+                qldvx.SubmitChanges();
+                return true;
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Không thể xóa khách hàng này. Lỗi: " + ex.Message); // Log lỗi
+                return false;
+            }
+        }
     }
 }

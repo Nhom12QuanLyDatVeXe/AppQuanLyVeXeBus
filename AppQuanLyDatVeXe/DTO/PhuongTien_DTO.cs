@@ -10,7 +10,7 @@ namespace DTO
     {
         public string BienSoXe { get; set; }
         public string TaiXeChinh { get; set; }
-        public string TaiXephu { get; set; }
+        public string TaiXePhu { get; set; }
         public int? SoGhe { get; set; }
     }
 }

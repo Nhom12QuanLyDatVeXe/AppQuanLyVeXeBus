@@ -46,5 +46,13 @@ namespace BUL
 
             return dal.ThemPhuongTien(pt);
         }
+        public bool SuaPT(PhuongTien_DTO pt)
+        {
+            return dal.SuaPhuongTien(pt);
+        }
+        public bool XoaPT(PhuongTien_DTO pt)
+        {
+            return dal.XoaPhuongTien(pt);
+        }
     }
 }

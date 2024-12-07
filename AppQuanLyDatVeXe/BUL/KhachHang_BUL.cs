@@ -46,5 +46,13 @@ namespace BUL
         {
             return dal.TimKHTheoMa(text);
         }
+        public bool SuaKH(KhachHang_DTO khachhang)
+        {
+            return dal.SuaKhachHang(khachhang);
+        }
+        public bool XoaKH(KhachHang_DTO khachhang)
+        {
+            return dal.XoaKhachHang(khachhang);
+        }
     }
 }
