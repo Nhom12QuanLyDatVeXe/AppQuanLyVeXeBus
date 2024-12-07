@@ -13,6 +13,15 @@ using System.IO;
 using System.Windows.Forms;
 using BUL;
 using DTO;
+using Microsoft.Office.Interop.Word;
+
+using Word = Microsoft.Office.Interop.Word;
+using WordApplication = Microsoft.Office.Interop.Word.Application;
+using WinFormsApplication = System.Windows.Forms.Application;
+using OfficeOpenXml.FormulaParsing.LexicalAnalysis;
+using System.Globalization;
+
+
 
 namespace AppQuanLyDatVeXe
 {
@@ -23,6 +32,7 @@ namespace AppQuanLyDatVeXe
         {
             nhanvien = nv;
             InitializeComponent();
+            dgvCTPDV.Columns["dg"].DefaultCellStyle.Format = "0";
         }
 
 
@@ -62,7 +72,7 @@ namespace AppQuanLyDatVeXe
                 if(tuyenxe != null)
                 {
                     lbTuyenXe.Text = "Tuyến xe: " + tuyenxe.TenTuyen;
-                    lbNgayDi.Text = "Ngày đi: " + tuyenxe.ThoiGianDi;
+                    lbNgayDi.Text = "Ngày đi: " + tuyenxe.ThoiGianDi.ToString("dd/MM/yyyy");
                     lbGioXuatBen.Text = "Giờ xuất bến: " + tuyenxe.GioXuatBen;
                     lbBienSoXe.Text = "Biển số xe: " + tuyenxe.BienSoXe;
                     lbKH.Text = "Khách hàng: " + tenKH;
@@ -172,60 +182,158 @@ namespace AppQuanLyDatVeXe
 
         }
 
-        public void XuatDanhSachHuyTrongTuan()
-        {
-            // Lấy danh sách phiếu đặt vé đã hủy trong tuần
-            DataTable dataTable = PDV_BUL.GetPhieuDatVeDaHuyTrongTuan();
 
-            // Đường dẫn lưu file Excel
-            string filePath = @"D:\hufi\Hk1_2024_2025\PTPMUDTM\AppQuanLyVeXeBus-main\AppQuanLyDatVeXe\FileExcel\DanhSachPhieuHuy.xlsx";
 
-            // Gọi hàm xuất Excel
-            XuatPhieuDatVeHuyRaExcel(dataTable, filePath);
-        }
+        //public void XuatDanhSachHuyTrongTuan()
+        //{
+        //    // Lấy danh sách phiếu đặt vé đã hủy trong tuần
+        //    DataTable dataTable = PDV_BUL.GetPhieuDatVeDaHuyTrongTuan();
+
+        //    // Đường dẫn lưu file Excel
+        //    string filePath = @"D:\hufi\Hk1_2024_2025\PTPMUDTM\AppQuanLyVeXeBus-main\AppQuanLyDatVeXe\FileExcel\DanhSachPhieuHuy.xlsx";
+
+        //    // Gọi hàm xuất Excel
+        //    XuatPhieuDatVeHuyRaExcel(dataTable, filePath);
+        //}
         private void btnXuatExcel_Click(object sender, EventArgs e)
         {
             //XuatDanhSachHuyTrongTuan();
         }
 
-        public void XuatPhieuDatVeHuyRaExcel(DataTable dataTable, string filePath)
+        //public void XuatPhieuDatVeHuyRaExcel(DataTable dataTable, string filePath)
+        //{
+        //    // Bật giấy phép không thương mại của EPPlus
+        //    ExcelPackage.LicenseContext = OfficeOpenXml.LicenseContext.NonCommercial;
+
+        //    using (ExcelPackage excelPackage = new ExcelPackage())
+        //    {
+        //        // Tạo một worksheet mới
+        //        ExcelWorksheet worksheet = excelPackage.Workbook.Worksheets.Add("Phiếu Đặt Vé Hủy");
+
+        //        // Thêm header vào file Excel
+        //        for (int col = 0; col < dataTable.Columns.Count; col++)
+        //        {
+        //            worksheet.Cells[1, col + 1].Value = dataTable.Columns[col].ColumnName;
+        //            worksheet.Cells[1, col + 1].Style.Font.Bold = true;
+        //            worksheet.Cells[1, col + 1].Style.Fill.PatternType = ExcelFillStyle.Solid;
+        //            worksheet.Cells[1, col + 1].Style.Fill.BackgroundColor.SetColor(System.Drawing.Color.LightGray);
+        //            worksheet.Cells[1, col + 1].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+        //        }
+
+        //        // Thêm dữ liệu từ DataTable vào Excel
+        //        for (int row = 0; row < dataTable.Rows.Count; row++)
+        //        {
+        //            for (int col = 0; col < dataTable.Columns.Count; col++)
+        //            {
+        //                worksheet.Cells[row + 2, col + 1].Value = dataTable.Rows[row][col];
+        //            }
+        //        }
+
+        //        // Tự động điều chỉnh kích thước cột
+        //        worksheet.Cells[worksheet.Dimension.Address].AutoFitColumns();
+
+        //        // Lưu file Excel
+        //        FileInfo fileInfo = new FileInfo(filePath);
+        //        excelPackage.SaveAs(fileInfo);
+        //    }
+
+        //    Console.WriteLine("Xuất file Excel thành công!");
+        //}
+
+        private void ReplaceFieldValue(Microsoft.Office.Interop.Word.Document wordDoc, string fieldName, string fieldValue)
         {
-            // Bật giấy phép không thương mại của EPPlus
-            ExcelPackage.LicenseContext = OfficeOpenXml.LicenseContext.NonCommercial;
-
-            using (ExcelPackage excelPackage = new ExcelPackage())
+            foreach (Microsoft.Office.Interop.Word.Field field in wordDoc.Fields)
             {
-                // Tạo một worksheet mới
-                ExcelWorksheet worksheet = excelPackage.Workbook.Worksheets.Add("Phiếu Đặt Vé Hủy");
-
-                // Thêm header vào file Excel
-                for (int col = 0; col < dataTable.Columns.Count; col++)
+                if (field.Code.Text.Contains(fieldName))
                 {
-                    worksheet.Cells[1, col + 1].Value = dataTable.Columns[col].ColumnName;
-                    worksheet.Cells[1, col + 1].Style.Font.Bold = true;
-                    worksheet.Cells[1, col + 1].Style.Fill.PatternType = ExcelFillStyle.Solid;
-                    worksheet.Cells[1, col + 1].Style.Fill.BackgroundColor.SetColor(System.Drawing.Color.LightGray);
-                    worksheet.Cells[1, col + 1].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+                    field.Result.Text = fieldValue;
                 }
-
-                // Thêm dữ liệu từ DataTable vào Excel
-                for (int row = 0; row < dataTable.Rows.Count; row++)
-                {
-                    for (int col = 0; col < dataTable.Columns.Count; col++)
-                    {
-                        worksheet.Cells[row + 2, col + 1].Value = dataTable.Rows[row][col];
-                    }
-                }
-
-                // Tự động điều chỉnh kích thước cột
-                worksheet.Cells[worksheet.Dimension.Address].AutoFitColumns();
-
-                // Lưu file Excel
-                FileInfo fileInfo = new FileInfo(filePath);
-                excelPackage.SaveAs(fileInfo);
             }
-
-            Console.WriteLine("Xuất file Excel thành công!");
         }
-    }
+
+        private void btnXuatVe_Click(object sender, EventArgs e)
+        {
+            try
+            {
+              
+                string templateFolder = Path.Combine(System.Windows.Forms.Application.StartupPath, "Template");
+                string saveFolder = Path.Combine(System.Windows.Forms.Application.StartupPath, "PhieuDatVe");
+                string templatePath = Path.Combine(templateFolder, "MauVeXe2.dotx");
+                string savePath = Path.Combine(saveFolder, $"PhieuDatVe_{DateTime.Now.ToString("yyyyMMdd_HHmmss")}.docx");
+
+            
+                if (!Directory.Exists(templateFolder))
+                    Directory.CreateDirectory(templateFolder);
+
+                if (!Directory.Exists(saveFolder))
+                    Directory.CreateDirectory(saveFolder);
+
+              
+                if (!File.Exists(templatePath))
+                {
+                    MessageBox.Show($"Không tìm thấy file mẫu tại: {templatePath}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                
+                Microsoft.Office.Interop.Word.Application wordApp = new Microsoft.Office.Interop.Word.Application();
+                Document wordDoc = wordApp.Documents.Add(templatePath);
+
+
+
+                string tuyenXe = lbTuyenXe.Text;        
+                string bienSoXe = lbBienSoXe.Text;     
+                string ngayDi = lbNgayDi.Text;         
+                string gioXuatBen = lbGioXuatBen.Text;  
+                string khachHang = lbKH.Text;          
+
+                ReplaceFieldValue(wordDoc, "TuyenXe", tuyenXe);
+                ReplaceFieldValue(wordDoc, "BienSoXe", bienSoXe);
+                ReplaceFieldValue(wordDoc, "NgayDi", ngayDi);
+                ReplaceFieldValue(wordDoc, "GioXuatBen", gioXuatBen);
+                ReplaceFieldValue(wordDoc, "KhachHang", khachHang);
+
+                decimal totalAmount = 0;
+            
+
+                if (dgvCTPDV.Rows.Count > 0)
+                {
+              
+                    StringBuilder sb = new StringBuilder();
+                    foreach (DataGridViewRow row in dgvCTPDV.Rows)
+                    {
+                       
+                        string maPhieu = row.Cells["mp"].Value?.ToString() ?? "";
+                        string maGhe = row.Cells["mg"].Value?.ToString() ?? "";
+                        string donGiaStr = row.Cells["dg"].Value?.ToString() ?? "0";
+
+                        decimal donGia = 0;
+                        decimal.TryParse(donGiaStr, out donGia);
+
+                        
+                        totalAmount += donGia;
+
+                        
+                        sb.AppendLine($"Mã phiếu: {maPhieu} - Mã ghế: {maGhe} - Đơn giá: {donGia:C0}");
+                    }
+
+                    
+                    wordDoc.Bookmarks["BangVe"].Range.Text = sb.ToString();
+                }
+                ReplaceFieldValue(wordDoc, "TongTien", totalAmount.ToString("C0"));
+
+               
+                wordDoc.SaveAs2(savePath);
+                MessageBox.Show($"Xuất thông tin vé xe thành công! File đã được lưu tại: {savePath}", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                wordDoc.Close();
+                wordApp.Quit();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Đã xảy ra lỗi: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+            
+     }
 }

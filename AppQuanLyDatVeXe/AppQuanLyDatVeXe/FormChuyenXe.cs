@@ -22,10 +22,12 @@ namespace AppQuanLyDatVeXe
             InitializeComponent();
             
         }
-
+ 
         private void btnThem_Click(object sender, EventArgs e)
         {
             FormCTCX ctcx=new FormCTCX();
+
+            ctcx.Owner = this;
             ctcx.ShowDialog();
         }
 
@@ -46,38 +48,38 @@ namespace AppQuanLyDatVeXe
 
         private void dgvDSTX_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
-            if (dgvDSTX.Columns[e.ColumnIndex].Name == "ThoiGianDi" && e.Value is DateTime dateTime)
-            {
-                e.Value = dateTime.ToString("dd/MM/yyyy");
-                e.FormattingApplied = true;
-            }
-            if (dgvDSTX.Columns[e.ColumnIndex].Name == "GioXuatBen" || dgvDSTX.Columns[e.ColumnIndex].Name == "GioDenNoi")
-            {
-                if (e.Value is TimeSpan time)
+            //if (dgvDSTX.Columns[e.ColumnIndex].Name == "ThoiGianDi" && e.Value is DateTime dateTime)
+            //{
+            //    e.Value = dateTime.ToString("dd/MM/yyyy");
+            //    e.FormattingApplied = true;
+            //}
+            //if (dgvDSTX.Columns[e.ColumnIndex].Name == "GioXuatBen" || dgvDSTX.Columns[e.ColumnIndex].Name == "GioDenNoi")
+            //{
+            //    if (e.Value is TimeSpan time)
             
                     
-                    e.Value = time.ToString(@"hh\:mm\:ss");
-                    e.FormattingApplied = true; 
+            //        e.Value = time.ToString(@"hh\:mm\:ss");
+            //        e.FormattingApplied = true; 
                
-            }
+            //}
 
-            if (dgvDSTX.Columns[e.ColumnIndex].Name == "GioDenNoi" && e.Value is TimeSpan)
-            {
-                TimeSpan timeSpan = (TimeSpan)e.Value;
+            //if (dgvDSTX.Columns[e.ColumnIndex].Name == "GioDenNoi" && e.Value is TimeSpan)
+            //{
+            //    TimeSpan timeSpan = (TimeSpan)e.Value;
                
-                e.Value = timeSpan.ToString(@"hh\:mm\:ss");
-                e.FormattingApplied = true;
-            }
+            //    e.Value = timeSpan.ToString(@"hh\:mm\:ss");
+            //    e.FormattingApplied = true;
+            //}
 
-            if (dgvDSTX.Columns[e.ColumnIndex].Name == "DonGia")
-            {
-                if (e.Value is decimal donGia)
-                {
+            //if (dgvDSTX.Columns[e.ColumnIndex].Name == "DonGia")
+            //{
+            //    if (e.Value is decimal donGia)
+            //    {
                   
-                    e.Value = donGia.ToString("0");  
-                    e.FormattingApplied = true; 
-                }
-            }
+            //        e.Value = donGia.ToString("0");  
+            //        e.FormattingApplied = true; 
+            //    }
+            //}
         }
 
         private void txtTimKiem_TextChanged(object sender, EventArgs e)

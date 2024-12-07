@@ -14,9 +14,11 @@ namespace AppQuanLyDatVeXe.FormChiTiet
 {
     public partial class FormCTPT : Sample
     {
+    
         public FormCTPT()
         {
             InitializeComponent();
+           
         }
 
         private void btnDong_Click(object sender, EventArgs e)

@@ -11,6 +11,8 @@ using DTO;
 using BUL;
 using System.Security.Cryptography;
 
+
+
 namespace AppQuanLyDatVeXe
 {
     public partial class FormDatVeXe : Form
@@ -299,6 +301,14 @@ namespace AppQuanLyDatVeXe
         private void guna2Panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+       
+
+
+        private void btnXuatVe_Click(object sender, EventArgs e)
+        {
+           
         }
     }
 }

@@ -117,7 +117,7 @@ namespace DAL
                 {
 
 
-                    Console.WriteLine("Lỗi khi thêm khách hàng ! ");
+                    Console.WriteLine("Lỗi khi thêm  ! ");
                     return false; 
                 }
                 TuyenXe newTuyenXe = new TuyenXe
