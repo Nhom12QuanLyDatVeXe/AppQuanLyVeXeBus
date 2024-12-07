@@ -116,7 +116,8 @@ namespace AppQuanLyDatVeXe.FormChiTiet
                 {
                     MessageBox.Show("Thêm thông tin tuyến xe thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-
+                    var parentForm = this.Owner as FormChuyenXe;
+                    parentForm?.LoadCX();
                     this.Close();
                 }
                 else

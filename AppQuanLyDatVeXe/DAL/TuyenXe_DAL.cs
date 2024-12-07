@@ -117,7 +117,7 @@ namespace DAL
                 {
 
 
-                    Console.WriteLine("Lỗi khi thêm khách hàng ! ");
+                    Console.WriteLine("Lỗi khi thêm tuyến xe ! ");
                     return false; 
                 }
                 TuyenXe newTuyenXe = new TuyenXe
@@ -146,7 +146,7 @@ namespace DAL
             catch (Exception ex)
             {
 
-                Console.WriteLine("Lỗi khi thêm khách hàng !: " + ex.Message);
+                Console.WriteLine("Lỗi khi thêm tuyến xe !: " + ex.Message);
                 return false;
             }
         }
@@ -155,8 +155,8 @@ namespace DAL
             try
             {
                 var tbl = from tx in qldvx.TuyenXes
-                          where tx.DiemDi == tuyenxe.DiemDi && tx.DiemDen == tuyenxe.DiemDen && tx.ThoiGianDi.HasValue && tx.ThoiGianDi.Value.Date == tuyenxe.ThoiGianDi.Date
-                          select new TuyenXe_DTO
+                          where tx.ThoiGianDi.HasValue && tx.ThoiGianDi.Value.Date == tuyenxe.ThoiGianDi.Date && tx.MaTuyenXe != tuyenxe.MaTuyenXe
+                          select new TuyenXe_DTO 
                           {
                               MaTuyenXe = tx.MaTuyenXe,
                               TenTuyen = tx.TenTuyen,
@@ -170,9 +170,13 @@ namespace DAL
                               BienSoXe = tx.BienSoXe
                           };
                 List<TuyenXe_DTO> lst = tbl.ToList();
-                if(lst.Count > 0 )
+                foreach (TuyenXe_DTO t in lst)
                 {
-                    return false;
+                    if (t.BienSoXe == tuyenxe.BienSoXe)
+                    {
+                        Console.WriteLine("Xe đã có tuyến xe cùng giờ");
+                        return false;
+                    }
                 }
 
                 TuyenXe txe = qldvx.TuyenXes.Where(n => n.MaTuyenXe == tuyenxe.MaTuyenXe).FirstOrDefault();

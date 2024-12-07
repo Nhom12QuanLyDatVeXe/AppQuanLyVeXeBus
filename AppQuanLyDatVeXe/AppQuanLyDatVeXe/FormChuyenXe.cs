@@ -26,6 +26,7 @@ namespace AppQuanLyDatVeXe
         private void btnThem_Click(object sender, EventArgs e)
         {
             FormCTCX ctcx=new FormCTCX();
+            ctcx.Owner = this;
             ctcx.ShowDialog();
         }
 
@@ -44,41 +45,41 @@ namespace AppQuanLyDatVeXe
             dgvDSTX.DataSource = CX_BUL.GetTuyenXe();
         }
 
-        private void dgvDSTX_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
-        {
-            if (dgvDSTX.Columns[e.ColumnIndex].Name == "ThoiGianDi" && e.Value is DateTime dateTime)
-            {
-                e.Value = dateTime.ToString("dd/MM/yyyy");
-                e.FormattingApplied = true;
-            }
-            if (dgvDSTX.Columns[e.ColumnIndex].Name == "GioXuatBen" || dgvDSTX.Columns[e.ColumnIndex].Name == "GioDenNoi")
-            {
-                if (e.Value is TimeSpan time)
+        //private void dgvDSTX_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        //{
+        //    if (dgvDSTX.Columns[e.ColumnIndex].Name == "ThoiGianDi" && e.Value is DateTime dateTime)
+        //    {
+        //        e.Value = dateTime.ToString("dd/MM/yyyy");
+        //        e.FormattingApplied = true;
+        //    }
+        //    if (dgvDSTX.Columns[e.ColumnIndex].Name == "GioXuatBen" || dgvDSTX.Columns[e.ColumnIndex].Name == "GioDenNoi")
+        //    {
+        //        if (e.Value is TimeSpan time)
             
                     
-                    e.Value = time.ToString(@"HH\:mm\:ss");
-                    e.FormattingApplied = true; 
+        //            e.Value = time.ToString(@"HH\:mm\:ss");
+        //            e.FormattingApplied = true; 
                
-            }
+        //    }
 
-            if (dgvDSTX.Columns[e.ColumnIndex].Name == "GioDenNoi" && e.Value is TimeSpan)
-            {
-                TimeSpan timeSpan = (TimeSpan)e.Value;
+        //    if (dgvDSTX.Columns[e.ColumnIndex].Name == "GioDenNoi" && e.Value is TimeSpan)
+        //    {
+        //        TimeSpan timeSpan = (TimeSpan)e.Value;
                
-                e.Value = timeSpan.ToString(@"HH\:mm\:ss");
-                e.FormattingApplied = true;
-            }
+        //        e.Value = timeSpan.ToString(@"HH\:mm\:ss");
+        //        e.FormattingApplied = true;
+        //    }
 
-            if (dgvDSTX.Columns[e.ColumnIndex].Name == "DonGia")
-            {
-                if (e.Value is decimal donGia)
-                {
+        //    if (dgvDSTX.Columns[e.ColumnIndex].Name == "DonGia")
+        //    {
+        //        if (e.Value is decimal donGia)
+        //        {
                   
-                    e.Value = donGia.ToString("0");  
-                    e.FormattingApplied = true; 
-                }
-            }
-        }
+        //            e.Value = donGia.ToString("0");  
+        //            e.FormattingApplied = true; 
+        //        }
+        //    }
+        //}
 
         private void txtTimKiem_TextChanged(object sender, EventArgs e)
         {
@@ -93,6 +94,8 @@ namespace AppQuanLyDatVeXe
                 try
                 {
                     DataGridViewRow row = dgvDSTX.Rows[e.RowIndex];
+                    Console.WriteLine(row.Cells["gioXuatBen"].Value.GetType());
+
                     TuyenXe_DTO txe = new TuyenXe_DTO
                     {
                         MaTuyenXe = Convert.ToInt32(row.Cells["MaTuyenXe"].Value),
@@ -100,8 +103,8 @@ namespace AppQuanLyDatVeXe
                         ThoiGianDi = Convert.ToDateTime(row.Cells["thoiGianDi"].Value),
                         DiemDi = row.Cells["diemDi"].Value.ToString(),
                         DiemDen = row.Cells["diemDen"].Value.ToString(),
-                        GioXuatBen = Convert.ToDateTime(row.Cells["gioXuatBen"].Value).TimeOfDay,
-                        GioDenNoi = Convert.ToDateTime(row.Cells["gioDenNoi"].Value).TimeOfDay,
+                        GioXuatBen = (TimeSpan)row.Cells["gioXuatBen"].Value,
+                        GioDenNoi = (TimeSpan)row.Cells["gioDenNoi"].Value,
                         KhoangCach = Convert.ToInt32(row.Cells["khoangCach"].Value),
                         DonGia = Convert.ToInt32(row.Cells["donGia"].Value),
                         BienSoXe = row.Cells["bienSo"].Value.ToString(),
