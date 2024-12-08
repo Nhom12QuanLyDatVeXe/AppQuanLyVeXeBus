@@ -20,6 +20,7 @@ CREATE TABLE KhachHang (
     SDT NVARCHAR(15),
     Email NVARCHAR(100),
     GioiTinh NVARCHAR(10),
+	constraint FK_KH_TK foreign Key (MaKH) references TaiKhoan(ID)
 );
 
 CREATE TABLE ChucVu
@@ -82,7 +83,6 @@ CREATE TABLE PhieuDatVe (
     SoLuongGhe INT,
     TongTien DECIMAL(18, 2),
 	MaKH CHAR(7),
-	TrangThai nvarchar(30),
     FOREIGN KEY (MaKH) REFERENCES KhachHang(MaKH)
 )
 
