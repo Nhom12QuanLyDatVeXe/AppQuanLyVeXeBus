@@ -160,5 +160,28 @@ namespace DAL
             }
         }
 
+        public bool doiMatKhau(string mkCu, string mkMoi, string maNV)
+        {
+            try
+            {
+                var nv = qldvx.TaiKhoans.Where(t=>t.ID == maNV).FirstOrDefault();
+                if (nv != null)
+                {
+                    if(nv.Pass == mkCu)
+                    {
+                        nv.Pass = mkMoi;
+
+                        qldvx.SubmitChanges();
+                        return true;
+                    }
+                    return false;
+                }
+                return false;
+            }
+            catch
+            {
+                return false;
+            }
+        }
     }
 }

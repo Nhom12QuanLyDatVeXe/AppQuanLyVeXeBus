@@ -103,7 +103,7 @@ namespace DAL
         {
             try
             {
-
+                Random random = new Random();
                 
                 DateTime ngayKhoiHanh = tuyenxe.ThoiGianDi.Date; 
                 string bienSoXe = tuyenxe.BienSoXe;
@@ -115,15 +115,19 @@ namespace DAL
 
                 if (existingTuyenXe != null)
                 {
-
-
                     Console.WriteLine("Lỗi khi thêm tuyến xe ! ");
                     return false; 
+                }
+
+                int temp = random.Next(1, 999);
+                while (qldvx.TuyenXes.Where(t=>t.MaTuyenXe == temp).FirstOrDefault() != null)
+                {
+                    temp = random.Next(1, 999);
                 }
                 TuyenXe newTuyenXe = new TuyenXe
                 {
 
-                    MaTuyenXe = tuyenxe.MaTuyenXe,
+                    MaTuyenXe = temp,
                     TenTuyen = tuyenxe.TenTuyen,
                     ThoiGianDi = tuyenxe.ThoiGianDi,
                     DiemDi = tuyenxe.DiemDi,
@@ -196,6 +200,25 @@ namespace DAL
             catch (Exception ex)
             {
                 Console.WriteLine("Lỗi khi sửa tuyến xe: " + ex.Message);
+                return false;
+            }
+        }
+
+        public bool deleteOne(int matuyen)
+        {
+            try
+            {
+                var tbl = qldvx.TuyenXes.Where(t => t.MaTuyenXe == matuyen).FirstOrDefault();
+                if (tbl!=null)
+                {
+                    qldvx.TuyenXes.DeleteOnSubmit(tbl);
+                    qldvx.SubmitChanges();
+                    return true;
+                }
+                return false;
+            }
+            catch
+            {
                 return false;
             }
         }

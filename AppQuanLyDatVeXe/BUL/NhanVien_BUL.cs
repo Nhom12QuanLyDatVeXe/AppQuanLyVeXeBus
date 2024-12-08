@@ -48,5 +48,10 @@ namespace BUL
         {
             return dal.XoaNhanVien(nhanvien);
         }
+
+        public bool doiMatKhau(string mkCu, string mkMoi, string maNV)
+        {
+            return dal.doiMatKhau(mkCu, mkMoi, maNV);
+        }
     }
 }

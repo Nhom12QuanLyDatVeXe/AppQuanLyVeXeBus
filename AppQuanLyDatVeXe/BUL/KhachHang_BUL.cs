@@ -54,5 +54,10 @@ namespace BUL
         {
             return dal.XoaKhachHang(khachhang);
         }
+
+        public KhachHang_DTO TimKHTheoSDT(string text)
+        {
+            return dal.TimKHTheoSDT(text);
+        }
     }
 }

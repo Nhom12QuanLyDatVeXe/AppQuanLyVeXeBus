@@ -75,7 +75,8 @@ namespace AppQuanLyDatVeXe.FormChiTiet
         {
             try
             {
-                int maTx = int.Parse(txtMaChuyen.Text.Trim());
+                DateTime now = DateTime.Now;
+                //int maTx = int.Parse(txtMaChuyen.Text.Trim());
                 string tenTuyen = txtTenChuyen.Text.Trim();
                 string diemDi = cboDiemDi.SelectedValue?.ToString();
                 string diemDen = cboDiemDen.SelectedValue?.ToString();
@@ -99,9 +100,15 @@ namespace AppQuanLyDatVeXe.FormChiTiet
                     return;
                 }
 
+                //if(dtpGioDi.Value.TimeOfDay <= now.TimeOfDay)
+                //{
+                //    MessageBox.Show("Thời gian đi xát hiện tại! Không thể thêm chuyến xe!");
+                //    return;
+                //}
+
                 TuyenXe_DTO tx = new TuyenXe_DTO
                 {
-                    MaTuyenXe = maTx,
+                    //MaTuyenXe = maTx,
                     TenTuyen = tenTuyen,
                     DiemDi = diemDi,
                     DiemDen = diemDen,
@@ -182,24 +189,7 @@ namespace AppQuanLyDatVeXe.FormChiTiet
 
         private void dtpGioDi_ValueChanged(object sender, EventArgs e)
         {
-            DateTime now = DateTime.Now;
-
-            // Kiểm tra nếu ngày được chọn là hôm nay
-            if (dtpNgayDi.Value.Date == DateTime.Today)
-            {
-                // Kiểm tra nếu giờ được chọn nhỏ hơn giờ hiện tại
-                if (dtpGioDi.Value.TimeOfDay < now.TimeOfDay)
-                {
-                    // Đặt lại giờ về thời gian hiện tại
-                    dtpGioDi.Value = new DateTime(dtpNgayDi.Value.Year, dtpNgayDi.Value.Month, dtpNgayDi.Value.Day, now.Hour, now.Minute, 0);
-                    MessageBox.Show("Không thể chọn giờ trong quá khứ!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
-            }
-            else
-            {
-                // Nếu là ngày tương lai, không cần kiểm tra giờ, chỉ cần giữ nguyên giá trị giờ đã chọn
-                dtpGioDi.Value = new DateTime(dtpNgayDi.Value.Year, dtpNgayDi.Value.Month, dtpNgayDi.Value.Day, dtpGioDi.Value.Hour, dtpGioDi.Value.Minute, 0);
-            }
+            
         }
     }
 }

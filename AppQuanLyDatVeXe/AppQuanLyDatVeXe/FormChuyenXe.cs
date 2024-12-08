@@ -126,6 +126,20 @@ namespace AppQuanLyDatVeXe
                     MessageBox.Show($"Lỗi: {ex.Message}", "Lỗi");
                 }
             }
+            else if(e.ColumnIndex == dgvDSTX.Columns["btnXoa"].Index && e.RowIndex >= 0)
+            {
+                DataGridViewRow row = dgvDSTX.Rows[e.RowIndex];
+                int matuyen = Convert.ToInt32(row.Cells["MaTuyenXe"].Value);
+                if(CX_BUL.deleteOne(matuyen) == true)
+                {
+                    MessageBox.Show("Xóa chuyến xe thành công!");
+                    LoadCX();
+                }
+                else
+                {
+                    MessageBox.Show("Chuyến xe này không thể xóa!");
+                }    
+            }
         }
     }
 }

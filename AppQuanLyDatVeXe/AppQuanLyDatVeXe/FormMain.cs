@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DTO;
 using BUL;
+using AppQuanLyDatVeXe.FormChiTiet;
 
 namespace AppQuanLyDatVeXe
 {
@@ -63,6 +64,7 @@ namespace AppQuanLyDatVeXe
                     QuyenNhanVienKeToan(false);
                 }
             }
+            AddControls(new FormBaoCao(nv));
         }
         public void AddControls(Form f)
         {
@@ -134,6 +136,17 @@ namespace AppQuanLyDatVeXe
         private void guna2Button1_Click(object sender, EventArgs e)
         {
             AddControls(new FormDatVeXe());
+        }
+
+        private void guna2Button1_Click_1(object sender, EventArgs e)
+        {
+            FormDoiMatKhau dmk = new FormDoiMatKhau(nv);
+            dmk.Show();
+        }
+
+        private void guna2Button2_Click(object sender, EventArgs e)
+        {
+            AddControls(new FormBaoCao(nv));
         }
     }
 }

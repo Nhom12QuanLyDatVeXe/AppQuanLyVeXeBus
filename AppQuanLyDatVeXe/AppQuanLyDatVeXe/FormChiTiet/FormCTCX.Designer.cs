@@ -45,8 +45,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txtTenChuyen = new Guna.UI2.WinForms.Guna2TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtMaChuyen = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.cboDiemDi = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label12 = new System.Windows.Forms.Label();
@@ -63,7 +61,7 @@
             this.guna2CustomGradientPanel1.Controls.Add(this.btnLuu);
             this.guna2CustomGradientPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.guna2CustomGradientPanel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(231)))), ((int)(((byte)(187)))));
-            this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(0, 361);
+            this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(0, 268);
             this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
             this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(1112, 113);
             this.guna2CustomGradientPanel1.TabIndex = 5;
@@ -123,7 +121,7 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(30, 30);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(368, 37);
+            this.label1.Size = new System.Drawing.Size(260, 26);
             this.label1.TabIndex = 0;
             this.label1.Text = "Bảng chi tiết chuyến xe";
             // 
@@ -139,7 +137,7 @@
             this.cboDiemDen.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.cboDiemDen.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cboDiemDen.ItemHeight = 30;
-            this.cboDiemDen.Location = new System.Drawing.Point(857, 126);
+            this.cboDiemDen.Location = new System.Drawing.Point(563, 128);
             this.cboDiemDen.Name = "cboDiemDen";
             this.cboDiemDen.Size = new System.Drawing.Size(199, 36);
             this.cboDiemDen.TabIndex = 75;
@@ -149,9 +147,9 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.Black;
-            this.label11.Location = new System.Drawing.Point(852, 102);
+            this.label11.Location = new System.Drawing.Point(558, 104);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(117, 29);
+            this.label11.Size = new System.Drawing.Size(77, 20);
             this.label11.TabIndex = 74;
             this.label11.Text = "Điểm đến";
             // 
@@ -188,7 +186,7 @@
             this.label8.ForeColor = System.Drawing.Color.Black;
             this.label8.Location = new System.Drawing.Point(490, 182);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(96, 29);
+            this.label8.Size = new System.Drawing.Size(64, 20);
             this.label8.TabIndex = 70;
             this.label8.Text = "Đơn giá";
             // 
@@ -207,7 +205,7 @@
             this.txtKhoangcach.HoverState.BorderColor = System.Drawing.Color.Transparent;
             this.txtKhoangcach.HoverState.FillColor = System.Drawing.Color.Transparent;
             this.txtKhoangcach.IconLeftOffset = new System.Drawing.Point(10, 0);
-            this.txtKhoangcach.Location = new System.Drawing.Point(37, 291);
+            this.txtKhoangcach.Location = new System.Drawing.Point(798, 206);
             this.txtKhoangcach.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.txtKhoangcach.Name = "txtKhoangcach";
             this.txtKhoangcach.Padding = new System.Windows.Forms.Padding(13);
@@ -223,9 +221,9 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(32, 267);
+            this.label9.Location = new System.Drawing.Point(793, 182);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(152, 29);
+            this.label9.Size = new System.Drawing.Size(102, 20);
             this.label9.TabIndex = 68;
             this.label9.Text = "Khoảng cách";
             // 
@@ -236,7 +234,7 @@
             this.label7.ForeColor = System.Drawing.Color.Black;
             this.label7.Location = new System.Drawing.Point(32, 182);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(95, 29);
+            this.label7.Size = new System.Drawing.Size(61, 20);
             this.label7.TabIndex = 67;
             this.label7.Text = "Ngày đi";
             // 
@@ -261,9 +259,9 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(622, 102);
+            this.label4.Location = new System.Drawing.Point(328, 104);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(96, 29);
+            this.label4.Size = new System.Drawing.Size(62, 20);
             this.label4.TabIndex = 60;
             this.label4.Text = "Điểm đi";
             // 
@@ -282,7 +280,7 @@
             this.txtTenChuyen.HoverState.BorderColor = System.Drawing.Color.Transparent;
             this.txtTenChuyen.HoverState.FillColor = System.Drawing.Color.Transparent;
             this.txtTenChuyen.IconLeftOffset = new System.Drawing.Point(10, 0);
-            this.txtTenChuyen.Location = new System.Drawing.Point(331, 126);
+            this.txtTenChuyen.Location = new System.Drawing.Point(37, 128);
             this.txtTenChuyen.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.txtTenChuyen.Name = "txtTenChuyen";
             this.txtTenChuyen.Padding = new System.Windows.Forms.Padding(13);
@@ -298,57 +296,20 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(326, 102);
+            this.label3.Location = new System.Drawing.Point(32, 104);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(169, 29);
+            this.label3.Size = new System.Drawing.Size(111, 20);
             this.label3.TabIndex = 58;
             this.label3.Text = "Tên chuyến xe";
-            // 
-            // txtMaChuyen
-            // 
-            this.txtMaChuyen.BorderColor = System.Drawing.Color.Gray;
-            this.txtMaChuyen.BorderRadius = 15;
-            this.txtMaChuyen.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtMaChuyen.DefaultText = "";
-            this.txtMaChuyen.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtMaChuyen.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtMaChuyen.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtMaChuyen.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtMaChuyen.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtMaChuyen.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.txtMaChuyen.HoverState.BorderColor = System.Drawing.Color.Transparent;
-            this.txtMaChuyen.HoverState.FillColor = System.Drawing.Color.Transparent;
-            this.txtMaChuyen.IconLeftOffset = new System.Drawing.Point(10, 0);
-            this.txtMaChuyen.Location = new System.Drawing.Point(37, 126);
-            this.txtMaChuyen.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.txtMaChuyen.Name = "txtMaChuyen";
-            this.txtMaChuyen.Padding = new System.Windows.Forms.Padding(13);
-            this.txtMaChuyen.PasswordChar = '\0';
-            this.txtMaChuyen.PlaceholderText = "";
-            this.txtMaChuyen.SelectedText = "";
-            this.txtMaChuyen.Size = new System.Drawing.Size(268, 36);
-            this.txtMaChuyen.TabIndex = 57;
-            this.txtMaChuyen.TextOffset = new System.Drawing.Point(10, 0);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(32, 102);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(159, 29);
-            this.label2.TabIndex = 56;
-            this.label2.Text = "Mã chuyến xe";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.Black;
-            this.label10.Location = new System.Drawing.Point(792, 182);
+            this.label10.Location = new System.Drawing.Point(792, 100);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(125, 29);
+            this.label10.Size = new System.Drawing.Size(82, 20);
             this.label10.TabIndex = 72;
             this.label10.Text = "Biển số xe";
             // 
@@ -364,7 +325,7 @@
             this.cboDiemDi.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.cboDiemDi.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cboDiemDi.ItemHeight = 30;
-            this.cboDiemDi.Location = new System.Drawing.Point(627, 126);
+            this.cboDiemDi.Location = new System.Drawing.Point(333, 128);
             this.cboDiemDi.Name = "cboDiemDi";
             this.cboDiemDi.Size = new System.Drawing.Size(199, 36);
             this.cboDiemDi.TabIndex = 76;
@@ -376,7 +337,7 @@
             this.label12.ForeColor = System.Drawing.Color.Black;
             this.label12.Location = new System.Drawing.Point(249, 182);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(77, 29);
+            this.label12.Size = new System.Drawing.Size(50, 20);
             this.label12.TabIndex = 78;
             this.label12.Text = "Giờ đi";
             // 
@@ -415,16 +376,16 @@
             this.cbBienSoXe.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.cbBienSoXe.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cbBienSoXe.ItemHeight = 30;
-            this.cbBienSoXe.Location = new System.Drawing.Point(797, 210);
+            this.cbBienSoXe.Location = new System.Drawing.Point(797, 128);
             this.cbBienSoXe.Name = "cbBienSoXe";
             this.cbBienSoXe.Size = new System.Drawing.Size(199, 36);
             this.cbBienSoXe.TabIndex = 79;
             // 
             // FormCTCX
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 36F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1112, 474);
+            this.ClientSize = new System.Drawing.Size(1112, 381);
             this.Controls.Add(this.cbBienSoXe);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.dtpGioDi);
@@ -441,8 +402,6 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtTenChuyen);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.txtMaChuyen);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.guna2CustomGradientPanel1);
             this.Controls.Add(this.guna2Panel1);
             this.Name = "FormCTCX";
@@ -474,8 +433,6 @@
         private System.Windows.Forms.Label label4;
         private Guna.UI2.WinForms.Guna2TextBox txtTenChuyen;
         private System.Windows.Forms.Label label3;
-        private Guna.UI2.WinForms.Guna2TextBox txtMaChuyen;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label10;
         private Guna.UI2.WinForms.Guna2ComboBox cboDiemDi;
         private System.Windows.Forms.Label label12;
