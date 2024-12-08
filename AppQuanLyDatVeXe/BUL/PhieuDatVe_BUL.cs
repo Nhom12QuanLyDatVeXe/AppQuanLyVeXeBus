@@ -103,5 +103,32 @@ namespace BUL
         {
             return dal.PhieuDatVe_DaThanhToan_TrongTuan();
         }
+
+        public List<DailyReport> GetPhieuDatVeTheoNgayTrongTuan()
+        {
+            return dal.GetPhieuDatVeTheoNgayTrongTuan();
+        }
+
+        //========== Tháng ============
+        public List<MonthlyReport> GetPhieuDatVeTheoThang()
+        {
+            return dal.PhieuDatVeTheoThang();
+        }
+        public List<MonthlyReport> PhieuDatVe_DaHuy_TrongThang()
+        {
+            return dal.PhieuDatVe_DaHuy_TrongThang();
+        }
+        public List<MonthlyReport> PhieuDatVe_DaThanhToan_TrongThang()
+        {
+            return dal.PhieuDatVe_DaThanhToan_TrongThang();
+        }
+        public List<WeeklyReport> GetPhieuDatVeTheoTuanTrongThang()
+        {
+            return dal.GetPhieuDatVeTheoTuanTrongThang();
+        }
+        public int ExportPhieuDatVeToExcel()
+        {
+            return dal.ExportPhieuDatVeToExcel();
+        }
     }
 }

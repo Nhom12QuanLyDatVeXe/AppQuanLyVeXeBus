@@ -92,5 +92,60 @@ namespace AppQuanLyDatVeXe
         {
 
         }
+
+        private void dgvDSTX_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == dgvDSTX.Columns["btnSua"].Index && e.RowIndex >= 0)
+            {
+                try
+                {
+                    DataGridViewRow row = dgvDSTX.Rows[e.RowIndex];
+                    Console.WriteLine(row.Cells["gioXuatBen"].Value.GetType());
+
+                    TuyenXe_DTO txe = new TuyenXe_DTO
+                    {
+                        MaTuyenXe = Convert.ToInt32(row.Cells["MaTuyenXe"].Value),
+                        TenTuyen = row.Cells["tenTuyen"].Value.ToString(),
+                        ThoiGianDi = Convert.ToDateTime(row.Cells["thoiGianDi"].Value),
+                        DiemDi = row.Cells["diemDi"].Value.ToString(),
+                        DiemDen = row.Cells["diemDen"].Value.ToString(),
+                        GioXuatBen = (TimeSpan)row.Cells["gioXuatBen"].Value,
+                        GioDenNoi = (TimeSpan)row.Cells["gioDenNoi"].Value,
+                        KhoangCach = Convert.ToInt32(row.Cells["khoangCach"].Value),
+                        DonGia = Convert.ToInt32(row.Cells["donGia"].Value),
+                        BienSoXe = row.Cells["bienSo"].Value.ToString(),
+                    };
+                    bool result = CX_BUL.SuaTX(txe);
+                    if (result)
+                    {
+                        MessageBox.Show("Cập nhật sửa tuyến xe thành công");
+                        LoadCX();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Cập nhật phương tiện thất bại");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                    MessageBox.Show($"Lỗi: {ex.Message}", "Lỗi");
+                }
+            }
+            else if (e.ColumnIndex == dgvDSTX.Columns["btnXoa"].Index && e.RowIndex >= 0)
+            {
+                DataGridViewRow row = dgvDSTX.Rows[e.RowIndex];
+                int matuyen = Convert.ToInt32(row.Cells["MaTuyenXe"].Value);
+                if (CX_BUL.deleteOne(matuyen) == true)
+                {
+                    MessageBox.Show("Xóa chuyến xe thành công!");
+                    LoadCX();
+                }
+                else
+                {
+                    MessageBox.Show("Chuyến xe này không thể xóa!");
+                }
+            }
+        }
     }
 }
