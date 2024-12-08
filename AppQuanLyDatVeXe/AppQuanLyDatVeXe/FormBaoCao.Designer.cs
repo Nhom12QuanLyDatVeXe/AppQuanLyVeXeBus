@@ -28,22 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea7 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend7 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea8 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend8 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.ChartPhieuDatVeTrongTuan = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.ChartPhieuDatVeTrongNam = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.ChartPhieuDatVeCacNgayTrongTuan = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.ChartPhieuDatVeThangTrongNam = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.btnXuatExcel = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.ChartPhieuDatVeTrongTuan)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ChartPhieuDatVeTrongNam)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ChartPhieuDatVeCacNgayTrongTuan)).BeginInit();
@@ -52,73 +53,94 @@
             // 
             // ChartPhieuDatVeTrongTuan
             // 
-            chartArea1.Name = "ChartArea1";
-            this.ChartPhieuDatVeTrongTuan.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.ChartPhieuDatVeTrongTuan.Legends.Add(legend1);
-            this.ChartPhieuDatVeTrongTuan.Location = new System.Drawing.Point(798, 36);
+            chartArea5.Name = "ChartArea1";
+            this.ChartPhieuDatVeTrongTuan.ChartAreas.Add(chartArea5);
+            legend5.Name = "Legend1";
+            this.ChartPhieuDatVeTrongTuan.Legends.Add(legend5);
+            this.ChartPhieuDatVeTrongTuan.Location = new System.Drawing.Point(1084, 87);
             this.ChartPhieuDatVeTrongTuan.Name = "ChartPhieuDatVeTrongTuan";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.ChartPhieuDatVeTrongTuan.Series.Add(series1);
-            this.ChartPhieuDatVeTrongTuan.Size = new System.Drawing.Size(529, 286);
+            series5.ChartArea = "ChartArea1";
+            series5.Legend = "Legend1";
+            series5.Name = "Series1";
+            this.ChartPhieuDatVeTrongTuan.Series.Add(series5);
+            this.ChartPhieuDatVeTrongTuan.Size = new System.Drawing.Size(529, 362);
             this.ChartPhieuDatVeTrongTuan.TabIndex = 0;
             this.ChartPhieuDatVeTrongTuan.Text = "chart1";
             // 
             // ChartPhieuDatVeTrongNam
             // 
-            chartArea2.Name = "ChartArea1";
-            this.ChartPhieuDatVeTrongNam.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.ChartPhieuDatVeTrongNam.Legends.Add(legend2);
-            this.ChartPhieuDatVeTrongNam.Location = new System.Drawing.Point(798, 341);
+            chartArea6.Name = "ChartArea1";
+            this.ChartPhieuDatVeTrongNam.ChartAreas.Add(chartArea6);
+            legend6.Name = "Legend1";
+            this.ChartPhieuDatVeTrongNam.Legends.Add(legend6);
+            this.ChartPhieuDatVeTrongNam.Location = new System.Drawing.Point(1084, 480);
             this.ChartPhieuDatVeTrongNam.Name = "ChartPhieuDatVeTrongNam";
-            series2.ChartArea = "ChartArea1";
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            this.ChartPhieuDatVeTrongNam.Series.Add(series2);
-            this.ChartPhieuDatVeTrongNam.Size = new System.Drawing.Size(529, 286);
+            series6.ChartArea = "ChartArea1";
+            series6.Legend = "Legend1";
+            series6.Name = "Series1";
+            this.ChartPhieuDatVeTrongNam.Series.Add(series6);
+            this.ChartPhieuDatVeTrongNam.Size = new System.Drawing.Size(529, 362);
             this.ChartPhieuDatVeTrongNam.TabIndex = 1;
             this.ChartPhieuDatVeTrongNam.Text = "chart1";
             // 
             // ChartPhieuDatVeCacNgayTrongTuan
             // 
-            chartArea3.Name = "ChartArea1";
-            this.ChartPhieuDatVeCacNgayTrongTuan.ChartAreas.Add(chartArea3);
-            legend3.Name = "Legend1";
-            this.ChartPhieuDatVeCacNgayTrongTuan.Legends.Add(legend3);
-            this.ChartPhieuDatVeCacNgayTrongTuan.Location = new System.Drawing.Point(36, 36);
+            chartArea7.Name = "ChartArea1";
+            this.ChartPhieuDatVeCacNgayTrongTuan.ChartAreas.Add(chartArea7);
+            legend7.Name = "Legend1";
+            this.ChartPhieuDatVeCacNgayTrongTuan.Legends.Add(legend7);
+            this.ChartPhieuDatVeCacNgayTrongTuan.Location = new System.Drawing.Point(36, 87);
             this.ChartPhieuDatVeCacNgayTrongTuan.Name = "ChartPhieuDatVeCacNgayTrongTuan";
-            series3.ChartArea = "ChartArea1";
-            series3.Legend = "Legend1";
-            series3.Name = "Series1";
-            this.ChartPhieuDatVeCacNgayTrongTuan.Series.Add(series3);
-            this.ChartPhieuDatVeCacNgayTrongTuan.Size = new System.Drawing.Size(744, 286);
+            series7.ChartArea = "ChartArea1";
+            series7.Legend = "Legend1";
+            series7.Name = "Series1";
+            this.ChartPhieuDatVeCacNgayTrongTuan.Series.Add(series7);
+            this.ChartPhieuDatVeCacNgayTrongTuan.Size = new System.Drawing.Size(1006, 362);
             this.ChartPhieuDatVeCacNgayTrongTuan.TabIndex = 0;
             this.ChartPhieuDatVeCacNgayTrongTuan.Text = "chart1";
             // 
             // ChartPhieuDatVeThangTrongNam
             // 
-            chartArea4.Name = "ChartArea1";
-            this.ChartPhieuDatVeThangTrongNam.ChartAreas.Add(chartArea4);
-            legend4.Name = "Legend1";
-            this.ChartPhieuDatVeThangTrongNam.Legends.Add(legend4);
-            this.ChartPhieuDatVeThangTrongNam.Location = new System.Drawing.Point(36, 341);
+            chartArea8.Name = "ChartArea1";
+            this.ChartPhieuDatVeThangTrongNam.ChartAreas.Add(chartArea8);
+            legend8.Name = "Legend1";
+            this.ChartPhieuDatVeThangTrongNam.Legends.Add(legend8);
+            this.ChartPhieuDatVeThangTrongNam.Location = new System.Drawing.Point(36, 480);
             this.ChartPhieuDatVeThangTrongNam.Name = "ChartPhieuDatVeThangTrongNam";
-            series4.ChartArea = "ChartArea1";
-            series4.Legend = "Legend1";
-            series4.Name = "Series1";
-            this.ChartPhieuDatVeThangTrongNam.Series.Add(series4);
-            this.ChartPhieuDatVeThangTrongNam.Size = new System.Drawing.Size(744, 286);
+            series8.ChartArea = "ChartArea1";
+            series8.Legend = "Legend1";
+            series8.Name = "Series1";
+            this.ChartPhieuDatVeThangTrongNam.Series.Add(series8);
+            this.ChartPhieuDatVeThangTrongNam.Size = new System.Drawing.Size(1006, 362);
             this.ChartPhieuDatVeThangTrongNam.TabIndex = 1;
             this.ChartPhieuDatVeThangTrongNam.Text = "chart1";
+            // 
+            // btnXuatExcel
+            // 
+            this.btnXuatExcel.AutoRoundedCorners = true;
+            this.btnXuatExcel.BackColor = System.Drawing.Color.Transparent;
+            this.btnXuatExcel.BorderRadius = 23;
+            this.btnXuatExcel.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnXuatExcel.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnXuatExcel.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnXuatExcel.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnXuatExcel.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(147)))), ((int)(((byte)(81)))));
+            this.btnXuatExcel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXuatExcel.ForeColor = System.Drawing.Color.White;
+            this.btnXuatExcel.Location = new System.Drawing.Point(36, 22);
+            this.btnXuatExcel.Margin = new System.Windows.Forms.Padding(2);
+            this.btnXuatExcel.Name = "btnXuatExcel";
+            this.btnXuatExcel.Size = new System.Drawing.Size(256, 48);
+            this.btnXuatExcel.TabIndex = 10;
+            this.btnXuatExcel.Text = "Xuất danh sách phiếu trong tháng";
+            this.btnXuatExcel.Click += new System.EventHandler(this.btnXuatExcel_Click);
             // 
             // FormBaoCao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.ClientSize = new System.Drawing.Size(1554, 680);
+            this.ClientSize = new System.Drawing.Size(1657, 813);
+            this.Controls.Add(this.btnXuatExcel);
             this.Controls.Add(this.ChartPhieuDatVeThangTrongNam);
             this.Controls.Add(this.ChartPhieuDatVeCacNgayTrongTuan);
             this.Controls.Add(this.ChartPhieuDatVeTrongNam);
@@ -142,5 +164,6 @@
         private System.Windows.Forms.DataVisualization.Charting.Chart ChartPhieuDatVeTrongNam;
         private System.Windows.Forms.DataVisualization.Charting.Chart ChartPhieuDatVeCacNgayTrongTuan;
         private System.Windows.Forms.DataVisualization.Charting.Chart ChartPhieuDatVeThangTrongNam;
+        private Guna.UI2.WinForms.Guna2Button btnXuatExcel;
     }
 }

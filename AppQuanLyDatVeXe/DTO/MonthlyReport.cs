@@ -6,12 +6,10 @@ using System.Threading.Tasks;
 
 namespace DTO
 {
-    public class WeeklyReport
+    public class MonthlyReport
     {
-        public int DatVe { get; set; } 
-        public int DaHuy { get; set; }
-        public int DaThanhToan { get; set; }
-        public int Week { get; set; }
+        public int Month { get; set; }
+        public int Year { get; set; }
         public int Count { get; set; }
         public int TotalSeats { get; set; }
         public decimal TotalAmount { get; set; }
