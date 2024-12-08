@@ -55,7 +55,7 @@ namespace AppQuanLyDatVeXe.FormChiTiet
                 {
                     BienSoXe = biensoxe,
                     TaiXeChinh = taixechinh,
-                    TaiXephu = taixephu,
+                    TaiXePhu = taixephu,
                     SoGhe = soghe,
                 };
 

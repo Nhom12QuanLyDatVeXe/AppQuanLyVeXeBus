@@ -101,6 +101,7 @@ namespace AppQuanLyDatVeXe
                     DataGridViewRow row = dgvDSKH.Rows[e.RowIndex];
                     KhachHang_DTO kh = new KhachHang_DTO
                     {
+                        MaKH = row.Cells["MaKH"].Value.ToString(),
                         HoTen = row.Cells["hoTen"].Value.ToString(),
                         SDT = row.Cells["SDT"].Value.ToString(),
                         Email=row.Cells["email"].Value.ToString(),

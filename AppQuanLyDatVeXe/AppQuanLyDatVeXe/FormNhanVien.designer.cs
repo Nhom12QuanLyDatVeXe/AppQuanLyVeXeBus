@@ -216,6 +216,7 @@
             this.MaNV.HeaderText = "ID";
             this.MaNV.MinimumWidth = 8;
             this.MaNV.Name = "MaNV";
+            this.MaNV.ReadOnly = true;
             // 
             // HoTen
             // 

@@ -49,5 +49,15 @@ namespace BUL
         {
             return dal.GetTuyenXe(text);
         }
+
+        public bool SuaTX(TuyenXe_DTO txe)
+        {
+            return dal.SuaTuyenXe(txe);
+        }
+
+        public bool deleteOne(int matuyen)
+        {
+            return dal.deleteOne(matuyen);
+        }
     }
 }

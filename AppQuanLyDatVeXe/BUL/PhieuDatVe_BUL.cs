@@ -88,5 +88,20 @@ namespace BUL
         {
             return dal.GetPhieuDatVeDaHuyTrongTuan();
         }
+
+        public List<WeeklyReport> GetPhieuDatVe_DaDat_TrongTuan()
+        {
+            return dal.PhieuDatVeTrongTuan();
+        }
+
+        public List<WeeklyReport> GetPhieuDatVe_Dahuy_TrongTuan()
+        {
+            return dal.PhieuDatVe_DaHuy_TrongTuan();
+        }
+
+        public List<WeeklyReport> GetPhieuDatVe_DaThanhToan_TrongTuan()
+        {
+            return dal.PhieuDatVe_DaThanhToan_TrongTuan();
+        }
     }
 }

@@ -78,6 +78,7 @@
     <Compile Include="TaiKhoan_DTO.cs" />
     <Compile Include="TinhThanh_DTO.cs" />
     <Compile Include="TuyenXe_DTO.cs" />
+    <Compile Include="WeeklyReport.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -10,6 +10,8 @@ using OfficeOpenXml.Style;
 using System.Drawing;
 using System.IO;
 using System.Data;
+using System.Globalization;
+using System.Runtime.InteropServices;
 
 namespace DAL
 {
@@ -327,6 +329,102 @@ namespace DAL
 
             return dt;
         }
+
+
+        public List<WeeklyReport> PhieuDatVeTrongTuan()
+        {
+            var currentDate = DateTime.Now;  // Ngày hiện tại
+            var currentWeek = CultureInfo.CurrentCulture.Calendar.GetWeekOfYear(
+                currentDate, CalendarWeekRule.FirstDay, DayOfWeek.Monday);  // Tuần hiện tại
+
+            var phieuDatVes = qldvx.PhieuDatVes.ToList();
+
+            // Lọc các phiếu có ngày đặt trong tuần hiện tại
+            var result = phieuDatVes.Select(p => new
+            {
+                Phieu = p,
+                NgayDat = DateTime.ParseExact(p.MaPhieu, "ddMMyyHHmm", CultureInfo.InvariantCulture)
+            })
+            .Where(t => CultureInfo.CurrentCulture.Calendar.GetWeekOfYear(
+                t.NgayDat, CalendarWeekRule.FirstDay, DayOfWeek.Monday) == currentWeek)  // Chỉ lấy phiếu trong tuần hiện tại
+            .GroupBy(p => currentWeek)  // Gộp theo tuần hiện tại
+            .Select(g => new WeeklyReport
+            {
+                Week = g.Key,
+                Count = g.Count(),
+                TotalSeats = g.Sum(x => x.Phieu.SoLuongGhe ?? 0),
+                TotalAmount = (decimal)g.Sum(x => x.Phieu.TongTien)
+            })
+            .OrderBy(r => r.Week)
+            .ToList();
+
+            return result;
+        }
+
+        public List<WeeklyReport> PhieuDatVe_DaHuy_TrongTuan()
+        {
+            var currentDate = DateTime.Now;  // Ngày hiện tại
+            var currentWeek = CultureInfo.CurrentCulture.Calendar.GetWeekOfYear(
+                currentDate, CalendarWeekRule.FirstDay, DayOfWeek.Monday);  // Tuần hiện tại
+
+            var phieuDatVes = qldvx.PhieuDatVes.ToList();
+
+            // Lọc các phiếu đã hủy trong tuần hiện tại
+            var result = phieuDatVes.Select(p => new
+            {
+                Phieu = p,
+                NgayDat = DateTime.ParseExact(p.MaPhieu, "ddMMyyHHmm", CultureInfo.InvariantCulture)
+            })
+            .Where(t => t.Phieu.TrangThai == "Vé đã hủy" &&
+                        CultureInfo.CurrentCulture.Calendar.GetWeekOfYear(
+                            t.NgayDat, CalendarWeekRule.FirstDay, DayOfWeek.Monday) == currentWeek)  // Lọc theo tuần hiện tại
+            .GroupBy(p => currentWeek)  // Gộp theo tuần hiện tại
+            .Select(g => new WeeklyReport
+            {
+                Week = g.Key,
+                Count = g.Count(),
+                TotalSeats = g.Sum(x => x.Phieu.SoLuongGhe ?? 0),
+                TotalAmount = (decimal)g.Sum(x => x.Phieu.TongTien)
+            })
+            .OrderBy(r => r.Week)
+            .ToList();
+
+            return result;
+        }
+
+
+        public List<WeeklyReport> PhieuDatVe_DaThanhToan_TrongTuan()
+        {
+            var currentDate = DateTime.Now;  // Ngày hiện tại
+            var currentWeek = CultureInfo.CurrentCulture.Calendar.GetWeekOfYear(
+                currentDate, CalendarWeekRule.FirstDay, DayOfWeek.Monday);  // Tuần hiện tại
+
+            var phieuDatVes = qldvx.PhieuDatVes.ToList();
+
+            // Lọc các phiếu đã thanh toán trong tuần hiện tại
+            var result = phieuDatVes.Select(p => new
+            {
+                Phieu = p,
+                NgayDat = DateTime.ParseExact(p.MaPhieu, "ddMMyyHHmm", CultureInfo.InvariantCulture)
+            })
+            .Where(t => t.Phieu.TrangThai == "Đã thanh toán" &&
+                        CultureInfo.CurrentCulture.Calendar.GetWeekOfYear(
+                            t.NgayDat, CalendarWeekRule.FirstDay, DayOfWeek.Monday) == currentWeek)  // Lọc theo tuần hiện tại
+            .GroupBy(p => currentWeek)  // Gộp theo tuần hiện tại
+            .Select(g => new WeeklyReport
+            {
+                Week = g.Key,
+                Count = g.Count(),
+                TotalSeats = g.Sum(x => x.Phieu.SoLuongGhe ?? 0),
+                TotalAmount = (decimal)g.Sum(x => x.Phieu.TongTien)
+            })
+            .OrderBy(r => r.Week)
+            .ToList();
+
+            return result;
+        }
+
+
 
     }
 }

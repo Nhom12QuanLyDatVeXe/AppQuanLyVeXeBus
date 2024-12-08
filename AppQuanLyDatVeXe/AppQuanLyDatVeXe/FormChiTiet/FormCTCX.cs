@@ -26,6 +26,9 @@ namespace AppQuanLyDatVeXe.FormChiTiet
         TuyenXe_BUL bul = new TuyenXe_BUL();
         private void FormCTCX_Load(object sender, EventArgs e)
         {
+            dtpGioDi.CustomFormat = "HH:mm";
+            dtpNgayDi.MinDate = DateTime.Today;
+            dtpGioDi.Value = DateTime.Now;
             dtpGioDi.Format = DateTimePickerFormat.Time;
             dtpGioDi.ShowUpDown = true;
             DateTime myDate = dtpNgayDi.Value.Date +
@@ -72,7 +75,8 @@ namespace AppQuanLyDatVeXe.FormChiTiet
         {
             try
             {
-                int maTx = int.Parse(txtMaChuyen.Text.Trim());
+                DateTime now = DateTime.Now;
+                //int maTx = int.Parse(txtMaChuyen.Text.Trim());
                 string tenTuyen = txtTenChuyen.Text.Trim();
                 string diemDi = cboDiemDi.SelectedValue?.ToString();
                 string diemDen = cboDiemDen.SelectedValue?.ToString();
@@ -96,9 +100,15 @@ namespace AppQuanLyDatVeXe.FormChiTiet
                     return;
                 }
 
+                //if(dtpGioDi.Value.TimeOfDay <= now.TimeOfDay)
+                //{
+                //    MessageBox.Show("Thời gian đi xát hiện tại! Không thể thêm chuyến xe!");
+                //    return;
+                //}
+
                 TuyenXe_DTO tx = new TuyenXe_DTO
                 {
-                    MaTuyenXe = maTx,
+                    //MaTuyenXe = maTx,
                     TenTuyen = tenTuyen,
                     DiemDi = diemDi,
                     DiemDen = diemDen,
@@ -132,43 +142,54 @@ namespace AppQuanLyDatVeXe.FormChiTiet
         {
             try
             {
-                
-                TimeSpan gioKhoiHanh = dtpGioDi.Value.TimeOfDay;
 
+                TimeSpan gioKhoiHanh = dtpGioDi.Value.TimeOfDay;
                 if (!int.TryParse(txtKhoangcach.Text.Trim(), out int khoangCach))
                 {
                     throw new Exception("Khoảng cách phải là số nguyên hợp lệ.");
                 }
 
-             
                 double vanTocTrungBinh = 60.0; // km/h
-
                 double gioNghi = 1;
-               
+
                 double thoiGianDiChuyen = khoangCach / vanTocTrungBinh + gioNghi;
-
-
                 DateTime thoiGianKhoiHanh = DateTime.Today.Add(gioKhoiHanh);
-
                 DateTime thoiGianDenNoi = thoiGianKhoiHanh.AddHours(thoiGianDiChuyen);
 
-                
                 if (thoiGianDenNoi.TimeOfDay.TotalHours >= 24)
                 {
-                    
+
                     thoiGianDenNoi = thoiGianDenNoi.AddDays(-1);
                 }
 
-                
                 return thoiGianDenNoi.TimeOfDay;
             }
             catch (Exception ex)
             {
                 MessageBox.Show($"Đã xảy ra lỗi khi tính thời gian đến nơi: {ex.Message}",
                                 "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                
+
                 return TimeSpan.Zero;
             }
+        }
+
+        private void dtpNgayDi_ValueChanged(object sender, EventArgs e)
+        {
+            if (dtpNgayDi.Value.Date > DateTime.Today)
+            {
+                // Nếu chọn ngày tương lai, không cần kiểm tra giờ
+                dtpGioDi.Value = new DateTime(dtpNgayDi.Value.Year, dtpNgayDi.Value.Month, dtpNgayDi.Value.Day, 0, 0, 0);
+            }
+            else
+            {
+                // Nếu là ngày hiện tại, cập nhật giờ
+                dtpGioDi_ValueChanged(sender, e);
+            }
+        }
+
+        private void dtpGioDi_ValueChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }

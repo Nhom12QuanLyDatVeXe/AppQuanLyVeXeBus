@@ -59,7 +59,7 @@
             this.label1.Location = new System.Drawing.Point(20, 12);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(279, 29);
+            this.label1.Size = new System.Drawing.Size(329, 32);
             this.label1.TabIndex = 0;
             this.label1.Text = "> Danh sách chuyến xe";
             // 
@@ -74,7 +74,7 @@
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(1352, 128);
             this.guna2Panel1.TabIndex = 12;
-            this.guna2Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel1_Paint);
+            //this.guna2Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel1_Paint);
             // 
             // btnThem
             // 
@@ -202,7 +202,8 @@
             this.dgvDSTX.ThemeStyle.RowsStyle.Height = 28;
             this.dgvDSTX.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvDSTX.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.dgvDSTX.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvDSTX_CellFormatting);
+            this.dgvDSTX.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDSTX_CellContentClick);
+            //this.dgvDSTX.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvDSTX_CellFormatting);
             // 
             // MaTuyenXe
             // 

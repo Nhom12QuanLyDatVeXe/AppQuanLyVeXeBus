@@ -55,6 +55,7 @@
             this.btnDong = new Guna.UI2.WinForms.Guna2Button();
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
+            this.guna2BorderlessForm2 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.guna2Panel1.SuspendLayout();
             this.guna2CustomGradientPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -470,6 +471,12 @@
             this.guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
             this.guna2BorderlessForm1.TransparentWhileDrag = true;
             // 
+            // guna2BorderlessForm2
+            // 
+            this.guna2BorderlessForm2.ContainerControl = this;
+            this.guna2BorderlessForm2.DockIndicatorTransparencyValue = 0.6D;
+            this.guna2BorderlessForm2.TransparentWhileDrag = true;
+            // 
             // FormCTNV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -535,5 +542,6 @@
         private Guna.UI2.WinForms.Guna2Button btnDong;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel1;
         private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
+        private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm2;
     }
 }
