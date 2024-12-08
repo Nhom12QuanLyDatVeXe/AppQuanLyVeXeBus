@@ -255,78 +255,66 @@ namespace AppQuanLyDatVeXe
         {
             try
             {
-              
+               
                 string templateFolder = Path.Combine(System.Windows.Forms.Application.StartupPath, "Template");
                 string saveFolder = Path.Combine(System.Windows.Forms.Application.StartupPath, "PhieuDatVe");
-                string templatePath = Path.Combine(templateFolder, "MauVeXe2.dotx");
-                string savePath = Path.Combine(saveFolder, $"PhieuDatVe_{DateTime.Now.ToString("yyyyMMdd_HHmmss")}.docx");
+                string templatePath = Path.Combine(templateFolder, "MauVeXe.dotx");
 
-            
                 if (!Directory.Exists(templateFolder))
                     Directory.CreateDirectory(templateFolder);
 
                 if (!Directory.Exists(saveFolder))
                     Directory.CreateDirectory(saveFolder);
 
-              
                 if (!File.Exists(templatePath))
                 {
                     MessageBox.Show($"Không tìm thấy file mẫu tại: {templatePath}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
 
-                
-                Microsoft.Office.Interop.Word.Application wordApp = new Microsoft.Office.Interop.Word.Application();
-                Document wordDoc = wordApp.Documents.Add(templatePath);
-
-
-
-                string tuyenXe = lbTuyenXe.Text;        
-                string bienSoXe = lbBienSoXe.Text;     
-                string ngayDi = lbNgayDi.Text;         
-                string gioXuatBen = lbGioXuatBen.Text;  
-                string khachHang = lbKH.Text;          
-
-                ReplaceFieldValue(wordDoc, "TuyenXe", tuyenXe);
-                ReplaceFieldValue(wordDoc, "BienSoXe", bienSoXe);
-                ReplaceFieldValue(wordDoc, "NgayDi", ngayDi);
-                ReplaceFieldValue(wordDoc, "GioXuatBen", gioXuatBen);
-                ReplaceFieldValue(wordDoc, "KhachHang", khachHang);
-
-                decimal totalAmount = 0;
-            
-
-                if (dgvCTPDV.Rows.Count > 0)
-                {
               
-                    StringBuilder sb = new StringBuilder();
-                    foreach (DataGridViewRow row in dgvCTPDV.Rows)
-                    {
-                       
-                        string maPhieu = row.Cells["mp"].Value?.ToString() ?? "";
-                        string maGhe = row.Cells["mg"].Value?.ToString() ?? "";
-                        string donGiaStr = row.Cells["dg"].Value?.ToString() ?? "0";
-
-                        decimal donGia = 0;
-                        decimal.TryParse(donGiaStr, out donGia);
-
-                        
-                        totalAmount += donGia;
-
-                        
-                        sb.AppendLine($"Mã phiếu: {maPhieu} - Mã ghế: {maGhe} - Đơn giá: {donGia:C0}");
-                    }
-
-                    
-                    wordDoc.Bookmarks["BangVe"].Range.Text = sb.ToString();
-                }
-                ReplaceFieldValue(wordDoc, "TongTien", totalAmount.ToString("C0"));
+                Microsoft.Office.Interop.Word.Application wordApp = new Microsoft.Office.Interop.Word.Application();
 
                
-                wordDoc.SaveAs2(savePath);
-                MessageBox.Show($"Xuất thông tin vé xe thành công! File đã được lưu tại: {savePath}", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                foreach (DataGridViewRow row in dgvCTPDV.Rows)
+                {
+                    // Lấy thông tin từ dòng hiện tại
+                    string maPhieu = row.Cells["mp"].Value?.ToString() ?? "";
+                    string maGhe = row.Cells["mg"].Value?.ToString() ?? "";
+                    string donGiaStr = row.Cells["dg"].Value?.ToString() ?? "0";
+                    decimal donGia = decimal.TryParse(donGiaStr, out decimal parsedDonGia) ? parsedDonGia : 0;
 
-                wordDoc.Close();
+                 
+                    Document wordDoc = wordApp.Documents.Add(templatePath);
+
+              
+                    string tuyenXe = lbTuyenXe.Text;
+                    string bienSoXe = lbBienSoXe.Text;
+                    string ngayDi = lbNgayDi.Text;
+                    string gioXuatBen = lbGioXuatBen.Text;
+                    string khachHang = lbKH.Text;
+
+                  
+                    ReplaceFieldValue(wordDoc, "TuyenXe", tuyenXe);
+                    ReplaceFieldValue(wordDoc, "BienSoXe", bienSoXe);
+                    ReplaceFieldValue(wordDoc, "NgayDi", ngayDi);
+                    ReplaceFieldValue(wordDoc, "GioXuatBen", gioXuatBen);
+                    ReplaceFieldValue(wordDoc, "KhachHang", khachHang);
+                    ReplaceFieldValue(wordDoc, "MaPhieu", maPhieu);
+                    ReplaceFieldValue(wordDoc, "MaGhe", maGhe);
+                    ReplaceFieldValue(wordDoc, "DonGia", donGia.ToString("C0"));
+
+                   
+                    string savePath = Path.Combine(saveFolder, $"PhieuDatVe_{maPhieu}_{maGhe}_{DateTime.Now:yyyyMMdd_HHmmss}.docx");
+                    wordDoc.SaveAs2(savePath);
+
+                   
+                    wordDoc.Close();
+                }
+
+                MessageBox.Show($"Xuất thông tin vé xe thành công! Các file đã được lưu tại: {saveFolder}", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+           
                 wordApp.Quit();
             }
             catch (Exception ex)
