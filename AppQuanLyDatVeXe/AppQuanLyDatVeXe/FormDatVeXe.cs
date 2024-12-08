@@ -29,7 +29,7 @@ namespace AppQuanLyDatVeXe
             LoadCX();
             loadDiemDi_den();
             loadComboKH();
-            dgvDSTX.Width = 900;
+            dgvDSTX.Width = 1550;
             cboDiemDen.DropDownStyle = ComboBoxStyle.DropDown;
             cboDiemDi.DropDownStyle = ComboBoxStyle.DropDown;
             dgvDSTX.AutoGenerateColumns = false;
@@ -207,7 +207,7 @@ namespace AppQuanLyDatVeXe
 
                 taoGhe(soghe, true);
 
-                dgvDSTX.Width = 500;
+                dgvDSTX.Width = 1030;
 
                 setNull(true);
                 
@@ -227,7 +227,7 @@ namespace AppQuanLyDatVeXe
 
         private void btnDatVe_Click(object sender, EventArgs e)
         {
-            if(makh != "")
+            if(makh != null)
             {
                 int soluongghe = danhSachGheDaChon.Count();
                 if (makh.Length > 0 && soluongghe > 0 && tongtien > 0)
@@ -238,7 +238,7 @@ namespace AppQuanLyDatVeXe
                         MessageBox.Show("Tạo phiếu đặt vé thành công!");
                         dgvDSTX.Width = 1200;
                         setNull(false);
-                        danhSachGheDaChon = null;
+                        danhSachGheDaChon.Clear();
                     }
                 }
             }
@@ -277,28 +277,46 @@ namespace AppQuanLyDatVeXe
             }
         }
 
-        private void txtMaKH_TextChanged(object sender, EventArgs e)
+        //private void txtMaKH_TextChanged(object sender, EventArgs e)
+        //{
+        //    KhachHang_DTO kh = new KhachHang_DTO();
+        //    kh = bul_kh.TimKHTheoMa(txtMaKH.Text);
+        //    if(kh != null)
+        //    {
+        //        cboKH.SelectedValue = kh.MaKH;
+        //        txtSDT.Text = kh.SDT;
+        //        makh = kh.MaKH;
+        //    }
+        //    else
+        //    {
+        //        cboKH.SelectedIndex = -1;
+        //        txtSDT.Text = "";
+        //        makh = "";
+        //    }
+
+        //}
+
+        private void guna2Panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void txtSDT_TextChanged(object sender, EventArgs e)
         {
             KhachHang_DTO kh = new KhachHang_DTO();
-            kh = bul_kh.TimKHTheoMa(txtMaKH.Text);
-            if(kh != null)
+            kh = bul_kh.TimKHTheoSDT(txtSDT.Text);
+            if (kh != null)
             {
                 cboKH.SelectedValue = kh.MaKH;
-                txtSDT.Text = kh.SDT;
+                txtMaKH.Text = kh.MaKH;
                 makh = kh.MaKH;
             }
             else
             {
                 cboKH.SelectedIndex = -1;
-                txtSDT.Text = "";
+                txtMaKH.Text = "";
                 makh = "";
             }
-
-        }
-
-        private void guna2Panel1_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }

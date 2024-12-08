@@ -54,5 +54,10 @@ namespace BUL
         {
             return dal.SuaTuyenXe(txe);
         }
+
+        public bool deleteOne(int matuyen)
+        {
+            return dal.deleteOne(matuyen);
+        }
     }
 }

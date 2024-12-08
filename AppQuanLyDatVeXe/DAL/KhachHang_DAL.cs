@@ -147,5 +147,33 @@ namespace DAL
                 return false;
             }
         }
+
+        public KhachHang_DTO TimKHTheoSDT(string text)
+        {
+            try
+            {
+                var tbl = qldvx.KhachHangs.Where(t => t.SDT == text).FirstOrDefault();
+                if (tbl != null)
+                {
+                    KhachHang_DTO kh = new KhachHang_DTO();
+                    kh.MaKH = tbl.MaKH;
+                    kh.SDT = tbl.SDT;
+                    kh.HoTen = tbl.HoTen;
+                    kh.Email = tbl.Email;
+                    kh.GioiTinh = tbl.GioiTinh;
+                    return kh;
+                }
+                else
+                {
+                    return null;
+                }
+            }
+            catch
+            {
+                return null;
+            }
+
+
+        }
     }
 }
